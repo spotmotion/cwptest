@@ -84,10 +84,9 @@ window.addEventListener("message", (event) => {
 
   const { path, value } = data;
 
-  // Split "basicShape#1.rotation" -> layerId="basicShape#1", attrPath="rotation"
   const firstDot = path.indexOf(".");
   if (firstDot === -1) {
-    console.warn("[CWP] Invalid path (no dot):", path);
+    console.warn("[CWP] Invalid path:", path);
     return;
   }
 
@@ -97,11 +96,12 @@ window.addEventListener("message", (event) => {
   console.log("[CWP] setAttribute", layerId, attrPath, value);
 
   try {
-    app.setAttribute(layerId, attrPath, String(value));
+    app.setAttribute(layerId, attrPath, value);
   } catch (err) {
     console.error("[CWP] setAttribute failed", err);
   }
 });
+
 
         /* 5) Surface creation with aspect-ratio locking */
         let surface;
