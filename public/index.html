@@ -69,10 +69,11 @@
         log("Creating app");
         const app = Module.Cavalry.MakeWithPath("scene.cv");
 
-console.log(
-  app.getControlCentreAttributes(app.getActiveComp())
-);
-
+const attrs = app.getControlCentreAttributes(app.getActiveComp());
+console.log("[CWP] Control Centre attributes count:", attrs.size());
+for (let i = 0; i < attrs.size(); i++) {
+  console.log("[CWP] CC attr", i, ":", attrs.get(i));
+}
 
 window.addEventListener("message", (event) => {
   const data = event.data;
