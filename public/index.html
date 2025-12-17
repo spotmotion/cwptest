@@ -69,8 +69,8 @@
         log("Creating app");
         const app = Module.Cavalry.MakeWithPath("scene.cv");
 
-const attrs = app.getControlCentreAttributes(app.getActiveComp());
-console.log("[CWP] Control Centre attributes count:", attrs.size());
+const attrs = app.getControlCenterAttributes(app.getActiveComp());
+console.log("[CWP] Control Center attributes count:", attrs.size());
 for (let i = 0; i < attrs.size(); i++) {
   console.log("[CWP] CC attr", i, ":", attrs.get(i));
 }
@@ -82,12 +82,12 @@ window.addEventListener("message", (event) => {
   if (data.type === "set-attribute") {
     const { path, value } = data;
 
-    console.log("[CWP] set-control-centre", path, value);
+    console.log("[CWP] set-control-center", path, value);
 
     try {
-      app.setControlCentreAttribute(path, String(value));
+      app.setControlCenterAttribute(path, String(value));
     } catch (err) {
-      console.error("[CWP] Failed to set Control Centre attribute", err);
+      console.error("[CWP] Failed to set Control Center attribute", err);
     }
   }
 });
