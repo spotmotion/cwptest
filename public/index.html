@@ -82,16 +82,15 @@ window.addEventListener("message", (event) => {
   if (data.type === "set-attribute") {
     const { path, value } = data;
 
-    console.log("[CWP] set-attribute", path, value);
+    console.log("[CWP] set-control-centre", path, value);
 
     try {
-      app.setAttribute(path, value);
+      app.setControlCentreAttribute(path, String(value));
     } catch (err) {
-      console.error("[CWP] Failed to set attribute", err);
+      console.error("[CWP] Failed to set Control Centre attribute", err);
     }
   }
 });
-
 
         /* 5) Surface creation with aspect-ratio locking */
         let surface;
