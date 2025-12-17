@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavalry Text Editing Demo</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <a href="../" class="back-button">← Back to Demos</a>
+    
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        Loading Cavalry Player...
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Text Editing Demo</h1>
+            <p class="subtitle">Edit text content and colors</p>
+        </div>
+        
+        <div class="demo-layout">
+            <div class="viewport-section">
+                <div class="player-container">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+            
+            <div class="controls-section">
+                <div id="status">Loading scene...</div>
+
+                <div class="control-group">
+                    <label>Playback</label>
+                    <button id="playButton" disabled>Play</button>
+                    <button id="restartButton" disabled>Restart</button>
+                </div>
+                
+                <div class="control-group">
+                    <label>Edit Text</label>
+                    <textarea id="textInput" rows="3" placeholder="Enter your text here..." disabled></textarea>
+                </div>
+                
+                <div class="control-group">
+                    <label>Text Color</label>
+                    <div class="color-group">
+                        <input type="color" id="colorPicker" value="#ffffff" disabled>
+                        <input type="text" id="colorHex" value="#ffffff" placeholder="#ffffff" disabled>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label>Current Frame</label>
+                    <input type="range" id="frameSlider" min="0" max="100" value="0" disabled>
+                    <div id="frameDisplay">Frame: 0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-section">
+            <h3>About this Demo</h3>
+            <p>This demo showcases using a Browser UI to edit a Cavalry Scene. You can modify both the text content and color Attributes of the Text Shape.</p>
+        </div>
+    </div>
+    
+    <script src="app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/ianwaters/Dev/Cavalry/src/CyEngine/src/**)",
+      "Read(//Users/ianwaters/Dev/cavalry-docs/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

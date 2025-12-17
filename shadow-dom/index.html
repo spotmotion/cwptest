@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavalry Shadow DOM Demo</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        .shadow-player-wrapper {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        cavalry-shadow-player {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .inspector-info {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .inspector-info strong {
+            color: var(--text-primary);
+        }
+
+        .inspector-info code {
+            background: var(--bg-base);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: var(--brand-purple);
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-button">← Back to Demos</a>
+
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        Loading Cavalry Player...
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Shadow DOM Demo</h1>
+            <p class="subtitle">Cavalry player encapsulated in Web Components</p>
+        </div>
+
+        <div class="demo-layout">
+            <div class="viewport-section">
+                <div class="player-container">
+                    <div class="shadow-player-wrapper">
+                        <cavalry-shadow-player id="shadowPlayer"></cavalry-shadow-player>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div id="status">Loading scene...</div>
+
+                <div class="control-group">
+                    <label>Inspector View</label>
+                    <div class="inspector-info">
+                        <strong>Element structure:</strong><br>
+                        <code>&lt;cavalry-shadow-player&gt;</code><br>
+                        &nbsp;&nbsp;<code>#shadow-root (open)</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;canvas&gt;&lt;/canvas&gt;</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h3>About this Demo</h3>
+            <p>This demo showcases the Cavalry player running entirely within a Shadow DOM, demonstrating complete encapsulation.</p>
+            <p>The canvas element is hidden inside the shadow root, and styles are completely isolated from the main document. This is perfect for widget/component-based embedding.</p>
+        </div>
+    </div>
+
+    <script src="../auto-asset-loader.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

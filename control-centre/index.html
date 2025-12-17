@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavalry Control Centre Demo</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        .dynamic-controls {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .dynamic-controls .control-group {
+            margin-bottom: 16px;
+            padding: 12px;
+            background: var(--bg-base);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+
+        .dynamic-controls .control-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .control-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .control-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .control-input:focus {
+            outline: none;
+            border-color: var(--brand-purple);
+            box-shadow: 0 0 0 3px rgba(100, 55, 255, 0.15);
+        }
+
+        .control-input[type="range"] {
+            -webkit-appearance: none;
+            height: 6px;
+            background: var(--bg-elevated);
+            border-radius: 3px;
+            padding: 0;
+        }
+
+        .control-input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: var(--text-primary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .control-input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+            transform: scale(1.2);
+            accent-color: var(--brand-purple);
+        }
+
+        .double2-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .double2-controls .control-input {
+            flex: 1;
+        }
+
+        .color-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .color-picker {
+            width: 44px !important;
+            height: 38px;
+            border: 1px solid var(--border) !important;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            background: var(--bg-base) !important;
+            padding: 2px !important;
+        }
+
+        .color-picker::-webkit-color-swatch-wrapper {
+            padding: 2px;
+        }
+
+        .color-picker::-webkit-color-swatch {
+            border: none;
+            border-radius: 4px;
+        }
+
+        .hex-input {
+            flex: 1;
+            font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+            text-transform: uppercase;
+        }
+
+        .control-info {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .no-controls-message {
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+            padding: 32px 16px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-button">← Back to Demos</a>
+
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        Loading Cavalry Player...
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Control Centre Demo</h1>
+            <p class="subtitle">Dynamic UI generation based on Control Centre Attributes</p>
+        </div>
+
+        <div class="demo-layout">
+            <div class="viewport-section">
+                <div class="player-container">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div id="status">Loading scene...</div>
+
+                <div class="control-group">
+                    <label>Load Scene File</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="sceneInput" class="file-input" accept=".cv">
+                        <div class="file-input-button">Choose .cv File</div>
+                    </div>
+                    <div id="selectedSceneInfo" class="selected-file-info" style="display: none;"></div>
+                </div>
+
+                <div class="control-group">
+                    <label>Playback</label>
+                    <button id="playButton" disabled>Play</button>
+                </div>
+
+                <div class="control-group">
+                    <label>Control Centre Attributes</label>
+                    <div id="dynamicControls" class="dynamic-controls">
+                        <div class="no-controls-message">
+                            Loading Control Centre Attributes...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h3>About this Demo</h3>
+            <p>This demo showcases dynamic UI generation based on a Scene's Control Centre Attributes.</p>
+            <p>Supported attribute types: int, bool, string, double, double2, Color</p>
+        </div>
+    </div>
+
+    <script src="../auto-asset-loader.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

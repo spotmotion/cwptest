@@ -1,0 +1,547 @@
+{
+ "activeComp": "compNode#2",
+ "connections": [
+  { "from": "keyframe#4.id", "to": "animationCurve#1.keyframes.1" },
+  { "from": "keyframe#3.id", "to": "animationCurve#1.keyframes.0" },
+  { "from": "compNode#2.outActiveAnimationLayer", "to": "animationCurve#1.activeAnimationLayer" },
+  { "from": "compNode#2.time", "to": "animationCurve#1.time" },
+  { "from": "keyframe#2.id", "to": "visibilityCurve#1.keyframes.1" },
+  { "from": "keyframe#1.id", "to": "visibilityCurve#1.keyframes.0" },
+  { "from": "compNode#2.outActiveAnimationLayer", "to": "visibilityCurve#1.activeAnimationLayer" },
+  { "from": "compNode#2.time", "to": "visibilityCurve#1.time" },
+  { "from": "strokeMaterial#1.id", "to": "editableShape#1.stroke" },
+  { "from": "pixelateFilter#1.id", "to": "editableShape#1.filters.0" },
+  { "from": "visibilityCurve#1.out", "to": "editableShape#1.on" },
+  { "from": "animationCurve#1.out", "to": "strokeMaterial#1.trimEnd" }
+ ],
+ "controlCenter": {
+  "compNode#2": {
+   "attributes": [
+    { "path": "pixelateFilter#1.size" },
+    { "path": "pixelateFilter#1.outline" },
+    { "path": "pixelateFilter#1.borderColor" }
+   ],
+   "footerScript": "",
+   "headerScript": ""
+  }
+ },
+ "dependencyGraph": {
+  "tabs": [
+   { "compId": "compNode#2", "name": "", "positions": [] },
+   { "compId": "compNode#1", "name": "", "positions": [] }
+  ]
+ },
+ "labelColors": "Pastel",
+ "nodeMeta": [
+  {
+   "children": [ "keyframe#4", "keyframe#3" ],
+   "nodeId": "animationCurve#1"
+  },
+  {
+   "children": [ "keyframe#2", "keyframe#1" ],
+   "nodeId": "visibilityCurve#1"
+  },
+  {
+   "children": [ "editableShape#1", "pixelateFilter#1" ],
+   "nodeId": "compNode#2"
+  },
+  {
+   "children": [ "hiddenFolder#1" ],
+   "nodeId": "editableShape#1"
+  },
+  {
+   "children": [ "compNode#2", "compNode#1" ],
+   "nodeId": "asset#1"
+  },
+  {
+   "children": [ "motionBlurFilter#1", "strokeMaterial#1", "colorMaterial#1", "visibilityCurve#1" ],
+   "nodeId": "hiddenFolder#1"
+  },
+  {
+   "children": [ "colorArray#1" ],
+   "nodeId": "paletteContainer#1"
+  },
+  {
+   "children": [ "animationCurve#1" ],
+   "nodeId": "strokeMaterial#1"
+  }
+ ],
+ "nodes": [
+  {
+   "attributes": {
+    "animationLayers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 54.0, "varType": "double" }
+   },
+   "nodeId": "animationCurve#1",
+   "nodeType": "animationCurve"
+  },
+  {
+   "attributes": {
+    "backgroundColor": {
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+     "varType": "color"
+    },
+    "colorId": { "value": 3, "varType": "int" },
+    "niceName": { "value": "Composition 1", "varType": "string" },
+    "uuid": { "value": "041e0067-4e35-423f-b87a-cf4c48897d1c", "varType": "string" }
+   },
+   "nodeId": "compNode#1",
+   "nodeType": "compNode"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 54.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#1",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "backgroundColor": {
+     "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+     "varType": "color"
+    },
+    "colorId": { "value": 3, "varType": "int" },
+    "inTime": { "value": 54.0, "varType": "double" },
+    "niceName": { "value": "Gradient along a Path", "varType": "string" },
+    "resolution": {
+     "value": { "x": 1080, "y": 1080 },
+     "varType": "int2"
+    },
+    "uuid": { "value": "e920e5a4-904a-43d3-9728-8ab6f55fe439", "varType": "string" }
+   },
+   "nodeId": "compNode#2",
+   "nodeType": "compNode"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 2, "varType": "int" },
+    "filters": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "inputPath": {
+     "value": {
+      "contours": [
+       {
+        "closed": false,
+        "points": [
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -506.1622314453125, "y": -80.98396301269531 },
+           { "x": -419.27703857421875, "y": -30.557098388671875 },
+           { "x": -506.1622314453125, "y": -80.98396301269531 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -314.4997253417969, "y": 68.72606658935547 },
+           { "x": -299.02508544921875, "y": 221.90399169921875 },
+           { "x": -304.44696044921875, "y": 168.2347869873047 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -354.4740905761719, "y": 225.88677978515625 },
+           { "x": -387.6436462402344, "y": 134.2476043701172 },
+           { "x": -370.4349060058594, "y": 181.79104614257813 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -411.8702087402344, "y": -99.88107299804688 },
+           { "x": -411.8702087402344, "y": -99.88107299804688 },
+           { "x": -411.8702087402344, "y": -99.88107299804688 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -401.577392578125, "y": -7.066774845123291 },
+           { "x": -344.868408203125, "y": 58.36665725708008 },
+           { "x": -373.5205078125, "y": 25.30654525756836 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -293.7492370605469, "y": 70.39032745361328 },
+           { "x": -283.15924072265625, "y": -17.366676330566406 },
+           { "x": -287.5642395019531, "y": 19.13532257080078 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -316.24688720703125, "y": -72.53128814697266 },
+           { "x": -238.63528442382813, "y": -110.90110778808594 },
+           { "x": -277.8665771484375, "y": -91.50584411621094 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -134.6061248779297, "y": -72.11058044433594 },
+           { "x": -85.04669189453125, "y": 48.03350067138672 },
+           { "x": -105.51322937011719, "y": -1.5823440551757813 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -140.19386291503906, "y": 83.44873046875 },
+           { "x": -200.72634887695313, "y": 9.878501892089844 },
+           { "x": -172.07424926757813, "y": 44.70181655883789 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -199.9685821533203, "y": -54.94837951660156 },
+           { "x": -126.36619567871094, "y": -111.6715316772461 },
+           { "x": -168.54783630371094, "y": -79.16340637207031 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -66.55744934082031, "y": -101.53094482421875 },
+           { "x": 21.149995803833008, "y": -21.3413143157959 },
+           { "x": -20.879348754882813, "y": -59.76812744140625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 60.344970703125, "y": 44.415252685546875 },
+           { "x": 91.74225616455078, "y": 146.45655822753906 },
+           { "x": 77.24777221679688, "y": 99.34942626953125 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 94.15060424804688, "y": 202.45663452148438 },
+           { "x": 41.5657844543457, "y": 224.3669891357422 },
+           { "x": 73.86721801757813, "y": 210.90805053710938 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 10.428215026855469, "y": 170.5807342529297 },
+           { "x": -19.211273193359375, "y": -0.6338729858398438 },
+           { "x": -2.195465087890625, "y": 97.65914916992188 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": -18.975830078125, "y": -93.70118713378906 },
+           { "x": 119.04349517822266, "y": -104.27249145507813 },
+           { "x": 53.58380126953125, "y": -99.25874328613281 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 213.95553588867188, "y": -4.774200439453125 },
+           { "x": 252.43136596679688, "y": 181.43408203125 },
+           { "x": 240.36001586914063, "y": 123.01336669921875 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 247.8646240234375, "y": 206.29153442382813 },
+           { "x": 200.63839721679688, "y": 221.04974365234375 },
+           { "x": 227.68289184570313, "y": 212.59832763671875 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 171.0076141357422, "y": 171.92617797851563 },
+           { "x": 143.16876220703125, "y": 21.59644317626953 },
+           { "x": 160.07159423828125, "y": 112.87167358398438 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 137.4217071533203, "y": -87.03028106689453 },
+           { "x": 251.15838623046875, "y": -105.02660369873047 },
+           { "x": 199.70816040039063, "y": -96.8857421875 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 284.57086181640625, "y": -66.9503173828125 },
+           { "x": 318.8296813964844, "y": 14.743896484375 },
+           { "x": 299.3507080078125, "y": -31.706024169921875 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 324.6012878417969, "y": 50.56640625 },
+           { "x": 419.9706726074219, "y": 64.19058227539063 },
+           { "x": 378.0158996582031, "y": 58.197052001953125 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 439.99029541015625, "y": 21.05517578125 },
+           { "x": 437.5360107421875, "y": -41.01948547363281 },
+           { "x": 438.123046875, "y": -13.899490356445313 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 422.5009765625, "y": -96.57159423828125 },
+           { "x": 321.82647705078125, "y": -98.38412475585938 },
+           { "x": 367.13116455078125, "y": -97.56846618652344 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 303.71435546875, "y": -54.50273895263672 },
+           { "x": 324.43133544921875, "y": 59.02820587158203 },
+           { "x": 310.5067138671875, "y": -17.280044555664063 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": true,
+          "points": [
+           { "x": 380.27569580078125, "y": 74.33177947998047 },
+           { "x": 456.23553466796875, "y": 29.50305938720703 },
+           { "x": 431.829345703125, "y": 43.906700134277344 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 489.64556884765625, "y": 41.714820861816406 },
+           { "x": 505.734375, "y": 64.69863891601563 },
+           { "x": 505.734375, "y": 64.69863891601563 }
+          ],
+          "weightLocked": false
+         }
+        ]
+       }
+      ],
+      "fillType": 0,
+      "version": 1.0
+     },
+     "varType": "editablePath2"
+    },
+    "niceName": { "value": "Hello", "varType": "string" },
+    "uuid": { "value": "4986df3c-adb4-49f9-85ef-9fface27ca60", "varType": "string" }
+   },
+   "nodeId": "editableShape#1",
+   "nodeType": "editableShape"
+  },
+  {
+   "attributes": {
+    "uuid": { "value": "0d8d2f11-8178-4426-a081-45258c2b0f2b", "varType": "string" }
+   },
+   "nodeId": "asset#1",
+   "nodeType": "asset"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "66e3c1e9-0198-4e06-ba2d-13260d7d6c61", "varType": "string" }
+   },
+   "nodeId": "keyframe#1",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "d4d457c2-2092-42bf-9aab-61095536cd58", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#1",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "307ccc48-d004-4f06-9e8c-e3a56ce1d56b", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 250.0, "varType": "double" },
+    "uuid": { "value": "1581c87a-d6cb-405e-876d-88c73d173577", "varType": "string" }
+   },
+   "nodeId": "keyframe#2",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "Render Manager", "varType": "string" },
+    "uuid": { "value": "0cfa04b4-3ee2-41ac-a3f6-3a68cbf4c4fa", "varType": "string" }
+   },
+   "nodeId": "dynamicIndexManager#1",
+   "nodeType": "dynamicIndexManager"
+  },
+  { "nodeId": "paletteContainer#1", "nodeType": "paletteContainer" },
+  { "nodeId": "renderQueue#1", "nodeType": "renderQueue" },
+  {
+   "attributes": {
+    "niceName": { "value": "Default Scene Palette", "varType": "string" },
+    "uuid": { "value": "6358cb92-32f6-4395-9559-ee0bb3dda264", "varType": "string" }
+   },
+   "nodeId": "colorArray#1",
+   "nodeType": "colorArray"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 100.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 74.0, "varType": "double" },
+    "uuid": { "value": "c6c86db9-08f2-4183-990a-686928f2b903", "varType": "string" }
+   },
+   "nodeId": "keyframe#4",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "bc93c56d-32f3-46f6-a7f6-7a645cb55548", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#1",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "colorMode": { "value": 1, "varType": "enum" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 227, "g": 214, "r": 80 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 210, "r": 141 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "gradientMode": { "value": 2, "varType": "enum" },
+    "niceName": { "value": "Stroke", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "trim": { "value": true, "varType": "bool" },
+    "trimEnd": { "value": 85.39079620160702, "varType": "double" },
+    "uuid": { "value": "b884ec2d-7943-436d-a4fc-79b734251cd7", "varType": "string" },
+    "width": { "value": 32.0, "varType": "double" }
+   },
+   "nodeId": "strokeMaterial#1",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "easing": 3, "numValue": 0.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "38aee931-4ab3-4946-9f02-b09a4f011c11", "varType": "string" }
+   },
+   "nodeId": "keyframe#3",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Pixelate", "varType": "string" },
+    "outline": { "value": 0.9, "varType": "double" },
+    "size": { "value": 20, "varType": "int" },
+    "uuid": { "value": "6d96c0d5-e096-4504-8050-ca4fae26f6d2", "varType": "string" }
+   },
+   "nodeId": "pixelateFilter#1",
+   "nodeType": "pixelateFilter"
+  }
+ ],
+ "other": {
+  "viewport": { "backgroundMode": 0, "rulers": {} }
+ },
+ "referenceData": {},
+ "resourceType": "cavalry.scenefile",
+ "version": "1.0.55"
+}

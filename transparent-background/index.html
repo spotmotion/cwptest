@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavalry Player - Transparent Background</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #6437ff 0%, #4ffd7a 100%);
+            background-attachment: fixed;
+        }
+
+        body::before {
+            display: none;
+        }
+
+        .player-container {
+            background: transparent;
+            position: relative;
+            border: none;
+        }
+
+        .player-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        #canvas {
+            position: relative;
+            z-index: 1;
+            background: transparent;
+        }
+
+        .background-toggle {
+            margin-top: 16px;
+            padding: 12px;
+            background: var(--bg-elevated);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+
+        .background-toggle > label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .background-options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .bg-option {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.15s ease;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .bg-option:hover {
+            background: var(--bg-elevated);
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+        }
+
+        .bg-option.active {
+            border-color: var(--brand-purple);
+            background: rgba(100, 55, 255, 0.2);
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-button">← Back to Demos</a>
+
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        Loading Cavalry Player...
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Transparent Background</h1>
+            <p class="subtitle">Cavalry scenes with transparent backgrounds blend with the webpage</p>
+        </div>
+
+        <div class="demo-layout">
+            <div class="viewport-section">
+                <div class="player-container">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div id="status">Loading scene...</div>
+
+                <div class="control-group">
+                    <label>Playback</label>
+                    <button id="playButton" disabled>Play</button>
+                </div>
+
+                <div class="control-group">
+                    <label>Current Frame</label>
+                    <input type="range" id="frameSlider" min="0" max="100" value="0" disabled>
+                    <div id="frameDisplay">Frame: 0</div>
+                </div>
+
+                <div class="background-toggle">
+                    <label>Page Background</label>
+                    <div class="background-options">
+                        <div class="bg-option active" data-bg="gradient1">Purple/Green</div>
+                        <div class="bg-option" data-bg="gradient2">Blue</div>
+                        <div class="bg-option" data-bg="gradient3">Warm</div>
+                        <div class="bg-option" data-bg="solid1">Dark</div>
+                        <div class="bg-option" data-bg="solid2">Light</div>
+                        <div class="bg-option" data-bg="animated">Animated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h3>About this Demo</h3>
+            <p>This demo showcases Cavalry's ability to render scenes with transparent backgrounds. The animation seamlessly blends with whatever background is behind it.</p>
+            <p>The checkered pattern behind the canvas helps visualise the transparent areas. Try changing the page background using the options above.</p>
+        </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>

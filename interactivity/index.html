@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavalry Interactivity Demo</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        #canvas {
+            cursor: crosshair;
+        }
+
+        #canvas:active {
+            cursor: grabbing;
+        }
+
+        .coordinate-display {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .coordinate-display strong {
+            color: var(--text-primary);
+        }
+
+        .coordinate-display div {
+            margin-bottom: 4px;
+        }
+
+        .coordinate-display div:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-button">← Back to Demos</a>
+
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        Loading Cavalry Player...
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Interactivity Demo</h1>
+            <p class="subtitle">Click and drag to control the Falloff position</p>
+        </div>
+
+        <div class="demo-layout">
+            <div class="viewport-section">
+                <div class="player-container">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div id="status">Loading scene...</div>
+
+                <div class="control-group">
+                    <label>Playback</label>
+                    <button id="playButton" disabled>Play</button>
+                </div>
+
+                <div class="control-group">
+                    <label>Mouse Coordinates</label>
+                    <div class="coordinate-display">
+                        <div><strong>Canvas:</strong> <span id="canvasCoords">0, 0</span></div>
+                        <div><strong>Cavalry:</strong> <span id="cavalryCoords">0, 0</span></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Falloff Position</label>
+                    <div class="coordinate-display">
+                        <div>X: <span id="falloffX">0</span></div>
+                        <div>Y: <span id="falloffY">0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h3>About this Demo</h3>
+            <p>This demo showcases interactive control of a Cavalry Scene through mouse input. Click and drag on the canvas to move the Falloff position.</p>
+            <p>The JavaScript app converts browser canvas coordinates to Cavalry's Cartesian coordinate system and then updates the falloff position attribute.</p>
+        </div>
+    </div>
+
+    <script src="../auto-asset-loader.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

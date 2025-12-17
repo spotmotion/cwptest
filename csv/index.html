@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavalry CSV Demo</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <a href="../" class="back-button">← Back to Demos</a>
+
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        Loading Cavalry Player...
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>CSV Demo</h1>
+            <p class="subtitle">Load and visualise CSV data in your animations</p>
+        </div>
+
+        <div class="demo-layout">
+            <div class="viewport-section">
+                <div class="player-container">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div id="status">Loading scene...</div>
+                <div class="control-group">
+                    <label>Playback</label>
+                    <button id="playButton" disabled>Play</button>
+                </div>
+
+                <div class="control-group">
+                    <label>Example CSV</label>
+                    <button id="downloadCSV">Download Example CSV</button>
+                </div>
+
+                <div class="control-group">
+                    <label>Replace CSV Asset</label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="csvInput" class="file-input" accept=".csv" disabled>
+                        <div class="file-input-button">Choose CSV File</div>
+                    </div>
+                    <div id="selectedCSVInfo" class="selected-file-info" style="display: none;"></div>
+                </div>
+
+                <div class="control-group">
+                    <label>Current Frame</label>
+                    <input type="range" id="frameSlider" min="0" max="100" value="0" disabled>
+                    <div id="frameDisplay">Frame: 0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h3>About this Demo</h3>
+            <p>This demo showcases loading CSV data to drive an animation. The CSV asset is automatically loaded when the scene starts.</p>
+            <p>You can download, edit and replace the example CSV.</p>
+        </div>
+    </div>
+
+    <script src="../auto-asset-loader.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

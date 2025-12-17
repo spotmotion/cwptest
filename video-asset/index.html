@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavalry Video Asset Demo</title>
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <a href="../" class="back-button">← Back to Demos</a>
+
+    <div id="loading">
+        <div class="loading-spinner"></div>
+        Loading Cavalry Player…
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Video Asset Demo</h1>
+            <p class="subtitle">Stream frames from WebCodecs straight into Cavalry</p>
+        </div>
+
+        <div class="demo-layout">
+            <div class="viewport-section">
+                <div class="player-container">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div id="status">Loading scene…</div>
+
+                <div class="control-group">
+                    <label>Playback</label>
+                    <button id="playButton" disabled>Play</button>
+                    <div class="step-controls">
+                        <button id="prevFrameButton" disabled>◀︎ Prev</button>
+                        <button id="nextFrameButton" disabled>Next ▶︎</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Scrub Frame</label>
+                    <input type="range" id="frameSlider" min="0" max="100" value="0" disabled>
+                    <div id="frameDisplay">Frame: 0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h3>About this Demo</h3>
+            <p>This demo shows how you can stream video frames using the WebCodecs API into Cavalry's web player. It implements a pull-based system where Cavalry requests frames as needed, and the browser decodes and delivers them on demand.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li><strong>Chunk-based Prefetching:</strong> Frames are decoded in 10-frame chunks as playback progresses, keeping memory usage low</li>
+                <li><strong>Arbitrary Frame Seeking:</strong> Click anywhere on the timeline - the system finds the nearest keyframe, decodes from there, and displays your requested frame instantly</li>
+                <li><strong>Seamless Looping:</strong> Video loops automatically when reaching the end</li>
+                <li><strong>Browser Adaptation:</strong> Automatically detects the fastest frame copy method for your browser (direct copy in Chrome/Edge, canvas fallback in Safari)</li>
+                <li><strong>Memory Management:</strong> Old frames are automatically evicted from the cache to prevent memory exhaustion on long videos</li>
+            </ul>
+            <br>
+             <p>Please see <strong></strong>webcodec-helper.js</strong> for more details.</p>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
