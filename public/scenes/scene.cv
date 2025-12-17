@@ -16,6 +16,15 @@
   { "from": "rectangleShape#1.id", "to": "basicShape#1.generator" },
   { "from": "visibilityCurve#1.out", "to": "basicShape#1.on" }
  ],
+ "controlCenter": {
+  "compNode#1": {
+   "attributes": [
+    { "path": "basicShape#1.rotation" }
+   ],
+   "footerScript": "",
+   "headerScript": ""
+  }
+ },
  "labelColors": "Pastel",
  "nodeMeta": [
   {
@@ -148,7 +157,7 @@
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "materialColor": {
-     "value": { "a": 255, "b": 173, "g": 65, "r": 166 },
+     "value": { "a": 255, "b": 50, "g": 206, "r": 227 },
      "varType": "color"
     },
     "niceName": { "value": "Fill", "varType": "string" },
