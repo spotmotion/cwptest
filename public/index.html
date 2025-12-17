@@ -69,6 +69,11 @@
         log("Creating app");
         const app = Module.Cavalry.MakeWithPath("scene.cv");
 
+console.log(
+  app.getControlCentreAttributes(app.getActiveComp())
+);
+
+
 window.addEventListener("message", (event) => {
   const data = event.data;
   if (!data || typeof data !== "object") return;
