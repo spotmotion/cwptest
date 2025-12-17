@@ -69,8 +69,10 @@
         log("Creating app");
         const app = Module.Cavalry.MakeWithPath("scene.cv");
 
-const attrs = app.getControlCenterAttributes(app.getActiveComp());
-console.log("[CWP] Control Center attributes count:", attrs.size());
+console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(app)).filter(n => n.toLowerCase().includes("centre") || n.toLowerCase().includes("control")));
+
+const attrs = app.getControlCentreAttributes(app.getActiveComp());
+console.log("[CWP] Control Centre attributes count:", attrs.size());
 for (let i = 0; i < attrs.size(); i++) {
   console.log("[CWP] CC attr", i, ":", attrs.get(i));
 }
@@ -78,17 +80,26 @@ for (let i = 0; i < attrs.size(); i++) {
 window.addEventListener("message", (event) => {
   const data = event.data;
   if (!data || typeof data !== "object") return;
+  if (data.type !== "set-attribute") return;
 
-  if (data.type === "set-attribute") {
-    const { path, value } = data;
+  const { path, value } = data;
 
-    console.log("[CWP] set-control-center", path, value);
+  // Split "basicShape#1.rotation" -> layerId="basicShape#1", attrPath="rotation"
+  const firstDot = path.indexOf(".");
+  if (firstDot === -1) {
+    console.warn("[CWP] Invalid path (no dot):", path);
+    return;
+  }
 
-    try {
-      app.setControlCenterAttribute(path, String(value));
-    } catch (err) {
-      console.error("[CWP] Failed to set Control Center attribute", err);
-    }
+  const layerId = path.slice(0, firstDot);
+  const attrPath = path.slice(firstDot + 1);
+
+  console.log("[CWP] setAttribute", layerId, attrPath, value);
+
+  try {
+    app.setAttribute(layerId, attrPath, String(value));
+  } catch (err) {
+    console.error("[CWP] setAttribute failed", err);
   }
 });
 
