@@ -69,6 +69,24 @@
         log("Creating app");
         const app = Module.Cavalry.MakeWithPath("scene.cv");
 
+window.addEventListener("message", (event) => {
+  const data = event.data;
+  if (!data || typeof data !== "object") return;
+
+  if (data.type === "set-attribute") {
+    const { path, value } = data;
+
+    console.log("[CWP] set-attribute", path, value);
+
+    try {
+      app.setAttribute(path, value);
+    } catch (err) {
+      console.error("[CWP] Failed to set attribute", err);
+    }
+  }
+});
+
+
         /* 5) Surface creation with aspect-ratio locking */
         let surface;
 
