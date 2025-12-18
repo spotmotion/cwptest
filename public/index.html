@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Cavalry Web Player – Aspect Locked</title>
+    <title>Cavalry Web Player</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
@@ -11,14 +11,14 @@
         padding: 0;
         width: 100%;
         height: 100%;
+        background: #000;
+        overflow: hidden;
       }
 
       body {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #000;
-        overflow: hidden;
       }
 
       canvas {
@@ -31,179 +31,126 @@
     <canvas id="canvas"></canvas>
 
     <script type="module">
-      /* -------------------------------------------------------------
-         Cavalry Web Player – fixed aspect ratio renderer
-         ------------------------------------------------------------- */
+      const log = (...args) => console.log("[CWP]", ...args)
 
-      const log = (...args) => console.log("[CWP]", ...args);
+      const canvas = document.getElementById("canvas")
 
-      const canvas = document.getElementById("canvas");
+      // 📐 Live scene resolution (driven externally)
+      let SCENE_WIDTH = 1080
+      let SCENE_HEIGHT = 1920
 
-      // Scene fallback size
-    let SCENE_WIDTH = 1920;
-    let SCENE_HEIGHT = 1080;
+      let Module
+      let app
+      let surface
 
+      function createOrResizeSurface() {
+        if (!Module) return
+
+        const winW = window.innerWidth
+        const winH = window.innerHeight
+
+        const sceneAspect = SCENE_WIDTH / SCENE_HEIGHT
+        const windowAspect = winW / winH
+
+        let renderW, renderH
+
+        if (windowAspect > sceneAspect) {
+          renderH = winH
+          renderW = Math.round(winH * sceneAspect)
+        } else {
+          renderW = winW
+          renderH = Math.round(winW / sceneAspect)
+        }
+
+        canvas.width = renderW
+        canvas.height = renderH
+
+        surface = Module.makeWebGLSurfaceFromElement(
+          canvas,
+          renderW,
+          renderH
+        )
+      }
 
       try {
         /* 1) Import the Web Player module */
-        log("Importing CavalryWasm.js");
-        const CavalryModule = await import("/CavalryWasm.js");
+        log("Importing CavalryWasm.js")
+        const CavalryModule = await import("/CavalryWasm.js")
 
         /* 2) Initialise WASM */
-        log("Initialising module");
-        const Module = await CavalryModule.default({
+        log("Initialising module")
+        Module = await CavalryModule.default({
           canvas,
           locateFile: (path) => `/wasm-lib/${path}`,
-        });
+        })
 
         /* 3) Load scene into WASM filesystem */
-        log("Loading scene.cv");
-        const res = await fetch("/scenes/scene.cv");
-        if (!res.ok) {
-          throw new Error(`Failed to load scene.cv (${res.status})`);
-        }
+        log("Loading scene.cv")
+        const res = await fetch("/scenes/scene.cv")
+        if (!res.ok) throw new Error("Failed to load scene.cv")
 
-        const sceneBytes = new Uint8Array(await res.arrayBuffer());
-        Module.FS.writeFile("scene.cv", sceneBytes);
+        const sceneBytes = new Uint8Array(await res.arrayBuffer())
+        Module.FS.writeFile("scene.cv", sceneBytes)
 
         /* 4) Create Cavalry app */
-        log("Creating app");
-        const app = Module.Cavalry.MakeWithPath("scene.cv");
+        log("Creating app")
+        app = Module.Cavalry.MakeWithPath("scene.cv")
 
-/// ✅ Read initial comp resolution before first render
-try {
-  const attrs = app.getControlCentreAttributes(app.getActiveComp());
+        /* 5) Listen for external control messages */
+        window.addEventListener("message", (event) => {
+          const data = event.data
+          if (!data || typeof data !== "object") return
+          if (data.type !== "set-attribute") return
 
-  for (let i = 0; i < attrs.size(); i++) {
-    const attr = attrs.get(i);
+          const { path, value } = data
 
-    if (attr.path === "compNode#1.resolution") {
-      console.log("[CWP] Raw comp resolution value:", attr.value);
+          try {
+            app.setAttribute(
+              path.slice(0, path.indexOf(".")),
+              path.slice(path.indexOf(".") + 1),
+              value
+            )
 
-      if (Array.isArray(attr.value)) {
-        const [w, h] = attr.value;
-
-        if (w > 0 && h > 0) {
-          SCENE_WIDTH = w;
-          SCENE_HEIGHT = h;
-          log("Initial comp resolution:", w, "x", h);
-        }
-      }
-      break;
-    }
-  }
-} catch (err) {
-  console.warn(
-    "[CWP] Could not read initial comp resolution, using fallback",
-    err
-  );
-}
-
-    console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(app)).filter(n => n.toLowerCase().includes("centre") || n.toLowerCase().includes("control")));
-
-    const attrs = app.getControlCentreAttributes(app.getActiveComp());
-    console.log("[CWP] Control Centre attributes count:", attrs.size());
-    for (let i = 0; i < attrs.size(); i++) {
-     console.log("[CWP] CC attr", i, ":", attrs.get(i));
-    }
-
-    window.addEventListener("message", (event) => {
-  const data = event.data;
-  if (!data || typeof data !== "object") return;
-  if (data.type !== "set-attribute") return;
-
-  const { path, value } = data;
-
-  const firstDot = path.indexOf(".");
-  if (firstDot === -1) {
-    console.warn("[CWP] Invalid path:", path);
-    return;
-  }
-
-  const layerId = path.slice(0, firstDot);
-  const attrPath = path.slice(firstDot + 1);
-
-  console.log("[CWP] setAttribute", layerId, attrPath, value);
-
-  try {
-    // 🔁 Apply attribute in Cavalry
-    app.setAttribute(layerId, attrPath, value);
-
-    // 📐 If this is the comp resolution, update surface
-    if (path === "compNode#1.resolution") {
-      const [w, h] = value;
-
-      if (w > 0 && h > 0) {
-        SCENE_WIDTH = w;
-        SCENE_HEIGHT = h;
-        log("Updated comp resolution:", w, "x", h);
-        createOrResizeSurface();
-      }
-    }
-  } catch (err) {
-    console.error("[CWP] setAttribute failed", err);
-  }
-});
-
-
-
-        /* 5) Surface creation with aspect-ratio locking */
-        let surface;
-
-        function createOrResizeSurface() {
-          const winW = window.innerWidth;
-          const winH = window.innerHeight;
-
-          const sceneAspect = SCENE_WIDTH / SCENE_HEIGHT;
-          const windowAspect = winW / winH;
-
-          let renderW, renderH;
-
-          if (windowAspect > sceneAspect) {
-            // Window wider than scene → pillarbox
-            renderH = winH;
-            renderW = Math.round(winH * sceneAspect);
-          } else {
-            // Window taller than scene → letterbox
-            renderW = winW;
-            renderH = Math.round(winW / sceneAspect);
+            // 📐 Resolution updates
+            if (path === "compNode#1.resolution") {
+              const [w, h] = value
+              if (w > 0 && h > 0) {
+                SCENE_WIDTH = w
+                SCENE_HEIGHT = h
+                log("Resolution updated:", w, "x", h)
+                createOrResizeSurface()
+              }
+            }
+          } catch (err) {
+            console.error("[CWP] setAttribute failed", err)
           }
+        })
 
-          canvas.width = renderW;
-          canvas.height = renderH;
+        /* 6) Initial surface + resize handling */
+        createOrResizeSurface()
+        window.addEventListener("resize", createOrResizeSurface)
 
-          surface = Module.makeWebGLSurfaceFromElement(
-            canvas,
-            renderW,
-            renderH
-          );
-        }
-
-        createOrResizeSurface();
-        window.addEventListener("resize", createOrResizeSurface);
-
-        /* 6) Start playback + render loop */
-
-        log("Starting playback");
-        app.play();
+        /* 7) Start playback + render loop */
+        log("Starting playback")
+        app.play()
 
         function tick(time) {
-          if (!app.isPlaying()) return;
-          app.tick(surface, time);
-          requestAnimationFrame(tick);
+          if (!app.isPlaying()) return
+          app.tick(surface, time)
+          requestAnimationFrame(tick)
         }
 
-        requestAnimationFrame(tick);
-
-        log("Running ✓");
+        requestAnimationFrame(tick)
+        log("Running ✓")
 
       } catch (err) {
-        console.error("[CWP] Fatal error", err);
+        console.error("[CWP] Fatal error", err)
         document.body.innerHTML = `
           <div style="padding:16px;font-family:system-ui;color:#c00">
             <strong>Cavalry Web Player failed to start.</strong><br/>
             Open DevTools → Console for details.
-          </div>`;
+          </div>
+        `
       }
     </script>
   </body>
