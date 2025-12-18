@@ -70,6 +70,26 @@
         log("Creating app");
         const app = Module.Cavalry.MakeWithPath("scene.cv");
 
+        // ✅ Read initial comp resolution before first render
+try {
+  const attrs = app.getControlCentreAttributes(app.getActiveComp());
+  for (let i = 0; i < attrs.size(); i++) {
+    const a = attrs.get(i);
+    if (a.path === "compNode#1.resolution" && Array.isArray(a.value)) {
+      const [w, h] = a.value;
+      if (w > 0 && h > 0) {
+        SCENE_WIDTH = w;
+        SCENE_HEIGHT = h;
+        log("Initial comp resolution:", w, "x", h);
+      }
+      break;
+    }
+  }
+} catch (err) {
+  console.warn("[CWP] Could not read initial comp resolution, using fallback", err);
+}
+
+
     console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(app)).filter(n => n.toLowerCase().includes("centre") || n.toLowerCase().includes("control")));
 
     const attrs = app.getControlCentreAttributes(app.getActiveComp());
