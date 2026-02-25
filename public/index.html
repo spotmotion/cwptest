@@ -106,16 +106,16 @@
         })
 
         /* 3) Load scene into WASM filesystem */
-        log("Loading scene.cv")
-        const res = await fetch("/scenes/scene.cv")
-        if (!res.ok) throw new Error("Failed to load scene.cv")
+        log("Loading bdf_socialtemplate.cv")
+        const res = await fetch("/scenes/bdf_socialtemplate.cv")
+        if (!res.ok) throw new Error("Failed to load bdf_socialtemplate.cv")
 
         const sceneBytes = new Uint8Array(await res.arrayBuffer())
-        Module.FS.writeFile("scene.cv", sceneBytes)
+        Module.FS.writeFile("bdf_socialtemplate.cv", sceneBytes)
 
         /* 4) Create Cavalry app */
         log("Creating app")
-        app = Module.Cavalry.MakeWithPath("scene.cv")
+        app = Module.Cavalry.MakeWithPath("bdf_socialtemplate.cv")
 
         /* 5) Listen for external control messages */
         window.addEventListener("message", (event) => {
