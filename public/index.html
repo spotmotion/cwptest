@@ -134,6 +134,12 @@
         log("Creating app")
         app = Module.Cavalry.MakeWithPath("bdf_socialtemplate.cv")
 
+        /* 4.5 Log font loading */
+        log("Fonts visible to app:", app.queryFonts())
+
+        // Use the exact family name you saw from Module.loadFont(...)
+        log("Peridot styles:", app.getFontStyles("Peridot PE Variable"))
+
         /* 5) Listen for external control messages */
         window.addEventListener("message", (event) => {
           const data = event.data
