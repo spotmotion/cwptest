@@ -115,20 +115,24 @@
           locateFile: (path) => `/wasm-lib/${path}`,
         })
 
-        /* 2.5 Load fonts (must happen before MakeWithPath) */
-       const peridotFile = await writeFile(Module, "/Peridot_PE_Variable_Regular.otf")
-       const haasFile = await writeFile(Module, "/NeueHaasGrotText-75Bold-Trial.otf")
+        /* 2.5 Set up font auto-loading BEFORE MakeWithPath */
+        window.addEventListener("cavalryAutoLoadAsset", async (event) => {
+          const { type, assetId, filename } = event.detail
+          if (type !== "font") return
 
-       log("Registering fonts")
-       const peridotFamily = Module.loadFont(peridotFile)
-       const haasFamily = Module.loadFont(haasFile)
+          log("Auto-loading font:", filename, assetId)
+          const response = await fetch("/" + filename)
+          if (!response.ok) throw new Error(`Failed to fetch font: ${filename}`)
+          const data = await response.arrayBuffer()
+          Module.FS.writeFile(filename, new Uint8Array(data))
+          app.replaceFontAsset(filename, assetId)
+          app.render(surface)
+          log("Font loaded:", filename)
+        })
 
-       log("Peridot registered as:", peridotFamily)
-       log("Neue Haas registered as:", haasFamily)
-
-        /* 3) Load scene into WASM filesystem */
-        log("Loading bdf_socialtemplate.cv")
+        /* 3) Load scene — this will fire cavalryAutoLoadAsset for each font */
         const sceneFile = await writeFile(Module, "/scenes/bdf_socialtemplate.cv")
+        app = Module.Cavalry.MakeWithPath(sceneFile)
 
         /* 4) Create Cavalry app */
         log("Creating app")
