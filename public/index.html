@@ -116,9 +116,18 @@
         })
 
         /* 2.5 Set up font auto-loading BEFORE MakeWithPath */
+        const loadedFonts = new Set()
+
         window.addEventListener("cavalryAutoLoadAsset", async (event) => {
           const { type, assetId, filename } = event.detail
           if (type !== "font") return
+
+          const key = `${assetId}:${filename}`
+          if (loadedFonts.has(key)) {
+            log("Skipping already-loaded font:", filename)
+            return
+          }
+          loadedFonts.add(key)
 
           log("Auto-loading font:", filename, assetId)
           const response = await fetch("/" + filename)
@@ -130,9 +139,9 @@
           log("Font loaded:", filename)
         })
 
-        /* 3) Load scene — this will fire cavalryAutoLoadAsset for each font */
+        /* 3) Load scene into WASM filesystem */
+        log("Loading bdf_socialtemplate.cv")
         const sceneFile = await writeFile(Module, "/scenes/bdf_socialtemplate.cv")
-        app = Module.Cavalry.MakeWithPath(sceneFile)
 
         /* 4) Create Cavalry app */
         log("Creating app")
