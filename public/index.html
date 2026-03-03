@@ -57,12 +57,18 @@
       let app
       let surface
 
-      // Fetch a URL and write it into the WASM virtual filesystem under `filename`
-      async function fetchToFS(url, filename) {
-        const r = await fetch(url)
-        if (!r.ok) throw new Error(`Failed to fetch ${url}: ${r.status} ${r.statusText}`)
-        const bytes = new Uint8Array(await r.arrayBuffer())
-        Module.FS.writeFile(filename, bytes)
+      // Utility: fetch a file and write it into WASM virtual FS
+      async function writeFile(module, path) {
+        const response = await fetch(path)
+        if (!response.ok) {
+          throw new Error(`Failed to fetch ${path}: ${response.status} ${response.statusText}`)
+        }
+
+        const filename = path.split("/").pop()
+        const asset = await response.arrayBuffer()
+
+        module.FS.writeFile(filename, new Uint8Array(asset))
+        return filename
       }
 
       function resizeViewportAndSurface() {
@@ -97,27 +103,6 @@
         surface = Module.makeWebGLSurfaceFromElement(canvas, renderW, renderH)
       }
 
-      // Debug helper: dump pendingAssets in a way that's easy to read in console
-      function dumpPendingAssets() {
-        const pa = Module?.pendingAssets
-        log("pendingAssets raw:", pa)
-
-        // Try to normalize into a plain JS array for easier viewing/copying
-        try {
-          if (pa && typeof pa.size === "function" && typeof pa.get === "function") {
-            const arr = []
-            for (let i = 0; i < pa.size(); i++) arr.push(pa.get(i))
-            log("pendingAssets (as array):", arr)
-            return arr
-          }
-        } catch (e) {
-          log("pendingAssets vector conversion failed:", e)
-        }
-
-        // If it's already an array or plain object, just return it
-        return pa
-      }
-
       try {
         /* 1) Import the Web Player module */
         log("Importing CavalryWasm.js")
@@ -130,31 +115,32 @@
           locateFile: (path) => `/wasm-lib/${path}`,
         })
 
+        /* 2.5 Load fonts (must happen before MakeWithPath) */
+        log("Loading fonts")
+
+        const peridotFile = await writeFile(Module, "/Peridot_PE_Variable_Regular.otf")
+        const haasFile = await writeFile(Module, "/NeueHaasGrotText-75Bold-Trial.otf")
+
+        log("Registering fonts")
+
+        const peridotFamily = Module.loadFont(peridotFile)
+        const haasFamily = Module.loadFont(haasFile)
+
+        log("Peridot registered as:", peridotFamily)
+        log("Neue Haas registered as:", haasFamily)
+
         /* 3) Load scene into WASM filesystem */
         log("Loading bdf_socialtemplate.cv")
-        const res = await fetch("/scenes/bdf_socialtemplate.cv")
-        if (!res.ok) throw new Error("Failed to load bdf_socialtemplate.cv")
-
-        const sceneBytes = new Uint8Array(await res.arrayBuffer())
-        Module.FS.writeFile("bdf_socialtemplate.cv", sceneBytes)
+        const sceneFile = await writeFile(Module, "/scenes/bdf_socialtemplate.cv")
 
         /* 4) Create Cavalry app */
         log("Creating app")
-        app = Module.Cavalry.MakeWithPath("bdf_socialtemplate.cv")
+        app = Module.Cavalry.MakeWithPath(sceneFile)
 
-        /* 4.25) Dump pending assets immediately */
-        dumpPendingAssets()
-
-        /* 4.5) Dump pending assets again shortly after (some builds populate async) */
-        setTimeout(() => {
-          log("pendingAssets after 250ms:")
-          dumpPendingAssets()
-        }, 250)
-
-        setTimeout(() => {
-          log("pendingAssets after 1000ms:")
-          dumpPendingAssets()
-        }, 1000)
+        /* Debugging */
+        log("pendingAssets:", Module.pendingAssets)
+        log("Fonts visible to app:", app.queryFonts())
+        log("Peridot styles:", app.getFontStyles("Peridot PE Variable"))
 
         /* 5) Listen for external control messages */
         window.addEventListener("message", (event) => {
