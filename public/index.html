@@ -116,15 +116,13 @@
         })
 
         /* 2.5 Load fonts (must happen before MakeWithPath) */
-        log("Loading fonts")
-
         const peridotFile = await writeFile(Module, "/Peridot_PE_Variable_Regular.otf")
         const haasFile = await writeFile(Module, "/NeueHaasGrotText-75Bold-Trial.otf")
 
         log("Registering fonts")
 
-        const peridotFamily = Module.loadFont(peridotFile)
-        const haasFamily = Module.loadFont(haasFile)
+        const peridotFamily = Module.loadFont(peridotFile, "asset#3")
+        const haasFamily = Module.loadFont(haasFile, "asset#2")
 
         log("Peridot registered as:", peridotFamily)
         log("Neue Haas registered as:", haasFamily)
