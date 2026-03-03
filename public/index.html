@@ -119,7 +119,8 @@
         const peridotFile = await writeFile(Module, "/Peridot_PE_Variable_Regular.otf")
         const haasFile = await writeFile(Module, "/NeueHaasGrotText-75Bold-Trial.otf")
 
-        log("Registering fonts")
+        log("peridotFile:", peridotFile)
+        log("haasFile:", haasFile)
 
         const peridotFamily = Module.loadFont(peridotFile, "asset#3")
         const haasFamily = Module.loadFont(haasFile, "asset#2")

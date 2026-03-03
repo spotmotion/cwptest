@@ -3705,7 +3705,6 @@
      "varType": "polyMesh"
     },
     "colorId": { "value": 2, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "margins": {
      "value": { "w": 180, "x": 45, "y": 0, "z": 45 },
      "varType": "int4"
@@ -4126,7 +4125,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "layoutTransform": {
      "value": [ 1.0, 0.0, 11.40673828125, 0.0, 1.0, -126.54302978515625, 0.0, 0.0, 1.0 ],
      "varType": "transform"
