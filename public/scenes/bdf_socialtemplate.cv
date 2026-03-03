@@ -8800,7 +8800,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Social_Post_Mockup", "varType": "string" },
     "uuid": { "value": "d0a6ef31-6de5-4456-98c3-ead3842c5d61", "varType": "string" }
    },
@@ -9065,6 +9064,7 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Talk Title", "varType": "string" },
     "uuid": { "value": "a095cf77-449f-49e4-b831-1b8922fb3b96", "varType": "string" }
    },
@@ -10788,6 +10788,7 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Top Bar", "varType": "string" },
     "position": {
      "value": { "x": 0.306427001953125, "y": 0.0, "z": 0.0 },
@@ -10816,6 +10817,7 @@
      ]
     },
     "fontSize": { "value": 58.0, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "horizontalAlignment": { "value": 2, "varType": "enum" },
     "letterSpacing": { "value": -0.6, "varType": "double" },
     "niceName": { "value": "Speaker", "varType": "string" },

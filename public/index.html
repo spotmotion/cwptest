@@ -105,6 +105,13 @@
           locateFile: (path) => `/wasm-lib/${path}`,
         })
 
+        /* 2.5 Load fonts */
+        await fetchToFS("/Peridot_PE_Variable_Regular.otf", "Peridot_PE_Variable_Regular.otf")
+        await fetchToFS("/NeueHaasGrotText-75Bold-Trial.otf", "NeueHaasGrotText-75Bold-Trial.otf")
+
+        Module.loadFont("Peridot_PE_Variable_Regular.otf")
+        Module.loadFont("NeueHaasGrotText-75Bold-Trial.otf")
+
         /* 3) Load scene into WASM filesystem */
         log("Loading bdf_socialtemplate.cv")
         const res = await fetch("/scenes/bdf_socialtemplate.cv")
