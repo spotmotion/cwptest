@@ -1183,7 +1183,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#16",
    "nodeType": "animationCurve"
@@ -1252,7 +1252,6 @@
     "colorId": { "value": 0, "varType": "int" },
     "first": { "value": 815.2314453125, "varType": "double" },
     "niceName": { "value": "Math", "varType": "string" },
-    "second": { "value": 0.9996394003058054, "varType": "double" },
     "uuid": { "value": "c7fa508a-dcd5-49e0-9438-994be39464d2", "varType": "string" }
    },
    "nodeId": "math#1",
@@ -1271,7 +1270,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#10",
    "nodeType": "animationCurve"
@@ -1289,7 +1288,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#9",
    "nodeType": "animationCurve"
@@ -1315,7 +1314,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#13",
    "nodeType": "animationCurve"
@@ -1334,7 +1333,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#14",
    "nodeType": "animationCurve"
@@ -1407,8 +1406,8 @@
     "array": {
      "list": [
       { "value": 1920.0, "varType": "double" },
-      { "value": 814.9374731026226, "varType": "double" },
-      { "value": 102.88235294117646, "varType": "double" }
+      { "value": 815.2314453125, "varType": "double" },
+      { "value": 105.0, "varType": "double" }
      ]
     },
     "colorId": { "value": 0, "varType": "int" },
@@ -1821,7 +1820,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#15",
    "nodeType": "animationCurve"
@@ -2799,7 +2798,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "length": { "value": 1002.180173956201, "varType": "double" },
+    "length": { "value": 999.7685546875, "varType": "double" },
     "niceName": { "value": "Line 3", "varType": "string" },
     "uuid": { "value": "d949e54e-3c6e-4c89-a195-5da123d66bd8", "varType": "string" }
    },
@@ -2838,7 +2837,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "length": { "value": 814.9374731026226, "varType": "double" },
+    "length": { "value": 815.2314453125, "varType": "double" },
     "niceName": { "value": "Line 2", "varType": "string" },
     "uuid": { "value": "d949e54e-3c6e-4c89-a195-5da123d66bd8", "varType": "string" }
    },
@@ -3572,7 +3571,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#4",
    "nodeType": "animationCurve"
@@ -3589,7 +3588,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#7",
    "nodeType": "animationCurve"
@@ -3606,7 +3605,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#5",
    "nodeType": "animationCurve"
@@ -3623,7 +3622,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#8",
    "nodeType": "animationCurve"
@@ -3640,7 +3639,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "animationCurve#6",
    "nodeType": "animationCurve"
@@ -4912,7 +4911,7 @@
     "colorId": { "value": 9, "varType": "int" },
     "indexMode": { "value": 1, "varType": "enum" },
     "niceName": { "value": "Shuffle String", "varType": "string" },
-    "randomSeed": { "value": 19, "varType": "int" },
+    "randomSeed": { "value": 40, "varType": "int" },
     "regex": { "value": ".", "varType": "string" },
     "uuid": { "value": "985a06dc-3333-4b85-a690-fca871b4b7c2", "varType": "string" }
    },
@@ -4927,7 +4926,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#305",
    "nodeType": "visibilityCurve"
@@ -4940,7 +4939,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#298",
    "nodeType": "visibilityCurve"
@@ -4953,7 +4952,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#297",
    "nodeType": "visibilityCurve"
@@ -4966,7 +4965,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#424",
    "nodeType": "visibilityCurve"
@@ -4979,7 +4978,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#291",
    "nodeType": "visibilityCurve"
@@ -4992,7 +4991,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#292",
    "nodeType": "visibilityCurve"
@@ -5005,7 +5004,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#421",
    "nodeType": "visibilityCurve"
@@ -5018,7 +5017,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#296",
    "nodeType": "visibilityCurve"
@@ -5031,7 +5030,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#425",
    "nodeType": "visibilityCurve"
@@ -5044,7 +5043,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#293",
    "nodeType": "visibilityCurve"
@@ -5057,7 +5056,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#418",
    "nodeType": "visibilityCurve"
@@ -5070,7 +5069,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#300",
    "nodeType": "visibilityCurve"
@@ -5083,7 +5082,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#284",
    "nodeType": "visibilityCurve"
@@ -5096,7 +5095,7 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 120, "varType": "int" },
-    "inTime": { "value": 15.0, "varType": "double" },
+    "inTime": { "value": 41.0, "varType": "double" },
     "niceName": { "value": "BDF_SocialPost", "varType": "string" },
     "playbackEnd": { "value": 61, "varType": "int" },
     "uuid": { "value": "cc0e72eb-1c9c-4414-bfdc-cad926cabbd3", "varType": "string" }
@@ -5112,7 +5111,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#302",
    "nodeType": "visibilityCurve"
@@ -5125,7 +5124,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#444",
    "nodeType": "visibilityCurve"
@@ -5138,7 +5137,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#417",
    "nodeType": "visibilityCurve"
@@ -5151,7 +5150,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#301",
    "nodeType": "visibilityCurve"
@@ -5164,7 +5163,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#290",
    "nodeType": "visibilityCurve"
@@ -5177,7 +5176,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 15.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#443",
    "nodeType": "visibilityCurve"
@@ -5190,7 +5189,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#428",
    "nodeType": "visibilityCurve"
@@ -5203,7 +5202,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#441",
    "nodeType": "visibilityCurve"
@@ -5216,7 +5215,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#435",
    "nodeType": "visibilityCurve"
@@ -5229,7 +5228,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#304",
    "nodeType": "visibilityCurve"
@@ -5242,7 +5241,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#294",
    "nodeType": "visibilityCurve"
@@ -5255,7 +5254,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#432",
    "nodeType": "visibilityCurve"
@@ -5268,7 +5267,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#289",
    "nodeType": "visibilityCurve"
@@ -5281,7 +5280,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#427",
    "nodeType": "visibilityCurve"
@@ -5294,7 +5293,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#442",
    "nodeType": "visibilityCurve"
@@ -5307,7 +5306,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#288",
    "nodeType": "visibilityCurve"
@@ -5320,7 +5319,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#307",
    "nodeType": "visibilityCurve"
@@ -5333,7 +5332,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#306",
    "nodeType": "visibilityCurve"
@@ -5346,7 +5345,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#447",
    "nodeType": "visibilityCurve"
@@ -5359,7 +5358,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#303",
    "nodeType": "visibilityCurve"
@@ -5372,7 +5371,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#426",
    "nodeType": "visibilityCurve"
@@ -5385,7 +5384,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#430",
    "nodeType": "visibilityCurve"
@@ -5398,7 +5397,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#287",
    "nodeType": "visibilityCurve"
@@ -5411,7 +5410,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#440",
    "nodeType": "visibilityCurve"
@@ -5424,7 +5423,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#422",
    "nodeType": "visibilityCurve"
@@ -5437,7 +5436,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#416",
    "nodeType": "visibilityCurve"
@@ -5450,7 +5449,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#285",
    "nodeType": "visibilityCurve"
@@ -5463,7 +5462,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#295",
    "nodeType": "visibilityCurve"
@@ -5476,7 +5475,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#279",
    "nodeType": "visibilityCurve"
@@ -5489,7 +5488,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#286",
    "nodeType": "visibilityCurve"
@@ -5502,7 +5501,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#445",
    "nodeType": "visibilityCurve"
@@ -5515,7 +5514,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#283",
    "nodeType": "visibilityCurve"
@@ -5528,7 +5527,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#429",
    "nodeType": "visibilityCurve"
@@ -5541,7 +5540,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#299",
    "nodeType": "visibilityCurve"
@@ -5554,7 +5553,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#436",
    "nodeType": "visibilityCurve"
@@ -5567,7 +5566,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 15.0, "varType": "double" }
+    "time": { "value": 41.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#449",
    "nodeType": "visibilityCurve"
@@ -11682,10 +11681,9 @@
   {
    "attributes": {
     "colorId": { "value": 4, "varType": "int" },
-    "end": { "value": 99.96394003058055, "varType": "double" },
+    "end": { "value": 0.0, "varType": "double" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Visibility Sequence", "varType": "string" },
-    "start": { "value": 0.03605996941945522, "varType": "double" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
    },
    "nodeId": "visibility#1",
@@ -11696,7 +11694,6 @@
     "colorId": { "value": 4, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Visibility Sequence 1", "varType": "string" },
-    "start": { "value": 99.96394003058055, "varType": "double" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
    },
    "nodeId": "visibility#2",
