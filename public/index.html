@@ -152,7 +152,7 @@
         log("Fonts visible to app:", app.queryFonts())
         log("Peridot styles:", app.getFontStyles("Peridot PE Variable"))
 
-        /* 5) Listen for external control messages */
+       /* 5) Listen for external control messages */
         window.addEventListener("message", (event) => {
           const data = event.data
           if (!data || typeof data !== "object") return
@@ -177,10 +177,35 @@
                 resizeViewportAndSurface()
               }
             }
+
+            // ✏️ Text input updates
+            if (path === "string#2.string") {
+              const input = document.getElementById("nameInput")
+              if (input) {
+                input.value = value
+              }
+            }
+
           } catch (err) {
             console.error("[CWP] setAttribute failed", err)
           }
         })
+
+        /* 5b) Send updates from the text box to Cavalry */
+        const nameInput = document.getElementById("nameInput")
+
+        if (nameInput) {
+          nameInput.addEventListener("input", (e) => {
+            window.postMessage(
+              {
+                type: "set-attribute",
+                path: "string#2.string",
+                value: e.target.value
+              },
+              "*"
+            )
+          })
+        }
 
         /* 6) Initial surface + resize handling */
         resizeViewportAndSurface()
