@@ -57,6 +57,9 @@
       let app
       let surface
 
+      let animationFrameId = 0
+      let playbackLoopRunning = false
+
       // Utility: fetch a file and write it into WASM virtual FS
       async function writeFile(module, path) {
         const response = await fetch(path)
@@ -101,6 +104,44 @@
         canvas.height = renderH
 
         surface = Module.makeWebGLSurfaceFromElement(canvas, renderW, renderH)
+
+        if (app && surface) {
+          app.render(surface)
+        }
+      }
+
+      function runPlaybackLoop() {
+        if (!app || !surface) return
+        if (playbackLoopRunning) return
+
+        playbackLoopRunning = true
+
+        function tick(time) {
+          if (!app || !surface) {
+            playbackLoopRunning = false
+            animationFrameId = 0
+            return
+          }
+
+          if (!app.isPlaying()) {
+            playbackLoopRunning = false
+            animationFrameId = 0
+            return
+          }
+
+          app.tick(surface, time)
+          animationFrameId = requestAnimationFrame(tick)
+        }
+
+        animationFrameId = requestAnimationFrame(tick)
+      }
+
+      function stopPlaybackLoop() {
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId)
+        }
+        animationFrameId = 0
+        playbackLoopRunning = false
       }
 
       try {
@@ -152,94 +193,111 @@
         log("Fonts visible to app:", app.queryFonts())
         log("Peridot styles:", app.getFontStyles("Peridot PE Variable"))
 
-       /* 5) Listen for external control messages */
-       console.log("[CWP] About to register message listener")
+        /* 5) Listen for attribute updates via postMessage */
+        log("About to register message listener")
 
-       window.addEventListener("message", (event) => {
-         console.log("[CWP] MESSAGE EVENT FIRED:", event)
-         console.log("[CWP] MESSAGE RECEIVED FULL:", event.data)
+        window.addEventListener("message", (event) => {
+          log("MESSAGE EVENT FIRED:", event)
+          log("MESSAGE RECEIVED FULL:", event.data)
 
-         const data = event.data
-         if (!data || typeof data !== "object") return
+          const data = event.data
+          if (!data || typeof data !== "object") return
+          if (data.type !== "set-attribute") return
 
-         // ▶️ Playback controls
-         if (data.type === "player-control") {
-           console.log("[CWP] PLAYER CONTROL ACTION:", data.action)
+          const { path, value } = data
+          if (typeof path !== "string" || !path.includes(".")) {
+            console.warn("[CWP] Invalid set-attribute path:", path)
+            return
+          }
 
-           try {
-             if (data.action === "play") {
-               console.log("[CWP] Calling player.play()")
-               player.play()
-               runPlaybackLoop()
-             }
+          log("PATH:", path)
+          log("VALUE:", value)
 
-             if (data.action === "pause") {
-               console.log("[CWP] Calling player.stop()")
-               player.stop()
-               cancelAnimationFrame(animationFrameId)
-             }
-           } catch (err) {
-             console.error("[CWP] player-control failed", err)
-           }
-           return
-         }
+          try {
+            const nodeId = path.slice(0, path.indexOf("."))
+            const attr = path.slice(path.indexOf(".") + 1)
 
-         // 🎛 Attribute controls
-         if (data.type !== "set-attribute") return
+            log("SETTING ATTRIBUTE:", nodeId, attr, value)
 
-         const { path, value } = data
-         console.log("[CWP] PATH:", path)
-         console.log("[CWP] VALUE:", value)
+            app.setAttribute(nodeId, attr, value)
 
-         try {
-           const nodeId = path.slice(0, path.indexOf("."))
-           const attr = path.slice(path.indexOf(".") + 1)
+            // 📐 Resolution updates
+            if (path === "compNode#1.resolution") {
+              const [w, h] = value
+              if (w > 0 && h > 0) {
+                SCENE_WIDTH = w
+                SCENE_HEIGHT = h
+                log("Resolution updated:", w, "x", h)
+                resizeViewportAndSurface()
+              }
+            }
 
-           console.log("[CWP] SETTING ATTRIBUTE:", nodeId, attr, value)
+            // ✏️ If a native input exists on the page, mirror the text back into it
+            if (path === "string#2.string") {
+              const input = document.getElementById("nameInput")
+              if (input) {
+                input.value = value
+              }
+            }
 
-           app.setAttribute(nodeId, attr, value)
+            if (surface) {
+              app.render(surface)
+            }
+          } catch (err) {
+            console.error("[CWP] setAttribute failed", err)
+          }
+        })
 
-           // 📐 Resolution updates
-           if (path === "compNode#1.resolution") {
-             const [w, h] = value
-             if (w > 0 && h > 0) {
-               SCENE_WIDTH = w
-               SCENE_HEIGHT = h
-               log("Resolution updated:", w, "x", h)
-               resizeViewportAndSurface()
-             }
-           }
+        log("Message listener registered")
 
-           // ✏️ Text input updates
-           if (path === "string#2.string") {
-             const input = document.getElementById("nameInput")
-             if (input) {
-               input.value = value
-             }
-           }
-         } catch (err) {
-           console.error("[CWP] setAttribute failed", err)
-         }
-       })
+        /* 5a) Listen for playback controls via CustomEvent */
+        log("About to register cavalry-control listener")
 
-       console.log("[CWP] Message listener registered")
-       window.postMessage({ type: "player-control", action: "pause" }, "*")
+        window.addEventListener("cavalry-control", (event) => {
+          const data = event.detail
+          log("CUSTOM EVENT RECEIVED:", data)
 
-       /* 5b) Send updates from the text box to Cavalry */
-       const nameInput = document.getElementById("nameInput")
+          if (!data || typeof data !== "object") return
+          if (data.type !== "player-control") return
 
-       if (nameInput) {
-         nameInput.addEventListener("input", (e) => {
-           window.postMessage(
-             {
-               type: "set-attribute",
-               path: "string#2.string",
-               value: e.target.value,
-             },
-             "*"
-           )
-         })
-       }
+          try {
+            if (data.action === "play") {
+              log("Calling app.play()")
+              app.play()
+              runPlaybackLoop()
+            }
+
+            if (data.action === "pause") {
+              log("Calling app.stop()")
+              app.stop()
+              stopPlaybackLoop()
+
+              if (surface) {
+                app.render(surface)
+              }
+            }
+          } catch (err) {
+            console.error("[CWP] player-control failed", err)
+          }
+        })
+
+        log("cavalry-control listener registered")
+
+        /* 5b) Optional native text input support, if such an input exists on the page */
+        const nameInput = document.getElementById("nameInput")
+
+        if (nameInput) {
+          nameInput.addEventListener("input", (e) => {
+            window.postMessage(
+              {
+                type: "set-attribute",
+                path: "string#2.string",
+                value: e.target.value,
+              },
+              "*"
+            )
+          })
+        }
 
         /* 6) Initial surface + resize handling */
         resizeViewportAndSurface()
@@ -248,15 +306,13 @@
         /* 7) Start playback + render loop */
         log("Starting playback")
         app.play()
-
-        function tick(time) {
-          if (!app.isPlaying()) return
-          app.tick(surface, time)
-          requestAnimationFrame(tick)
-        }
-
-        requestAnimationFrame(tick)
+        runPlaybackLoop()
         log("Running ✓")
+
+        // If you want the player to start paused instead, replace the 3 lines above with:
+        // log("Rendering first frame")
+        // app.render(surface)
+        // log("Ready ✓")
 
       } catch (err) {
         console.error("[CWP] Fatal error", err)
