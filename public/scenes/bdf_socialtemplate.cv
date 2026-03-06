@@ -18,7 +18,103 @@
   }
  ],
  "connections": [
+  { "from": "pointConstraint#1.id", "to": "componentConstraint#1.generator" },
+  { "from": "boundingBox#3.size.x", "to": "linearDistribution#2.size" },
+  { "from": "stringLength#2.out", "to": "linearDistribution#2.count" },
+  { "from": "compNode#1.resolution", "to": "compConstraint#8.resolution" },
+  { "from": "visibilityCurve#567.out", "to": "editableShape#306.on" },
+  { "from": "colorMaterial#996.id", "to": "editableShape#306.material" },
+  { "from": "colorMaterial#1000.id", "to": "editableShape#305.material" },
+  { "from": "visibilityCurve#574.out", "to": "editableShape#305.on" },
+  { "from": "subMesh#31.id", "to": "editableShape#305.deformers.0" },
+  { "from": "visibilityCurve#573.out", "to": "customShape#45.on" },
+  { "from": "subMesh#28.id", "to": "customShape#45.deformers.0" },
+  { "from": "basicLine#2.id", "to": "pointConstraint#1.target" },
+  { "from": "valueArray#1.array.1", "to": "ifElse#1.second" },
+  { "from": "value#1.id", "to": "ifElse#1.condition" },
+  { "from": "valueArray#1.array.0", "to": "ifElse#1.first" },
+  { "from": "compNode#1.resolution", "to": "compConstraint#7.resolution" },
+  { "from": "string#6.id", "to": "stringLength#2.string" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#19.activeAnimationLayer" },
+  { "from": "keyframe#1178.id", "to": "animationCurve#19.keyframes.0" },
+  { "from": "keyframe#1179.id", "to": "animationCurve#19.keyframes.1" },
+  { "from": "compNode#1.time", "to": "animationCurve#19.time" },
+  { "from": "keyframe#1177.id", "to": "visibilityCurve#566.keyframes.0" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#566.activeAnimationLayer" },
+  { "from": "keyframe#1180.id", "to": "visibilityCurve#566.keyframes.1" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#566.time" },
+  { "from": "textShape#14.id", "to": "boundingBox#3.inputShapes.0" },
+  { "from": "visibilityCurve#568.out", "to": "customShape#42.on" },
+  { "from": "subMesh#30.id", "to": "customShape#42.deformers.0" },
+  { "from": "visibilityCurve#571.out", "to": "customShape#44.on" },
+  { "from": "subMesh#32.id", "to": "customShape#44.deformers.0" },
+  { "from": "visibilityCurve#569.out", "to": "customShape#43.on" },
+  { "from": "subMesh#29.id", "to": "customShape#43.deformers.0" },
+  { "from": "visibilityCurve#570.out", "to": "customShape#41.on" },
+  { "from": "subMesh#27.id", "to": "customShape#41.deformers.0" },
+  { "from": "string#6.id", "to": "textShape#14.text" },
+  { "from": "colorMaterial#991.id", "to": "textShape#14.material" },
+  { "from": "compConstraint#7.id", "to": "textShape#14.position" },
+  { "from": "subMesh#26.id", "to": "textShape#14.deformers.0" },
+  { "from": "align#12.id", "to": "textShape#14.deformers.1" },
+  { "from": "visibilityCurve#566.out", "to": "textShape#14.on" },
+  { "from": "valueArray#3.array.1", "to": "ifElse#3.second" },
+  { "from": "value#1.id", "to": "ifElse#3.condition" },
+  { "from": "valueArray#3.array.0", "to": "ifElse#3.first" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#568.activeAnimationLayer" },
+  { "from": "keyframe#1190.id", "to": "visibilityCurve#568.keyframes.1" },
+  { "from": "keyframe#1191.id", "to": "visibilityCurve#568.keyframes.0" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#568.time" },
+  { "from": "keyframe#1199.id", "to": "animationCurve#22.keyframes.1" },
+  { "from": "keyframe#1204.id", "to": "animationCurve#22.keyframes.0" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#22.activeAnimationLayer" },
+  { "from": "compNode#1.time", "to": "animationCurve#22.time" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#575.activeAnimationLayer" },
+  { "from": "keyframe#1203.id", "to": "visibilityCurve#575.keyframes.1" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#575.time" },
+  { "from": "keyframe#1202.id", "to": "visibilityCurve#575.keyframes.0" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#571.activeAnimationLayer" },
+  { "from": "keyframe#1193.id", "to": "visibilityCurve#571.keyframes.0" },
+  { "from": "keyframe#1194.id", "to": "visibilityCurve#571.keyframes.1" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#571.time" },
+  { "from": "keyframe#1192.id", "to": "visibilityCurve#570.keyframes.0" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#570.activeAnimationLayer" },
+  { "from": "keyframe#1189.id", "to": "visibilityCurve#570.keyframes.1" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#570.time" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#569.activeAnimationLayer" },
+  { "from": "keyframe#1186.id", "to": "visibilityCurve#569.keyframes.1" },
+  { "from": "keyframe#1185.id", "to": "visibilityCurve#569.keyframes.0" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#569.time" },
+  { "from": "keyframe#1200.id", "to": "animationCurve#20.keyframes.0" },
+  { "from": "compNode#1.time", "to": "animationCurve#20.time" },
+  { "from": "keyframe#1201.id", "to": "animationCurve#20.keyframes.1" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#20.activeAnimationLayer" },
+  { "from": "keyframe#1184.id", "to": "visibilityCurve#573.keyframes.1" },
+  { "from": "keyframe#1183.id", "to": "visibilityCurve#573.keyframes.0" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#573.activeAnimationLayer" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#573.time" },
+  { "from": "keyframe#1198.id", "to": "animationCurve#21.keyframes.0" },
+  { "from": "keyframe#1197.id", "to": "animationCurve#21.keyframes.1" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#21.activeAnimationLayer" },
+  { "from": "compNode#1.time", "to": "animationCurve#21.time" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#567.activeAnimationLayer" },
+  { "from": "keyframe#1182.id", "to": "visibilityCurve#567.keyframes.1" },
+  { "from": "keyframe#1181.id", "to": "visibilityCurve#567.keyframes.0" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#567.time" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#572.activeAnimationLayer" },
+  { "from": "keyframe#1196.id", "to": "visibilityCurve#572.keyframes.0" },
+  { "from": "keyframe#1195.id", "to": "visibilityCurve#572.keyframes.1" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#572.time" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#574.activeAnimationLayer" },
+  { "from": "keyframe#1187.id", "to": "visibilityCurve#574.keyframes.0" },
+  { "from": "keyframe#1188.id", "to": "visibilityCurve#574.keyframes.1" },
+  { "from": "compNode#1.time", "to": "visibilityCurve#574.time" },
+  { "from": "value#1.id", "to": "subMesh#26.shapeOpacity" },
+  { "from": "visibility#3.id", "to": "subMesh#26.shapeVisibility" },
   { "from": "string#2.id", "to": "javaScript#1.array.0" },
+  { "from": "value#1.id", "to": "ifElse#2.condition" },
+  { "from": "valueArray#2.array.0", "to": "ifElse#2.first" },
+  { "from": "valueArray#2.array.1", "to": "ifElse#2.second" },
   { "from": "subMesh#24.id", "to": "customShape#39.deformers.0" },
   { "from": "visibilityCurve#562.out", "to": "customShape#39.on" },
   { "from": "subMesh#23.id", "to": "customShape#38.deformers.0" },
@@ -73,22 +169,20 @@
   { "from": "visibility#2.id", "to": "subMesh#2.shapeVisibility" },
   { "from": "gradientShader#1.id", "to": "colorMaterial#539.colorShaders.0.shader" },
   { "from": "gradientShader#1.id", "to": "colorMaterial#533.colorShaders.0.shader" },
+  { "from": "ifElse#3.id", "to": "compConstraint#4.offset.y" },
   { "from": "compNode#1.resolution", "to": "compConstraint#4.resolution" },
   { "from": "stringLength#1.out", "to": "linearDistribution#1.count" },
   { "from": "boundingBox#1.size.x", "to": "linearDistribution#1.size" },
   { "from": "compNode#1.resolution", "to": "compConstraint#1.resolution" },
   { "from": "compNode#1.resolution", "to": "compConstraint#5.resolution" },
   { "from": "numberRange#2.id", "to": "compConstraint#5.offset.y" },
-  { "from": "compNode#1.resolution", "to": "compConstraint#2.resolution" },
+  { "from": "ifElse#3.id", "to": "compConstraint#6.offset.y" },
   { "from": "compNode#1.resolution", "to": "compConstraint#6.resolution" },
   { "from": "value2#1.id", "to": "rectangleShape#1.dimensions" },
   { "from": "compNode#1.resolution", "to": "compConstraint#3.resolution" },
   { "from": "textShape#3.id", "to": "boundingBox#1.inputShapes.0" },
   { "from": "jsmath#4.id", "to": "simpleLine#2.length" },
   { "from": "math#1.id", "to": "simpleLine#1.length" },
-  { "from": "visibilityCurve#442.out", "to": "layoutGroup#6.on" },
-  { "from": "numberRange#3.id", "to": "layoutGroup#6.margins.y" },
-  { "from": "value2#1.id", "to": "layoutGroup#6.maximumSize" },
   { "from": "numberRange#4.id", "to": "layoutGroup#2.margins.w" },
   { "from": "visibilityCurve#429.out", "to": "layoutGroup#2.on" },
   { "from": "value2#1.id", "to": "layoutGroup#2.maximumSize" },
@@ -166,14 +260,10 @@
   { "from": "string#2.id", "to": "textShape#3.text" },
   { "from": "colorMaterial#794.id", "to": "textShape#7.material" },
   { "from": "visibilityCurve#422.out", "to": "textShape#7.on" },
-  { "from": "animationCurve#8.out", "to": "textShape#10.scale.y" },
-  { "from": "animationCurve#7.out", "to": "textShape#10.scale.x" },
-  { "from": "animationCurve#6.out", "to": "textShape#10.rotation.z" },
-  { "from": "animationCurve#5.out", "to": "textShape#10.position.y" },
   { "from": "colorMaterial#815.id", "to": "textShape#10.material" },
   { "from": "visibilityCurve#443.out", "to": "textShape#10.on" },
-  { "from": "animationCurve#4.out", "to": "textShape#10.position.x" },
   { "from": "value2#1.value.x", "to": "textShape#10.textBoxSize.x" },
+  { "from": "pointConstraint#1.out", "to": "textShape#10.position" },
   { "from": "value2#1.value.y", "to": "textShape#10.textBoxSize.y" },
   { "from": "simpleLine#2.id", "to": "basicLine#2.generator" },
   { "from": "strokeMaterial#449.id", "to": "basicLine#2.stroke" },
@@ -209,21 +299,6 @@
   { "from": "keyframe#941.id", "to": "animationCurve#15.keyframes.1" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#15.activeAnimationLayer" },
   { "from": "keyframe#940.id", "to": "animationCurve#15.keyframes.0" },
-  { "from": "keyframe#896.id", "to": "animationCurve#4.keyframes.0" },
-  { "from": "compNode#1.time", "to": "animationCurve#4.time" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#4.activeAnimationLayer" },
-  { "from": "keyframe#899.id", "to": "animationCurve#7.keyframes.0" },
-  { "from": "compNode#1.time", "to": "animationCurve#7.time" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#7.activeAnimationLayer" },
-  { "from": "keyframe#897.id", "to": "animationCurve#5.keyframes.0" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#5.activeAnimationLayer" },
-  { "from": "compNode#1.time", "to": "animationCurve#5.time" },
-  { "from": "keyframe#900.id", "to": "animationCurve#8.keyframes.0" },
-  { "from": "compNode#1.time", "to": "animationCurve#8.time" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#8.activeAnimationLayer" },
-  { "from": "keyframe#898.id", "to": "animationCurve#6.keyframes.0" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#6.activeAnimationLayer" },
-  { "from": "compNode#1.time", "to": "animationCurve#6.time" },
   { "from": "keyframe#610.id", "to": "visibilityCurve#305.keyframes.1" },
   { "from": "keyframe#609.id", "to": "visibilityCurve#305.keyframes.0" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#305.activeAnimationLayer" },
@@ -281,10 +356,6 @@
   { "from": "compNode#1.time", "to": "visibilityCurve#302.time" },
   { "from": "keyframe#604.id", "to": "visibilityCurve#302.keyframes.1" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#302.activeAnimationLayer" },
-  { "from": "keyframe#890.id", "to": "visibilityCurve#444.keyframes.1" },
-  { "from": "keyframe#889.id", "to": "visibilityCurve#444.keyframes.0" },
-  { "from": "compNode#1.time", "to": "visibilityCurve#444.time" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#444.activeAnimationLayer" },
   { "from": "keyframe#833.id", "to": "visibilityCurve#417.keyframes.1" },
   { "from": "keyframe#834.id", "to": "visibilityCurve#417.keyframes.0" },
   { "from": "compNode#1.time", "to": "visibilityCurve#417.time" },
@@ -325,10 +396,6 @@
   { "from": "compNode#1.time", "to": "visibilityCurve#427.time" },
   { "from": "keyframe#855.id", "to": "visibilityCurve#427.keyframes.0" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#427.activeAnimationLayer" },
-  { "from": "keyframe#886.id", "to": "visibilityCurve#442.keyframes.1" },
-  { "from": "keyframe#885.id", "to": "visibilityCurve#442.keyframes.0" },
-  { "from": "compNode#1.time", "to": "visibilityCurve#442.time" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#442.activeAnimationLayer" },
   { "from": "keyframe#575.id", "to": "visibilityCurve#288.keyframes.0" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#288.activeAnimationLayer" },
   { "from": "compNode#1.time", "to": "visibilityCurve#288.time" },
@@ -415,6 +482,9 @@
   { "from": "keyframe#1008.id", "to": "visibilityCurve#485.keyframes.1" },
   { "from": "compNode#1.resolution.x", "to": "value2#1.value.x" },
   { "from": "compNode#1.resolution.y", "to": "value2#1.value.y" },
+  { "from": "animationCurve#21.out", "to": "visibility#4.end" },
+  { "from": "animationCurve#22.out", "to": "visibility#4.start" },
+  { "from": "animationCurve#19.out", "to": "visibility#3.start" },
   { "from": "animationCurve#9.out", "to": "visibility#1.start" },
   { "from": "animationCurve#10.out", "to": "visibility#1.end" },
   { "from": "animationCurve#13.out", "to": "visibility#2.start" },
@@ -422,13 +492,13 @@
   { "from": "colorMaterial#802.id", "to": "textShape#9.material" },
   { "from": "gradientShader#1.id", "to": "colorMaterial#541.colorShaders.0.shader" },
   { "from": "visibilityCurve#425.out", "to": "spacerItem#1.on" },
-  { "from": "visibilityCurve#444.out", "to": "spacerItem#2.on" },
   { "from": "value2#1.value.y", "to": "numberRange#1.value" },
+  { "from": "ifElse#2.id", "to": "numberRange#2.min" },
+  { "from": "ifElse#1.id", "to": "numberRange#2.max" },
   { "from": "value2#1.value.y", "to": "numberRange#2.value" },
   { "from": "value2#1.value.y", "to": "numberRange#4.value" },
   { "from": "value2#1.value.x", "to": "numberRange#10.value" },
   { "from": "value2#1.value.y", "to": "numberRange#12.value" },
-  { "from": "value2#1.value.y", "to": "numberRange#3.value" },
   { "from": "value2#1.value.x", "to": "numberRange#5.value" },
   { "from": "value2#1.value.x", "to": "numberRange#17.value" },
   { "from": "value2#1.value.x", "to": "numberRange#8.value" },
@@ -439,6 +509,7 @@
   { "from": "value2#1.value.y", "to": "numberRange#9.value" },
   { "from": "value2#1.value.y", "to": "numberRange#16.value" },
   { "from": "value2#1.value.x", "to": "numberRange#13.value" },
+  { "from": "linearDistribution#1.id", "to": "duplicator#2.generator" },
   { "from": "customShape#40.id", "to": "duplicator#2.shapes.6" },
   { "from": "customShape#39.id", "to": "duplicator#2.shapes.5" },
   { "from": "customShape#38.id", "to": "duplicator#2.shapes.4" },
@@ -449,7 +520,6 @@
   { "from": "visibility#1.id", "to": "duplicator#2.shapeVisibility" },
   { "from": "align#10.id", "to": "duplicator#2.deformers.0" },
   { "from": "visibilityCurve#463.out", "to": "duplicator#2.on" },
-  { "from": "linearDistribution#1.id", "to": "duplicator#2.generator" },
   { "from": "random#1.id", "to": "duplicator#2.shapeId" },
   { "from": "compConstraint#6.id", "to": "duplicator#2.position" },
   { "from": "visibilityCurve#485.out", "to": "group#55.on" },
@@ -472,19 +542,35 @@
   { "from": "value2#1.value.x", "to": "jsmath#4.array.0" },
   { "from": "animationCurve#16.out", "to": "jsmath#4.array.2" },
   { "from": "math#1.id", "to": "jsmath#4.array.1" },
-  { "from": "value2#1.value.y", "to": "jsmath#5.array.0" },
-  { "from": "value2#1.value.x", "to": "jsmath#6.array.0" },
   { "from": "animationCurve#17.out", "to": "random#1.seed" },
   { "from": "linearGradientShader#1.id", "to": "gradientShader#1.generator" },
   { "from": "compNode#1.resolution", "to": "gradientShader#1.resolution" },
-  { "from": "visibilityCurve#547.out", "to": "group#57.on" }
+  { "from": "visibilityCurve#547.out", "to": "group#57.on" },
+  { "from": "compConstraint#8.id", "to": "duplicator#3.position" },
+  { "from": "visibility#4.id", "to": "duplicator#3.shapeVisibility" },
+  { "from": "editableShape#306.id", "to": "duplicator#3.shapes.0" },
+  { "from": "editableShape#305.id", "to": "duplicator#3.shapes.1" },
+  { "from": "customShape#44.id", "to": "duplicator#3.shapes.2" },
+  { "from": "customShape#45.id", "to": "duplicator#3.shapes.3" },
+  { "from": "customShape#41.id", "to": "duplicator#3.shapes.5" },
+  { "from": "align#13.id", "to": "duplicator#3.deformers.0" },
+  { "from": "customShape#42.id", "to": "duplicator#3.shapes.4" },
+  { "from": "visibilityCurve#575.out", "to": "duplicator#3.on" },
+  { "from": "value#1.id", "to": "duplicator#3.opacity" },
+  { "from": "random#2.id", "to": "duplicator#3.shapeId" },
+  { "from": "customShape#43.id", "to": "duplicator#3.shapes.6" },
+  { "from": "linearDistribution#2.id", "to": "duplicator#3.generator" },
+  { "from": "visibilityCurve#572.out", "to": "group#59.on" },
+  { "from": "animationCurve#20.out", "to": "random#2.seed" }
  ],
  "controlCenter": {
   "compNode#1": {
    "attributes": [
     { "path": "value2Array#1.arrayIndex" },
     { "path": "string#2.string" },
-    { "path": "visibility#1.alwaysOff" }
+    { "path": "visibility#1.alwaysOff" },
+    { "path": "value#1.value" },
+    { "path": "textShape#10.text" }
    ],
    "footerScript": "",
    "headerScript": ""
@@ -498,6 +584,198 @@
  },
  "labelColors": "Pastel",
  "nodeMeta": [
+  {
+   "children": [ "hiddenFolder#669" ],
+   "nodeId": "componentConstraint#1"
+  },
+  {
+   "children": [ "pointConstraint#1" ],
+   "nodeId": "hiddenFolder#669"
+  },
+  {
+   "children": [ "motionBlurFilter#554", "strokeMaterial#594", "colorMaterial#1001", "visibilityCurve#568" ],
+   "nodeId": "hiddenFolder#656"
+  },
+  {
+   "children": [ "strokeMaterial#599", "colorMaterial#994" ],
+   "nodeId": "hiddenFolder#654"
+  },
+  {
+   "children": [ "motionBlurFilter#548", "strokeMaterial#586", "colorMaterial#999", "visibilityCurve#569" ],
+   "nodeId": "hiddenFolder#658"
+  },
+  {
+   "children": [ "motionBlurFilter#549", "strokeMaterial#592", "colorMaterial#1004", "visibilityCurve#571" ],
+   "nodeId": "hiddenFolder#659"
+  },
+  {
+   "children": [ "strokeMaterial#596", "colorMaterial#998" ],
+   "nodeId": "hiddenFolder#655"
+  },
+  {
+   "children": [ "linearDistribution#2", "motionBlurFilter#552", "strokeMaterial#585", "colorMaterial#1007", "gridDistribution#3", "visibilityCurve#575" ],
+   "nodeId": "hiddenFolder#665"
+  },
+  {
+   "children": [ "strokeMaterial#597", "colorMaterial#993" ],
+   "nodeId": "hiddenFolder#657"
+  },
+  {
+   "children": [ "motionBlurFilter#546", "strokeMaterial#598", "colorMaterial#1003", "visibilityCurve#570" ],
+   "nodeId": "hiddenFolder#660"
+  },
+  {
+   "children": [ "motionBlurFilter#551", "strokeMaterial#588", "colorMaterial#1005", "visibilityCurve#572" ],
+   "nodeId": "hiddenFolder#664"
+  },
+  {
+   "children": [ "strokeMaterial#590", "motionBlurFilter#547", "colorMaterial#1000", "visibilityCurve#574" ],
+   "nodeId": "hiddenFolder#662"
+  },
+  {
+   "children": [ "strokeMaterial#591", "colorMaterial#1002" ],
+   "nodeId": "hiddenFolder#663"
+  },
+  {
+   "children": [ "strokeMaterial#589", "motionBlurFilter#553", "colorMaterial#996", "visibilityCurve#567" ],
+   "nodeId": "hiddenFolder#661"
+  },
+  {
+   "children": [ "strokeMaterial#587", "colorMaterial#995" ],
+   "nodeId": "hiddenFolder#668"
+  },
+  {
+   "children": [ "motionBlurFilter#550", "strokeMaterial#593", "colorMaterial#997", "visibilityCurve#573" ],
+   "nodeId": "hiddenFolder#667"
+  },
+  {
+   "children": [ "strokeMaterial#595", "colorMaterial#1006" ],
+   "nodeId": "hiddenFolder#666"
+  },
+  {
+   "children": [ "hiddenFolder#661" ],
+   "nodeId": "editableShape#306"
+  },
+  {
+   "children": [ "subMesh#31", "hiddenFolder#662" ],
+   "nodeId": "editableShape#305"
+  },
+  {
+   "children": [ "subMesh#28", "hiddenFolder#667" ],
+   "nodeId": "customShape#45"
+  },
+  {
+   "children": [ "hiddenFolder#654" ],
+   "nodeId": "subMesh#29"
+  },
+  {
+   "children": [ "hiddenFolder#657" ],
+   "nodeId": "subMesh#27"
+  },
+  {
+   "children": [ "hiddenFolder#655" ],
+   "nodeId": "subMesh#30"
+  },
+  {
+   "children": [ "hiddenFolder#668" ],
+   "nodeId": "subMesh#28"
+  },
+  {
+   "children": [ "hiddenFolder#666" ],
+   "nodeId": "subMesh#32"
+  },
+  {
+   "children": [ "hiddenFolder#663" ],
+   "nodeId": "subMesh#31"
+  },
+  {
+   "children": [ "motionBlurFilter#545", "strokeMaterial#584", "colorMaterial#991", "visibilityCurve#566" ],
+   "nodeId": "hiddenFolder#652"
+  },
+  {
+   "children": [ "strokeMaterial#583", "colorMaterial#992" ],
+   "nodeId": "hiddenFolder#653"
+  },
+  {
+   "children": [ "keyframe#1179", "keyframe#1178" ],
+   "nodeId": "animationCurve#19"
+  },
+  {
+   "children": [ "keyframe#1180", "keyframe#1177" ],
+   "nodeId": "visibilityCurve#566"
+  },
+  {
+   "children": [ "subMesh#30", "hiddenFolder#656" ],
+   "nodeId": "customShape#42"
+  },
+  {
+   "children": [ "subMesh#32", "hiddenFolder#659" ],
+   "nodeId": "customShape#44"
+  },
+  {
+   "children": [ "subMesh#29", "hiddenFolder#658" ],
+   "nodeId": "customShape#43"
+  },
+  {
+   "children": [ "subMesh#27", "hiddenFolder#660" ],
+   "nodeId": "customShape#41"
+  },
+  {
+   "children": [ "align#12", "compConstraint#7", "visibility#3", "subMesh#26", "stringLength#2", "string#6", "boundingBox#3", "hiddenFolder#652" ],
+   "nodeId": "textShape#14"
+  },
+  {
+   "children": [ "keyframe#1190", "keyframe#1191" ],
+   "nodeId": "visibilityCurve#568"
+  },
+  {
+   "children": [ "keyframe#1199", "keyframe#1204" ],
+   "nodeId": "animationCurve#22"
+  },
+  {
+   "children": [ "keyframe#1203", "keyframe#1202" ],
+   "nodeId": "visibilityCurve#575"
+  },
+  {
+   "children": [ "keyframe#1194", "keyframe#1193" ],
+   "nodeId": "visibilityCurve#571"
+  },
+  {
+   "children": [ "keyframe#1189", "keyframe#1192" ],
+   "nodeId": "visibilityCurve#570"
+  },
+  {
+   "children": [ "keyframe#1186", "keyframe#1185" ],
+   "nodeId": "visibilityCurve#569"
+  },
+  {
+   "children": [ "keyframe#1201", "keyframe#1200" ],
+   "nodeId": "animationCurve#20"
+  },
+  {
+   "children": [ "keyframe#1184", "keyframe#1183" ],
+   "nodeId": "visibilityCurve#573"
+  },
+  {
+   "children": [ "keyframe#1197", "keyframe#1198" ],
+   "nodeId": "animationCurve#21"
+  },
+  {
+   "children": [ "keyframe#1182", "keyframe#1181" ],
+   "nodeId": "visibilityCurve#567"
+  },
+  {
+   "children": [ "keyframe#1195", "keyframe#1196" ],
+   "nodeId": "visibilityCurve#572"
+  },
+  {
+   "children": [ "keyframe#1188", "keyframe#1187" ],
+   "nodeId": "visibilityCurve#574"
+  },
+  {
+   "children": [ "hiddenFolder#653" ],
+   "nodeId": "subMesh#26"
+  },
   {
    "children": [ "hiddenFolder#645" ],
    "nodeId": "subMesh#24"
@@ -629,10 +907,6 @@
   {
    "children": [ "motionBlurFilter#425", "strokeMaterial#433", "colorMaterial#797", "visibilityCurve#425" ],
    "nodeId": "hiddenFolder#425"
-  },
-  {
-   "children": [ "motionBlurFilter#444", "strokeMaterial#452", "colorMaterial#816", "visibilityCurve#444" ],
-   "nodeId": "hiddenFolder#444"
   },
   {
    "children": [ "colorMaterial#576", "motionBlurFilter#306", "strokeMaterial#312", "colorMaterial#575", "visibilityCurve#306" ],
@@ -767,10 +1041,6 @@
    "nodeId": "hiddenFolder#302"
   },
   {
-   "children": [ "motionBlurFilter#442", "strokeMaterial#450", "colorMaterial#814", "visibilityCurve#442" ],
-   "nodeId": "hiddenFolder#442"
-  },
-  {
    "children": [ "motionBlurFilter#418", "strokeMaterial#426", "colorMaterial#790", "visibilityCurve#418" ],
    "nodeId": "hiddenFolder#418"
   },
@@ -811,6 +1081,10 @@
    "nodeId": "subMesh#2"
   },
   {
+   "children": [ "valueArray#3" ],
+   "nodeId": "compConstraint#4"
+  },
+  {
    "children": [ "colorMaterial#544", "motionBlurFilter#290", "strokeMaterial#296", "colorMaterial#543", "visibilityCurve#290" ],
    "nodeId": "hiddenFolder#290"
   },
@@ -823,7 +1097,7 @@
    "nodeId": "hiddenFolder#469"
   },
   {
-   "children": [ "numberRange#2" ],
+   "children": [ "value#1", "numberRange#2" ],
    "nodeId": "compConstraint#5"
   },
   {
@@ -845,10 +1119,6 @@
   {
    "children": [ "colorArray#1" ],
    "nodeId": "paletteContainer#1"
-  },
-  {
-   "children": [ "jsmath#6", "textShape#10", "spacerItem#2", "hiddenFolder#442" ],
-   "nodeId": "layoutGroup#6"
   },
   {
    "children": [ "group#44", "textShape#9", "hiddenFolder#429" ],
@@ -975,7 +1245,7 @@
    "nodeId": "textShape#6"
   },
   {
-   "children": [ "align#8", "compConstraint#4", "visibility#2", "subMesh#2", "stringLength#1", "string#2", "boundingBox#1", "hiddenFolder#418" ],
+   "children": [ "align#8", "compConstraint#4", "visibility#2", "subMesh#2", "stringLength#1", "string#2", "string#5", "boundingBox#1", "hiddenFolder#418" ],
    "nodeId": "textShape#3"
   },
   {
@@ -983,11 +1253,11 @@
    "nodeId": "textShape#7"
   },
   {
-   "children": [ "animationCurve#8", "animationCurve#7", "animationCurve#6", "animationCurve#5", "animationCurve#4", "hiddenFolder#443" ],
+   "children": [ "componentConstraint#1", "hiddenFolder#443" ],
    "nodeId": "textShape#10"
   },
   {
-   "children": [ "compConstraint#2", "compConstraint#1", "jsmath#4", "align#4", "hiddenFolder#441" ],
+   "children": [ "compConstraint#1", "jsmath#4", "align#4", "hiddenFolder#441" ],
    "nodeId": "basicLine#2"
   },
   {
@@ -1017,26 +1287,6 @@
   {
    "children": [ "keyframe#941", "keyframe#940" ],
    "nodeId": "animationCurve#15"
-  },
-  {
-   "children": [ "keyframe#896" ],
-   "nodeId": "animationCurve#4"
-  },
-  {
-   "children": [ "keyframe#899" ],
-   "nodeId": "animationCurve#7"
-  },
-  {
-   "children": [ "keyframe#897" ],
-   "nodeId": "animationCurve#5"
-  },
-  {
-   "children": [ "keyframe#900" ],
-   "nodeId": "animationCurve#8"
-  },
-  {
-   "children": [ "keyframe#898" ],
-   "nodeId": "animationCurve#6"
   },
   {
    "children": [ "keyframe#610", "keyframe#609" ],
@@ -1099,10 +1349,6 @@
    "nodeId": "visibilityCurve#302"
   },
   {
-   "children": [ "keyframe#890", "keyframe#889" ],
-   "nodeId": "visibilityCurve#444"
-  },
-  {
    "children": [ "keyframe#833", "keyframe#834" ],
    "nodeId": "visibilityCurve#417"
   },
@@ -1141,10 +1387,6 @@
   {
    "children": [ "keyframe#856", "keyframe#855" ],
    "nodeId": "visibilityCurve#427"
-  },
-  {
-   "children": [ "keyframe#886", "keyframe#885" ],
-   "nodeId": "visibilityCurve#442"
   },
   {
    "children": [ "keyframe#576", "keyframe#575" ],
@@ -1231,6 +1473,14 @@
    "nodeId": "visibilityCurve#485"
   },
   {
+   "children": [ "animationCurve#21", "animationCurve#22" ],
+   "nodeId": "visibility#4"
+  },
+  {
+   "children": [ "animationCurve#19" ],
+   "nodeId": "visibility#3"
+  },
+  {
    "children": [ "animationCurve#10", "animationCurve#9" ],
    "nodeId": "visibility#1"
   },
@@ -1247,15 +1497,15 @@
    "nodeId": "spacerItem#1"
   },
   {
-   "children": [ "hiddenFolder#444" ],
-   "nodeId": "spacerItem#2"
+   "children": [ "valueArray#2", "valueArray#1" ],
+   "nodeId": "numberRange#2"
   },
   {
    "children": [ "group#57", "visibility#1", "align#10", "compConstraint#6", "random#1", "hiddenFolder#482" ],
    "nodeId": "duplicator#2"
   },
   {
-   "children": [ "compConstraint#5", "basicLine#2", "duplicator#2", "textShape#3", "basicLine#1", "hiddenFolder#534" ],
+   "children": [ "compConstraint#5", "basicLine#2", "duplicator#2", "textShape#3", "duplicator#3", "textShape#14", "basicLine#1", "hiddenFolder#534" ],
    "nodeId": "group#55"
   },
   {
@@ -1287,7 +1537,7 @@
    "nodeId": "group#31"
   },
   {
-   "children": [ "numberRange#3", "jsmath#5", "layoutGroup#6", "hiddenFolder#445" ],
+   "children": [ "textShape#10", "hiddenFolder#445" ],
    "nodeId": "group#48"
   },
   {
@@ -1313,14 +1563,2385 @@
   {
    "children": [ "customShape#40", "customShape#39", "customShape#38", "customShape#37", "customShape#36", "editableShape#304", "editableShape#302", "hiddenFolder#623" ],
    "nodeId": "group#57"
+  },
+  {
+   "children": [ "group#59", "visibility#4", "align#13", "compConstraint#8", "random#2", "hiddenFolder#665" ],
+   "nodeId": "duplicator#3"
+  },
+  {
+   "children": [ "customShape#43", "customShape#41", "customShape#42", "customShape#45", "customShape#44", "editableShape#305", "editableShape#306", "hiddenFolder#664" ],
+   "nodeId": "group#59"
+  },
+  {
+   "children": [ "ifElse#2" ],
+   "nodeId": "valueArray#2"
+  },
+  {
+   "children": [ "ifElse#3" ],
+   "nodeId": "valueArray#3"
+  },
+  {
+   "children": [ "ifElse#1" ],
+   "nodeId": "valueArray#1"
+  },
+  {
+   "children": [ "animationCurve#20" ],
+   "nodeId": "random#2"
   }
  ],
  "nodes": [
   {
    "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Component Constraint", "varType": "string" },
+    "uuid": { "value": "4aaf8ee0-eb7e-4752-851c-f1720ba0fbd5", "varType": "string" }
+   },
+   "nodeId": "componentConstraint#1",
+   "nodeType": "componentConstraint"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "d9e9f0ad-0919-492b-b0aa-b442142c96a8", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#669",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "267bd2dc-b707-4b79-9675-cfb6f81b4390", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#656",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "cfc206ea-ca95-4971-b211-d307dd0f9c24", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#654",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "d9d73838-3447-47ad-b4c4-bc0aef749f03", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#658",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "adc56875-19f4-4746-9731-24913ecaca9d", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#659",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "44e419f7-994d-446b-a8b6-febedeaf3099", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#655",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "83c9e405-4242-4452-9bf8-bd70bfac6471", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#665",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "44e419f7-994d-446b-a8b6-febedeaf3099", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#657",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "63c08e51-fda9-4b1e-b866-a79750c5727c", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#660",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "count": { "value": 15, "varType": "int" },
+    "niceName": { "value": "Linear 3", "varType": "string" },
+    "size": { "expression": "-27", "expressionEnabled": true, "value": 464.960938, "varType": "double" },
+    "uuid": { "value": "445439ad-6710-4e52-a1a6-f6998cb8cdc2", "varType": "string" }
+   },
+   "nodeId": "linearDistribution#2",
+   "nodeType": "linearDistribution"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Composition Constraint 6", "varType": "string" },
+    "offset": {
+     "value": { "x": -42.0, "y": 40.0 },
+     "varType": "double2"
+    },
+    "resolution": {
+     "value": { "x": 1080, "y": 1920 },
+     "varType": "int2"
+    },
+    "uuid": { "value": "f0da6e83-56f6-4465-9739-91850c270ea4", "varType": "string" },
+    "width": { "value": 100.0, "varType": "double" }
+   },
+   "nodeId": "compConstraint#8",
+   "nodeType": "compConstraint"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "92cf5999-1023-4c66-8858-2c129f34a927", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#664",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "ba2c493c-81f9-4bd4-8a92-7dc81cb10cf9", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#662",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "f58d49bc-f8fc-44dd-97d2-5e4cf9994059", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#663",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "ba2c493c-81f9-4bd4-8a92-7dc81cb10cf9", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#661",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "44e419f7-994d-446b-a8b6-febedeaf3099", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#668",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "adc56875-19f4-4746-9731-24913ecaca9d", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#667",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "44e419f7-994d-446b-a8b6-febedeaf3099", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#666",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Grid 1", "varType": "string" },
+    "uuid": { "value": "53b6c9cc-4843-49f1-84f4-52bc18cd35b9", "varType": "string" }
+   },
+   "nodeId": "gridDistribution#3",
+   "nodeType": "gridDistribution"
+  },
+  {
+   "attributes": {
+    "hidden": { "value": true, "varType": "bool" },
+    "inputPath": {
+     "value": {
+      "contours": [
+       {
+        "closed": true,
+        "points": [
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 234.32498168945313, "y": -28.53997802734375 },
+           { "x": 218.76498413085938, "y": -28.53997802734375 },
+           { "x": 218.76498413085938, "y": -28.53997802734375 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 128.46499633789063, "y": -28.53997802734375 },
+           { "x": 117.30499267578125, "y": -28.53997802734375 },
+           { "x": 128.46499633789063, "y": -28.53997802734375 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 108.2550048828125, "y": -37.589996337890625 },
+           { "x": 108.2550048828125, "y": -48.75 },
+           { "x": 108.2550048828125, "y": -48.75 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 108.2550048828125, "y": -240.294921875 },
+           { "x": 108.2550048828125, "y": -251.45489501953125 },
+           { "x": 108.2550048828125, "y": -240.294921875 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 99.20498657226563, "y": -260.50494384765625 },
+           { "x": 88.04498291015625, "y": -260.50494384765625 },
+           { "x": 88.04498291015625, "y": -260.50494384765625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -88.05500793457031, "y": -260.50494384765625 },
+           { "x": -99.21501159667969, "y": -260.50494384765625 },
+           { "x": -88.05500793457031, "y": -260.50494384765625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -108.26499938964844, "y": -251.45489501953125 },
+           { "x": -108.26499938964844, "y": -240.294921875 },
+           { "x": -108.26499938964844, "y": -240.294921875 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -108.26499938964844, "y": -48.75 },
+           { "x": -108.26499938964844, "y": -37.589996337890625 },
+           { "x": -108.26499938964844, "y": -48.75 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -117.31500244140625, "y": -28.53997802734375 },
+           { "x": -128.47500610351563, "y": -28.53997802734375 },
+           { "x": -128.47500610351563, "y": -28.53997802734375 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -218.76499938964844, "y": -28.53997802734375 },
+           { "x": -234.31500244140625, "y": -28.53997802734375 },
+           { "x": -218.76499938964844, "y": -28.53997802734375 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -244.0449981689453, "y": -11.699981689453125 },
+           { "x": -236.26499938964844, "y": 1.77001953125 },
+           { "x": -236.26499938964844, "y": 1.77001953125 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -17.5050048828125, "y": 380.69000244140625 },
+           { "x": -9.725006103515625, "y": 394.1600036621094 },
+           { "x": -17.5050048828125, "y": 380.69000244140625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 9.714996337890625, "y": 394.1600036621094 },
+           { "x": 17.4949951171875, "y": 380.69000244140625 },
+           { "x": 17.4949951171875, "y": 380.69000244140625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 236.26498413085938, "y": 1.77001953125 },
+           { "x": 244.04498291015625, "y": -11.699981689453125 },
+           { "x": 236.26498413085938, "y": 1.77001953125 }
+          ],
+          "weightLocked": false
+         }
+        ]
+       }
+      ],
+      "fillType": 0,
+      "version": 1.0
+     },
+     "varType": "editablePath2"
+    },
+    "niceName": { "value": "Arrow U 1", "varType": "string" },
+    "uuid": { "value": "4c048282-06a7-4275-bcbb-acc119016514", "varType": "string" }
+   },
+   "nodeId": "editableShape#306",
+   "nodeType": "editableShape"
+  },
+  {
+   "attributes": {
+    "deformers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "hidden": { "value": true, "varType": "bool" },
+    "inputPath": {
+     "value": {
+      "contours": [
+       {
+        "closed": true,
+        "points": [
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 234.32498168945313, "y": -28.53997802734375 },
+           { "x": 218.76498413085938, "y": -28.53997802734375 },
+           { "x": 218.76498413085938, "y": -28.53997802734375 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 128.46499633789063, "y": -28.53997802734375 },
+           { "x": 117.30499267578125, "y": -28.53997802734375 },
+           { "x": 128.46499633789063, "y": -28.53997802734375 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 108.2550048828125, "y": -37.589996337890625 },
+           { "x": 108.2550048828125, "y": -48.75 },
+           { "x": 108.2550048828125, "y": -48.75 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 108.2550048828125, "y": -240.294921875 },
+           { "x": 108.2550048828125, "y": -251.45489501953125 },
+           { "x": 108.2550048828125, "y": -240.294921875 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 99.20498657226563, "y": -260.50494384765625 },
+           { "x": 88.04498291015625, "y": -260.50494384765625 },
+           { "x": 88.04498291015625, "y": -260.50494384765625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -88.05500793457031, "y": -260.50494384765625 },
+           { "x": -99.21501159667969, "y": -260.50494384765625 },
+           { "x": -88.05500793457031, "y": -260.50494384765625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -108.26499938964844, "y": -251.45489501953125 },
+           { "x": -108.26499938964844, "y": -240.294921875 },
+           { "x": -108.26499938964844, "y": -240.294921875 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -108.26499938964844, "y": -48.75 },
+           { "x": -108.26499938964844, "y": -37.589996337890625 },
+           { "x": -108.26499938964844, "y": -48.75 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -117.31500244140625, "y": -28.53997802734375 },
+           { "x": -128.47500610351563, "y": -28.53997802734375 },
+           { "x": -128.47500610351563, "y": -28.53997802734375 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -218.76499938964844, "y": -28.53997802734375 },
+           { "x": -234.31500244140625, "y": -28.53997802734375 },
+           { "x": -218.76499938964844, "y": -28.53997802734375 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -244.0449981689453, "y": -11.699981689453125 },
+           { "x": -236.26499938964844, "y": 1.77001953125 },
+           { "x": -236.26499938964844, "y": 1.77001953125 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": -17.5050048828125, "y": 380.69000244140625 },
+           { "x": -9.725006103515625, "y": 394.1600036621094 },
+           { "x": -17.5050048828125, "y": 380.69000244140625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 9.714996337890625, "y": 394.1600036621094 },
+           { "x": 17.4949951171875, "y": 380.69000244140625 },
+           { "x": 17.4949951171875, "y": 380.69000244140625 }
+          ],
+          "weightLocked": false
+         },
+         {
+          "gradientLocked": false,
+          "points": [
+           { "x": 236.26498413085938, "y": 1.77001953125 },
+           { "x": 244.04498291015625, "y": -11.699981689453125 },
+           { "x": 236.26498413085938, "y": 1.77001953125 }
+          ],
+          "weightLocked": false
+         }
+        ]
+       }
+      ],
+      "fillType": 0,
+      "version": 1.0
+     },
+     "varType": "editablePath2"
+    },
+    "niceName": { "value": "Arrow D 1", "varType": "string" },
+    "uuid": { "value": "4c048282-06a7-4275-bcbb-acc119016514", "varType": "string" }
+   },
+   "nodeId": "editableShape#305",
+   "nodeType": "editableShape"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 2, "varType": "int" },
+    "deformers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "hidden": { "value": true, "varType": "bool" },
+    "inputShape": {
+     "value": {
+      "meshes": [
+       {
+        "address": [ 0, 0 ],
+        "fill": {
+         "alpha": 1.0,
+         "color": { "a": 255, "b": 0, "g": 0, "r": 0 }
+        },
+        "fillType": 0,
+        "path": [
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": 219.4449920654297 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": 151.21499633789063 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": 146.08499145507813 },
+           { "x": 52.45001220703125, "y": 141.93499755859375 },
+           { "x": 58.399993896484375, "y": 141.93499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 236.58999633789063, "y": 141.93499755859375 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 242.54000854492188, "y": 141.93499755859375 },
+           { "x": 247.3699951171875, "y": 137.77499389648438 },
+           { "x": 247.3699951171875, "y": 132.65499877929688 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 247.3699951171875, "y": -132.65499877929688 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 247.3699951171875, "y": -137.78500366210938 },
+           { "x": 242.55001831054688, "y": -141.93499755859375 },
+           { "x": 236.58999633789063, "y": -141.93499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 58.399993896484375, "y": -141.93499755859375 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 52.45001220703125, "y": -141.93499755859375 },
+           { "x": 47.6199951171875, "y": -146.09500122070313 },
+           { "x": 47.6199951171875, "y": -151.21499633789063 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": -219.44500732421875 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": -227.55499267578125 },
+           { "x": 36.3900146484375, "y": -231.7650146484375 },
+           { "x": 29.5, "y": -226.23501586914063 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -243.94000244140625, "y": -6.7949981689453125 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -248.50999450683594, "y": -3.125 },
+           { "x": -248.50999450683594, "y": 3.114990234375 },
+           { "x": -243.94000244140625, "y": 6.7849884033203125 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 29.5, "y": 226.23500061035156 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 36.3900146484375, "y": 231.76499938964844 },
+           { "x": 47.6199951171875, "y": 227.55499267578125 },
+           { "x": 47.6199951171875, "y": 219.4449920654297 }
+          ],
+          "type": 4
+         },
+         { "type": 5 }
+        ]
+       },
+       {
+        "address": [ 0 ],
+        "fillType": 0,
+        "path": null
+       }
+      ],
+      "version": 1.0
+     },
+     "varType": "polyMesh"
+    },
+    "niceName": { "value": "Arrow R 1", "varType": "string" },
+    "uuid": { "value": "df79bca7-df1d-4c23-adb3-a7697cf0576c", "varType": "string" }
+   },
+   "nodeId": "customShape#45",
+   "nodeType": "customShape"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "flattenMeshAtLevel": { "value": true, "varType": "bool" },
+    "levelMode": { "value": 4, "varType": "enum" },
+    "levels": {
+     "value": { "x": 1, "y": 1 },
+     "varType": "int2"
+    },
+    "niceName": { "value": "Sub-Mesh 8 [Bounding Box 2 Rectangle] 1", "varType": "string" },
+    "shapePosition": {
+     "value": { "x": 0.0, "y": 50.0 },
+     "varType": "double2"
+    },
+    "uuid": { "value": "944f9f52-37e9-4c11-a07f-bf9ba15e2f15", "varType": "string" }
+   },
+   "nodeId": "subMesh#29",
+   "nodeType": "subMesh"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "Align 4 [Speaker - Text] 3", "varType": "string" },
+    "uuid": { "value": "8ece6d1c-6f12-40b8-ad35-c0a2638530e6", "varType": "string" },
+    "x": { "value": -1.0, "varType": "double" }
+   },
+   "nodeId": "align#13",
+   "nodeType": "align"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "flattenMeshAtLevel": { "value": true, "varType": "bool" },
+    "levels": {
+     "value": { "x": 2, "y": 2 },
+     "varType": "int2"
+    },
+    "niceName": { "value": "Sub-Mesh 7 [Arrow R] 7", "varType": "string" },
+    "shapePosition": {
+     "value": { "x": 0.0, "y": 50.0 },
+     "varType": "double2"
+    },
+    "uuid": { "value": "a52510fd-936d-42bd-a18d-e3be191aa6ad", "varType": "string" }
+   },
+   "nodeId": "subMesh#27",
+   "nodeType": "subMesh"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "flattenMeshAtLevel": { "value": true, "varType": "bool" },
+    "levels": {
+     "value": { "x": 1, "y": 1 },
+     "varType": "int2"
+    },
+    "niceName": { "value": "Sub-Mesh 7 [Arrow R] 6", "varType": "string" },
+    "shapePosition": {
+     "value": { "x": 0.0, "y": 40.0 },
+     "varType": "double2"
+    },
+    "uuid": { "value": "a52510fd-936d-42bd-a18d-e3be191aa6ad", "varType": "string" }
+   },
+   "nodeId": "subMesh#30",
+   "nodeType": "subMesh"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "flattenMeshAtLevel": { "value": true, "varType": "bool" },
+    "levelMode": { "value": 4, "varType": "enum" },
+    "levels": {
+     "value": { "x": 1, "y": 1 },
+     "varType": "int2"
+    },
+    "niceName": { "value": "Sub-Mesh 7 [Arrow R] 4", "varType": "string" },
+    "shapePosition": {
+     "value": { "x": 0.0, "y": 30.0 },
+     "varType": "double2"
+    },
+    "shapeRotation": { "value": 180.0, "varType": "double" },
+    "shapeScale": {
+     "value": { "x": 1.0, "y": 1.2 },
+     "varType": "double2"
+    },
+    "uuid": { "value": "a52510fd-936d-42bd-a18d-e3be191aa6ad", "varType": "string" }
+   },
+   "nodeId": "subMesh#28",
+   "nodeType": "subMesh"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "flattenMeshAtLevel": { "value": true, "varType": "bool" },
+    "levels": {
+     "value": { "x": 1, "y": 1 },
+     "varType": "int2"
+    },
+    "niceName": { "value": "Sub-Mesh 7 [Arrow R] 5", "varType": "string" },
+    "shapePosition": {
+     "value": { "x": 0.0, "y": 30.0 },
+     "varType": "double2"
+    },
+    "shapeScale": {
+     "value": { "x": 1.0, "y": 1.2 },
+     "varType": "double2"
+    },
+    "uuid": { "value": "a52510fd-936d-42bd-a18d-e3be191aa6ad", "varType": "string" }
+   },
+   "nodeId": "subMesh#32",
+   "nodeType": "subMesh"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "flattenMeshAtLevel": { "value": true, "varType": "bool" },
+    "levelMode": { "value": 4, "varType": "enum" },
+    "niceName": { "value": "Sub-Mesh 6 [Arrow D] 1", "varType": "string" },
+    "shapePosition": {
+     "value": { "x": 0.0, "y": 121.0 },
+     "varType": "double2"
+    },
+    "shapeRotation": { "value": 180.0, "varType": "double" },
+    "uuid": { "value": "e08fabdd-d92a-41ce-9775-3e4bb883e7fc", "varType": "string" }
+   },
+   "nodeId": "subMesh#31",
+   "nodeType": "subMesh"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Point Constraint", "varType": "string" },
+    "offset": {
+     "value": { "x": 0.0, "y": -15.0 },
+     "varType": "double2"
+    },
+    "uuid": { "value": "0046656f-f66a-485b-ab89-f8096851c732", "varType": "string" }
+   },
+   "nodeId": "pointConstraint#1",
+   "nodeType": "pointConstraint"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Two Lines Switch", "varType": "string" },
+    "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
+   },
+   "nodeId": "ifElse#1",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "fcbdda8d-ccc2-4e8e-aaba-d8456177cb4b", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#652",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Composition Constraint 5", "varType": "string" },
+    "offset": {
+     "value": { "x": -42.0, "y": 40.0 },
+     "varType": "double2"
+    },
+    "resolution": {
+     "value": { "x": 1080, "y": 1920 },
+     "varType": "int2"
+    },
+    "uuid": { "value": "f0da6e83-56f6-4465-9739-91850c270ea4", "varType": "string" },
+    "width": { "value": 100.0, "varType": "double" }
+   },
+   "nodeId": "compConstraint#7",
+   "nodeType": "compConstraint"
+  },
+  {
+   "attributes": {
+    "niceName": { "value": "subUINodes", "varType": "string" },
+    "uuid": { "value": "822f743a-d0d3-4849-b264-9c3fa8839b50", "varType": "string" }
+   },
+   "nodeId": "hiddenFolder#653",
+   "nodeType": "hiddenFolder"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 200", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "0d133ec8-9bb7-4cb4-b826-bff2fa09679f", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#545",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Artist Name String - Second Line", "varType": "string" },
+    "string": { "value": "& Stephen Minty", "varType": "string" },
+    "uuid": { "value": "f888b490-2889-4948-aea4-dcac3fb2808c", "varType": "string" }
+   },
+   "nodeId": "string#6",
+   "nodeType": "string"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "materialColor": {
+     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "varType": "color"
+    },
+    "niceName": { "value": "Fill 349", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "fd6e95d1-2225-443f-ab75-e4a64707f79b", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#991",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "58a41ef2-326c-4747-ab3c-6c70328e46a8", "varType": "string" }
+   },
+   "nodeId": "keyframe#1177",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 350", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "41d5cd17-74e2-405d-9b4e-32d476230e83", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#992",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": {
+      "interpolation": 0,
+      "leftBez": { "x": -5.0, "y": 0.0 },
+      "locked": true,
+      "numValue": 100.0,
+      "rightBez": { "x": 5.0, "y": 0.0 },
+      "weightLocked": true
+     },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 13.0, "varType": "double" },
+    "uuid": { "value": "4d9e2b0f-9a66-49ff-8a55-44dfded0b274", "varType": "string" }
+   },
+   "nodeId": "keyframe#1178",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": {
+      "interpolation": 0,
+      "leftBez": { "x": -13.208904266357422, "y": 0.0 },
+      "locked": true,
+      "numValue": 0.0,
+      "rightBez": { "x": 13.208904266357422, "y": -0.0 },
+      "weightLocked": true
+     },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 40.0, "varType": "double" },
+    "uuid": { "value": "d6db1f6a-2f4c-4ca6-8b8d-7fcaade61913", "varType": "string" }
+   },
+   "nodeId": "keyframe#1179",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "String Length 1", "varType": "string" },
+    "string": { "value": "& Stephen Minty", "varType": "string" },
+    "uuid": { "value": "bb8e8a73-608b-4df8-8ffb-64bf7431ee33", "varType": "string" }
+   },
+   "nodeId": "stringLength#2",
+   "nodeType": "stringLength"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 250.0, "varType": "double" },
+    "uuid": { "value": "9d7b3c8c-be02-48f5-9d81-11c5ccd18c89", "varType": "string" }
+   },
+   "nodeId": "keyframe#1180",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "animationLayers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "animationCurve#19",
+   "nodeType": "animationCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#566",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "inputShapes": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "niceName": { "value": "Bounding Box 3", "varType": "string" },
+    "uuid": { "value": "b9c837cd-bf46-418b-bfa9-217e65073821", "varType": "string" }
+   },
+   "nodeId": "boundingBox#3",
+   "nodeType": "boundingBox"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 2, "varType": "int" },
+    "deformers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "hidden": { "value": true, "varType": "bool" },
+    "inputShape": {
+     "value": {
+      "meshes": [
+       {
+        "address": [ 0, 0 ],
+        "fill": {
+         "alpha": 1.0,
+         "color": { "a": 255, "b": 0, "g": 0, "r": 0 }
+        },
+        "fillType": 0,
+        "path": [
+         {
+          "points": [
+           { "x": 0.0, "y": 247.36500549316406 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": -136.6199951171875, "y": 247.36500549316406 },
+           { "x": -247.3699951171875, "y": 136.61500549316406 },
+           { "x": -247.3699951171875, "y": 0.0050048828125 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -247.3699951171875, "y": -136.60499572753906 },
+           { "x": -136.6199951171875, "y": -247.36500549316406 },
+           { "x": 0.0, "y": -247.36500549316406 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 136.6199951171875, "y": -247.36500549316406 },
+           { "x": 247.3699951171875, "y": -136.61500549316406 },
+           { "x": 247.3699951171875, "y": 0.0050048828125 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 247.3699951171875, "y": 136.625 },
+           { "x": 136.6199951171875, "y": 247.36500549316406 },
+           { "x": 0.0, "y": 247.36500549316406 }
+          ],
+          "type": 4
+         },
+         { "type": 5 },
+         {
+          "points": [
+           { "x": 0.0, "y": -165.0850067138672 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": 0.0, "y": 165.0850067138672 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 91.17001342773438, "y": 165.0850067138672 },
+           { "x": 165.08999633789063, "y": 91.17500305175781 },
+           { "x": 165.08999633789063, "y": -0.0049896240234375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 165.08999633789063, "y": -91.18498229980469 },
+           { "x": 91.17999267578125, "y": -165.09498596191406 },
+           { "x": 0.0, "y": -165.09498596191406 }
+          ],
+          "type": 4
+         },
+         { "type": 5 }
+        ]
+       },
+       {
+        "address": [ 0 ],
+        "fillType": 0,
+        "path": null
+       }
+      ],
+      "version": 1.0
+     },
+     "varType": "polyMesh"
+    },
+    "niceName": { "value": "Circle 1", "varType": "string" },
+    "uuid": { "value": "43b3505d-845c-45f3-a141-ab15ce7b98c5", "varType": "string" }
+   },
+   "nodeId": "customShape#42",
+   "nodeType": "customShape"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 2, "varType": "int" },
+    "deformers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "hidden": { "value": true, "varType": "bool" },
+    "inputShape": {
+     "value": {
+      "meshes": [
+       {
+        "address": [ 0, 0 ],
+        "fill": {
+         "alpha": 1.0,
+         "color": { "a": 255, "b": 0, "g": 0, "r": 0 }
+        },
+        "fillType": 0,
+        "path": [
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": 219.4449920654297 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": 151.21499633789063 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": 146.08499145507813 },
+           { "x": 52.45001220703125, "y": 141.93499755859375 },
+           { "x": 58.399993896484375, "y": 141.93499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 236.58999633789063, "y": 141.93499755859375 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 242.54000854492188, "y": 141.93499755859375 },
+           { "x": 247.3699951171875, "y": 137.77499389648438 },
+           { "x": 247.3699951171875, "y": 132.65499877929688 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 247.3699951171875, "y": -132.65499877929688 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 247.3699951171875, "y": -137.78500366210938 },
+           { "x": 242.55001831054688, "y": -141.93499755859375 },
+           { "x": 236.58999633789063, "y": -141.93499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 58.399993896484375, "y": -141.93499755859375 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 52.45001220703125, "y": -141.93499755859375 },
+           { "x": 47.6199951171875, "y": -146.09500122070313 },
+           { "x": 47.6199951171875, "y": -151.21499633789063 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": -219.44500732421875 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 47.6199951171875, "y": -227.55499267578125 },
+           { "x": 36.3900146484375, "y": -231.7650146484375 },
+           { "x": 29.5, "y": -226.23501586914063 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -243.94000244140625, "y": -6.7949981689453125 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -248.50999450683594, "y": -3.125 },
+           { "x": -248.50999450683594, "y": 3.114990234375 },
+           { "x": -243.94000244140625, "y": 6.7849884033203125 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 29.5, "y": 226.23500061035156 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 36.3900146484375, "y": 231.76499938964844 },
+           { "x": 47.6199951171875, "y": 227.55499267578125 },
+           { "x": 47.6199951171875, "y": 219.4449920654297 }
+          ],
+          "type": 4
+         },
+         { "type": 5 }
+        ]
+       },
+       {
+        "address": [ 0 ],
+        "fillType": 0,
+        "path": null
+       }
+      ],
+      "version": 1.0
+     },
+     "varType": "polyMesh"
+    },
+    "niceName": { "value": "Arrow L 1", "varType": "string" },
+    "uuid": { "value": "df79bca7-df1d-4c23-adb3-a7697cf0576c", "varType": "string" }
+   },
+   "nodeId": "customShape#44",
+   "nodeType": "customShape"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 2, "varType": "int" },
+    "deformers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "hidden": { "value": true, "varType": "bool" },
+    "inputShape": {
+     "value": {
+      "meshes": [
+       {
+        "address": [ 0, 0 ],
+        "fill": {
+         "alpha": 1.0,
+         "color": { "a": 255, "b": 0, "g": 0, "r": 0 }
+        },
+        "fillType": 0,
+        "path": [
+         {
+          "points": [
+           { "x": 182.25001525878906, "y": 130.99501037597656 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": 158.27000427246094, "y": 78.83500671386719 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 122.22001647949219, "y": 92.16500854492188 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 108.47001647949219, "y": 97.2650146484375 },
+           { "x": 98.08000183105469, "y": 108.73500061035156 },
+           { "x": 94.36000061035156, "y": 122.91500854492188 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 84.41999816894531, "y": 160.8350067138672 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 84.41999816894531, "y": 160.8350067138672 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 84.41999816894531, "y": 160.8350067138672 },
+           { "x": 130.99000549316406, "y": 182.2550048828125 },
+           { "x": 130.99000549316406, "y": 182.2550048828125 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 163.5900115966797, "y": 197.24501037597656 },
+           { "x": 197.24000549316406, "y": 163.5850067138672 },
+           { "x": 182.25001525878906, "y": 130.99501037597656 }
+          ],
+          "type": 4
+         },
+         { "type": 5 },
+         {
+          "points": [
+           { "x": -94.36000061035156, "y": -122.91497802734375 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": -98.08000183105469, "y": -108.7349853515625 },
+           { "x": -108.4699935913086, "y": -97.26498413085938 },
+           { "x": -122.2199935913086, "y": -92.17498779296875 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -158.26998901367188, "y": -78.83499145507813 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -182.25, "y": -130.9849853515625 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -197.239990234375, "y": -163.58499145507813 },
+           { "x": -163.58999633789063, "y": -197.2349853515625 },
+           { "x": -130.989990234375, "y": -182.2449951171875 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -84.41999816894531, "y": -160.83499145507813 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -94.36000061035156, "y": -122.91497802734375 }
+          ],
+          "type": 1
+         },
+         { "type": 5 },
+         {
+          "points": [
+           { "x": -130.989990234375, "y": 182.2550048828125 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": -163.58999633789063, "y": 197.24501037597656 },
+           { "x": -197.239990234375, "y": 163.5850067138672 },
+           { "x": -182.25, "y": 130.99501037597656 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -158.26998901367188, "y": 78.83500671386719 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -122.2199935913086, "y": 92.16500854492188 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -108.4699935913086, "y": 97.2650146484375 },
+           { "x": -98.08000183105469, "y": 108.73500061035156 },
+           { "x": -94.36000061035156, "y": 122.91500854492188 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -84.41999816894531, "y": 160.8350067138672 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -130.989990234375, "y": 182.2550048828125 }
+          ],
+          "type": 1
+         },
+         { "type": 5 },
+         {
+          "points": [
+           { "x": 182.25001525878906, "y": -130.9849853515625 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": 158.27000427246094, "y": -78.83499145507813 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 122.22001647949219, "y": -92.17498779296875 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 108.47001647949219, "y": -97.26498413085938 },
+           { "x": 98.08000183105469, "y": -108.7349853515625 },
+           { "x": 94.36000061035156, "y": -122.91497802734375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 84.41999816894531, "y": -160.83499145507813 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 130.99000549316406, "y": -182.2449951171875 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 163.5900115966797, "y": -197.2349853515625 },
+           { "x": 197.24000549316406, "y": -163.58499145507813 },
+           { "x": 182.25001525878906, "y": -130.9849853515625 }
+          ],
+          "type": 4
+         },
+         { "type": 5 },
+         {
+          "points": [
+           { "x": 22.8800048828125, "y": -269.04498291015625 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": 54.12998962402344, "y": -149.78500366210938 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 66.66999816894531, "y": -101.94500732421875 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 71.11000061035156, "y": -85.02499389648438 },
+           { "x": 83.55000305175781, "y": -71.30499267578125 },
+           { "x": 99.94001770019531, "y": -65.2349853515625 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 145.52000427246094, "y": -48.364990234375 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 216.28001403808594, "y": -22.18499755859375 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 227.6699981689453, "y": -17.975006103515625 },
+           { "x": 231.7200164794922, "y": -7.964996337890625 },
+           { "x": 231.7200164794922, "y": -0.0050048828125 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 231.7200164794922, "y": 7.95501708984375 },
+           { "x": 227.66001892089844, "y": 17.95501708984375 },
+           { "x": 216.28001403808594, "y": 22.175018310546875 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 145.52000427246094, "y": 48.36500549316406 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 99.94001770019531, "y": 65.22500610351563 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 83.53999328613281, "y": 71.29501342773438 },
+           { "x": 71.11000061035156, "y": 85.0150146484375 },
+           { "x": 66.66999816894531, "y": 101.93501281738281 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 22.8800048828125, "y": 269.0350036621094 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 19.470001220703125, "y": 282.05499267578125 },
+           { "x": 8.82000732421875, "y": 286.69500732421875 },
+           { "x": 0.0, "y": 286.69500732421875 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -8.819992065429688, "y": 286.69500732421875 },
+           { "x": -19.470001220703125, "y": 282.05499267578125 },
+           { "x": -22.879989624023438, "y": 269.0450134277344 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -66.66999816894531, "y": 101.94500732421875 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -71.11000061035156, "y": 85.02500915527344 },
+           { "x": -83.53999328613281, "y": 71.30500793457031 },
+           { "x": -99.94999694824219, "y": 65.23500061035156 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -145.52999877929688, "y": 48.375 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -216.2899932861328, "y": 22.18499755859375 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -227.67999267578125, "y": 17.975006103515625 },
+           { "x": -231.72999572753906, "y": 7.964996337890625 },
+           { "x": -231.72999572753906, "y": 0.0050048828125 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -231.72999572753906, "y": -7.954986572265625 },
+           { "x": -227.6699981689453, "y": -17.954986572265625 },
+           { "x": -216.2899932861328, "y": -22.17498779296875 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -145.52999877929688, "y": -48.35498046875 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -99.94999694824219, "y": -65.22500610351563 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -83.55000305175781, "y": -71.29498291015625 },
+           { "x": -71.1199951171875, "y": -85.01498413085938 },
+           { "x": -66.67999267578125, "y": -101.93499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -54.13999938964844, "y": -149.76498413085938 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -22.889999389648438, "y": -269.03497314453125 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -19.479995727539063, "y": -282.04498291015625 },
+           { "x": -8.830001831054688, "y": -286.68499755859375 },
+           { "x": -0.0099945068359375, "y": -286.68499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 8.80999755859375, "y": -286.68499755859375 },
+           { "x": 19.460006713867188, "y": -282.04498291015625 },
+           { "x": 22.870010375976563, "y": -269.03497314453125 }
+          ],
+          "type": 4
+         },
+         { "type": 5 }
+        ]
+       },
+       {
+        "address": [ 0 ],
+        "fillType": 0,
+        "path": null
+       }
+      ],
+      "version": 1.0
+     },
+     "varType": "polyMesh"
+    },
+    "niceName": { "value": "Star 1", "varType": "string" },
+    "uuid": { "value": "94cc6151-937d-477a-8e50-1be3406e1069", "varType": "string" }
+   },
+   "nodeId": "customShape#43",
+   "nodeType": "customShape"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 2, "varType": "int" },
+    "deformers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "hidden": { "value": true, "varType": "bool" },
+    "inputShape": {
+     "value": {
+      "meshes": [
+       {
+        "address": [ 0, 0, 0 ],
+        "fill": {
+         "alpha": 1.0,
+         "color": { "a": 255, "b": 0, "g": 0, "r": 0 }
+        },
+        "fillType": 0,
+        "path": [
+         {
+          "points": [
+           { "x": 0.0, "y": 293.5350036621094 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": -136.6199951171875, "y": 293.5350036621094 },
+           { "x": -247.3699951171875, "y": 182.78500366210938 },
+           { "x": -247.3699951171875, "y": 46.17500305175781 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -247.3699951171875, "y": -20.69500732421875 },
+           { "x": -220.83999633789063, "y": -81.364990234375 },
+           { "x": -177.72999572753906, "y": -125.885009765625 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -169.00999450683594, "y": -134.885009765625 },
+           { "x": -164.16000366210938, "y": -146.92498779296875 },
+           { "x": -164.16000366210938, "y": -159.45498657226563 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -164.16000366210938, "y": -181.46499633789063 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -164.16000366210938, "y": -209.83499145507813 },
+           { "x": -147.7899932861328, "y": -273.4649963378906 },
+           { "x": -124.02999877929688, "y": -285.5950012207031 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -112.53999328613281, "y": -291.4549865722656 },
+           { "x": -98.91999816894531, "y": -282.9750061035156 },
+           { "x": -98.91999816894531, "y": -270.0849914550781 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -98.91999816894531, "y": -217.77499389648438 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -98.91999816894531, "y": -212.9849853515625 },
+           { "x": -96.97999572753906, "y": -208.64498901367188 },
+           { "x": -93.83999633789063, "y": -205.51498413085938 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -90.69999694824219, "y": -202.375 },
+           { "x": -86.3699951171875, "y": -200.43499755859375 },
+           { "x": -81.58000183105469, "y": -200.43499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -72.0, "y": -200.43499755859375 },
+           { "x": -64.239990234375, "y": -208.19500732421875 },
+           { "x": -64.239990234375, "y": -217.77499389648438 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -64.239990234375, "y": -276.1949768066406 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -64.239990234375, "y": -285.7649841308594 },
+           { "x": -56.47999572753906, "y": -293.5350036621094 },
+           { "x": -46.899993896484375, "y": -293.5350036621094 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -34.67999267578125, "y": -293.5350036621094 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -25.099990844726563, "y": -293.5350036621094 },
+           { "x": -17.339996337890625, "y": -285.7649841308594 },
+           { "x": -17.339996337890625, "y": -276.1949768066406 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -17.339996337890625, "y": -217.77499389648438 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": -17.339996337890625, "y": -212.9849853515625 },
+           { "x": -15.399993896484375, "y": -208.64498901367188 },
+           { "x": -12.259994506835938, "y": -205.51498413085938 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -9.1199951171875, "y": -202.375 },
+           { "x": -4.7899932861328125, "y": -200.43499755859375 },
+           { "x": 0.0, "y": -200.43499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 9.58001708984375, "y": -200.43499755859375 },
+           { "x": 17.339996337890625, "y": -208.19500732421875 },
+           { "x": 17.339996337890625, "y": -217.77499389648438 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 17.339996337890625, "y": -276.1949768066406 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 17.339996337890625, "y": -285.7649841308594 },
+           { "x": 25.100006103515625, "y": -293.5350036621094 },
+           { "x": 34.67999267578125, "y": -293.5350036621094 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 46.899993896484375, "y": -293.5350036621094 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 56.480010986328125, "y": -293.5350036621094 },
+           { "x": 64.239990234375, "y": -285.7649841308594 },
+           { "x": 64.239990234375, "y": -276.1949768066406 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 64.239990234375, "y": -217.77499389648438 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 64.239990234375, "y": -212.9849853515625 },
+           { "x": 66.17999267578125, "y": -208.64498901367188 },
+           { "x": 69.32000732421875, "y": -205.51498413085938 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 72.45999145507813, "y": -202.375 },
+           { "x": 76.79000854492188, "y": -200.43499755859375 },
+           { "x": 81.58001708984375, "y": -200.43499755859375 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 91.16000366210938, "y": -200.43499755859375 },
+           { "x": 98.92001342773438, "y": -208.19500732421875 },
+           { "x": 98.92001342773438, "y": -217.77499389648438 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 98.92001342773438, "y": -270.0849914550781 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 98.92001342773438, "y": -282.9750061035156 },
+           { "x": 112.54000854492188, "y": -291.4549865722656 },
+           { "x": 124.02999877929688, "y": -285.5950012207031 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 147.79000854492188, "y": -273.4649963378906 },
+           { "x": 164.16000366210938, "y": -209.83499145507813 },
+           { "x": 164.16000366210938, "y": -181.46499633789063 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 164.16000366210938, "y": -159.45498657226563 }
+          ],
+          "type": 1
+         },
+         {
+          "points": [
+           { "x": 164.16000366210938, "y": -146.92498779296875 },
+           { "x": 169.010009765625, "y": -134.885009765625 },
+           { "x": 177.73001098632813, "y": -125.885009765625 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 220.83999633789063, "y": -81.364990234375 },
+           { "x": 247.3699951171875, "y": -20.69500732421875 },
+           { "x": 247.3699951171875, "y": 46.17500305175781 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 247.3699951171875, "y": 182.78500366210938 },
+           { "x": 136.6199951171875, "y": 293.5350036621094 },
+           { "x": 0.0, "y": 293.5350036621094 }
+          ],
+          "type": 4
+         },
+         { "type": 5 },
+         {
+          "points": [
+           { "x": -107.59999084472656, "y": -7.2550048828125 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": -157.4499969482422, "y": -7.2550048828125 },
+           { "x": -197.8699951171875, "y": 33.165008544921875 },
+           { "x": -197.8699951171875, "y": 83.01499938964844 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -197.8699951171875, "y": 132.86500549316406 },
+           { "x": -157.4499969482422, "y": 173.27499389648438 },
+           { "x": -107.59999084472656, "y": 173.27499389648438 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -57.75, "y": 173.27499389648438 },
+           { "x": -17.339996337890625, "y": 132.86500549316406 },
+           { "x": -17.339996337890625, "y": 83.01499938964844 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": -17.339996337890625, "y": 33.165008544921875 },
+           { "x": -57.75, "y": -7.2550048828125 },
+           { "x": -107.59999084472656, "y": -7.2550048828125 }
+          ],
+          "type": 4
+         },
+         { "type": 5 },
+         {
+          "points": [
+           { "x": 107.60000610351563, "y": -7.2550048828125 }
+          ],
+          "type": 0
+         },
+         {
+          "points": [
+           { "x": 57.75, "y": -7.2550048828125 },
+           { "x": 17.339996337890625, "y": 33.165008544921875 },
+           { "x": 17.339996337890625, "y": 83.01499938964844 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 17.339996337890625, "y": 132.86500549316406 },
+           { "x": 57.75, "y": 173.27499389648438 },
+           { "x": 107.60000610351563, "y": 173.27499389648438 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 157.45001220703125, "y": 173.27499389648438 },
+           { "x": 197.8699951171875, "y": 132.86500549316406 },
+           { "x": 197.8699951171875, "y": 83.01499938964844 }
+          ],
+          "type": 4
+         },
+         {
+          "points": [
+           { "x": 197.8699951171875, "y": 33.165008544921875 },
+           { "x": 157.45001220703125, "y": -7.2550048828125 },
+           { "x": 107.60000610351563, "y": -7.2550048828125 }
+          ],
+          "type": 4
+         },
+         { "type": 5 }
+        ]
+       },
+       {
+        "address": [ 0, 0 ],
+        "fill": {
+         "alpha": 1.0,
+         "color": { "a": 255, "b": 0, "g": 0, "r": 0 }
+        },
+        "fillType": 0,
+        "path": null
+       },
+       {
+        "address": [ 0 ],
+        "fillType": 0,
+        "path": null
+       }
+      ],
+      "version": 1.0
+     },
+     "varType": "polyMesh"
+    },
+    "niceName": { "value": "Skull 1", "varType": "string" },
+    "uuid": { "value": "8c572e2a-854b-455c-9c2d-65b8af6cbaad", "varType": "string" }
+   },
+   "nodeId": "customShape#41",
+   "nodeType": "customShape"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 201", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "c87a9bbd-f14c-48f8-9e34-2bdf1b71b0b0", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#552",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 203", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "d47988cc-c786-4d08-b649-db43105aa1dd", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#553",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 207", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "3f223581-b462-45f0-956a-72d4a64404f8", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#554",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "autoHeight": { "value": true, "varType": "bool" },
+    "autoName": { "value": false, "varType": "bool" },
+    "autoWidth": { "value": true, "varType": "bool" },
+    "colorId": { "value": 11, "varType": "int" },
+    "deformers": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "font": {
+     "value": { "font": "Roboto Mono", "style": "Bold" },
+     "varType": "font"
+    },
+    "fontSize": { "value": 58.0, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "horizontalAlignment": { "value": 2, "varType": "enum" },
+    "letterSpacing": { "value": -2.0, "varType": "double" },
+    "lineSpacing": { "value": -20.0, "varType": "double" },
+    "niceName": { "value": "Speaker - Line 2", "varType": "string" },
+    "position": {
+     "value": { "x": 498.0, "y": 40.0, "z": 0.0 },
+     "varType": "double3"
+    },
+    "text": {
+     "value": {
+      "overrides": [
+       {
+        "end": 15,
+        "features": { "calt": 1, "clig": 1, "liga": 1 },
+        "start": 0
+       }
+      ],
+      "text": "& Stephen Minty"
+     },
+     "varType": "richText"
+    },
+    "uuid": { "value": "0cb92417-6255-4d8f-be58-32424d74b60c", "varType": "string" },
+    "verticalAlignment": { "value": 1, "varType": "enum" }
+   },
+   "nodeId": "textShape#14",
+   "nodeType": "textShape"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 208", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "3d27ba4f-a207-46f9-8fa7-6ca782c169c7", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#546",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 202", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "dc65c869-27ed-4e67-90f8-3af622f1b3be", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#551",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 209", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "658f1b4f-230d-46ed-80d7-877fb5d3b82d", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#548",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 206", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "8fb2fc72-44b7-4e64-85cb-c63747db73d4", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#550",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 205", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "8fb2fc72-44b7-4e64-85cb-c63747db73d4", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#549",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 14, "varType": "int" },
+    "niceName": { "value": "Motion Blur 204", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "d47988cc-c786-4d08-b649-db43105aa1dd", "varType": "string" }
+   },
+   "nodeId": "motionBlurFilter#547",
+   "nodeType": "motionBlurFilter"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Two Lines Switch 1", "varType": "string" },
+    "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
+   },
+   "nodeId": "ifElse#3",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#568",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "animationLayers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "animationCurve#22",
+   "nodeType": "animationCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#575",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#571",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#570",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#569",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "animationLayers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "dataType": { "value": 0, "varType": "enum" },
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "animationCurve#20",
+   "nodeType": "animationCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#573",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "animationLayers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "animationCurve#21",
+   "nodeType": "animationCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#567",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#572",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 47.0, "varType": "double" }
+   },
+   "nodeId": "visibilityCurve#574",
+   "nodeType": "visibilityCurve"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "levelMode": { "value": 3, "varType": "enum" },
+    "niceName": { "value": "Sub-Mesh 2 [Speaker - Text] 1", "varType": "string" },
+    "shapeOpacity": { "expression": "*100", "expressionEnabled": true, "value": 0.0, "varType": "double" },
+    "uuid": { "value": "9ab66ef7-b16e-4269-8cd8-146a405619ce", "varType": "string" }
+   },
+   "nodeId": "subMesh#26",
+   "nodeType": "subMesh"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "Align 4 [Speaker - Text] 2", "varType": "string" },
+    "uuid": { "value": "8ece6d1c-6f12-40b8-ad35-c0a2638530e6", "varType": "string" },
+    "x": { "value": -1.0, "varType": "double" }
+   },
+   "nodeId": "align#12",
+   "nodeType": "align"
+  },
+  {
+   "attributes": {
     "array": {
      "list": [
-      { "instanceName": "n0", "value": "Dominic North & Max Lynch", "varType": "string" }
+      { "instanceName": "n0", "value": "Charlotte Ballantine", "varType": "string" }
      ]
     },
     "colorId": { "value": 0, "varType": "int" },
@@ -1330,6 +3951,30 @@
    },
    "nodeId": "javaScript#1",
    "nodeType": "javaScript"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Two Lines Switch", "varType": "string" },
+    "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
+   },
+   "nodeId": "ifElse#2",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "niceName": { "value": "Two Lines Switch", "varType": "string" },
+    "uuid": { "value": "f25d8861-7b05-4c5c-8969-f7af1fcc9b8f", "varType": "string" },
+    "value": {
+     "definitionOverrides": { "hardMax": 1.0, "hardMin": 0.0, "step": 1.0 },
+     "instanceName": "OnOff",
+     "value": 0.0,
+     "varType": "double"
+    }
+   },
+   "nodeId": "value#1",
+   "nodeType": "value"
   },
   {
    "attributes": {
@@ -3050,7 +5695,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#551",
    "nodeType": "visibilityCurve"
@@ -3156,6 +5801,36 @@
   },
   {
    "attributes": {
+    "data": {
+     "value": {
+      "interpolation": 0,
+      "leftBez": { "x": -19.390300750732422, "y": 0.0 },
+      "locked": true,
+      "numValue": 0.0,
+      "rightBez": { "x": 19.390300750732422, "y": -0.0 },
+      "weightLocked": true
+     },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 25.0, "varType": "double" },
+    "uuid": { "value": "58a9b8b9-9ed4-40f1-bc70-3c8ed49ccb40", "varType": "string" }
+   },
+   "nodeId": "keyframe#1199",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "07a675de-155f-4e76-afeb-d907da83d54c", "varType": "string" }
+   },
+   "nodeId": "keyframe#1183",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "niceName": { "value": "Fill 338", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
@@ -3184,6 +5859,436 @@
     "timeOffset": { "value": 121.0, "varType": "double" },
     "uuid": { "value": "50aa2553-1f8d-4fc6-98af-2d100927566f", "varType": "string" }
    },
+   "nodeId": "keyframe#1194",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "293fcf39-ed16-455e-b661-7f3d17e655cb", "varType": "string" }
+   },
+   "nodeId": "keyframe#1196",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "7368bd23-f4f8-47b3-93ee-f213262db92e", "varType": "string" }
+   },
+   "nodeId": "keyframe#1195",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "31cfff15-3cce-4710-bb6a-2916d815a5d5", "varType": "string" }
+   },
+   "nodeId": "keyframe#1187",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 357", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "5d17f483-ac7d-4973-88fa-d3f8195066a9", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#997",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "07a675de-155f-4e76-afeb-d907da83d54c", "varType": "string" }
+   },
+   "nodeId": "keyframe#1193",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 351", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "ae3ca635-75e1-46ac-b6ff-651712f07618", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1007",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "01cfad0d-64fe-46f5-ba1b-fc29e007a43e", "varType": "string" }
+   },
+   "nodeId": "keyframe#1203",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 358", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "685c470b-8b23-43e7-a8f0-1964f4057b79", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#995",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 363", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "685c470b-8b23-43e7-a8f0-1964f4057b79", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#993",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "da3d3f53-75a1-4b36-a53f-67a55c416c48", "varType": "string" }
+   },
+   "nodeId": "keyframe#1191",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": {
+      "interpolation": 0,
+      "leftBez": { "x": -5.0, "y": 0.0 },
+      "locked": true,
+      "numValue": 100.0,
+      "rightBez": { "x": 5.0, "y": 0.0 },
+      "weightLocked": true
+     },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 5.0, "varType": "double" },
+    "uuid": { "value": "8896f872-77ef-4a93-899a-0e96d6b9587f", "varType": "string" }
+   },
+   "nodeId": "keyframe#1204",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "uuid": { "value": "23d0d3e2-bee5-4b01-8b01-43541d59b4c1", "varType": "string" }
+   },
+   "nodeId": "keyframe#1200",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "c7754c92-68e1-4982-a7f9-a4bbe2f44811", "varType": "string" }
+   },
+   "nodeId": "keyframe#1182",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 364", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "82d981eb-8353-43e4-8fb8-7b1c2a247d6b", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#999",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 365", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "7445066e-61a0-4ba0-8b56-8ff40dd16ae1", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#994",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "1b4d4b6e-f2c4-4081-8fe2-64a4d3f66ed6", "varType": "string" }
+   },
+   "nodeId": "keyframe#1189",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 362", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "2d4de652-218d-44d8-ad4a-40ffedc200d7", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1003",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "c7754c92-68e1-4982-a7f9-a4bbe2f44811", "varType": "string" }
+   },
+   "nodeId": "keyframe#1188",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 352", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "113feb75-cbe9-40cd-a178-b12d01038194", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1005",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "6be40568-ac01-40a0-bd71-543d280e0ca4", "varType": "string" }
+   },
+   "nodeId": "keyframe#1190",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": {
+      "interpolation": 0,
+      "leftBez": { "x": -5.0, "y": 0.0 },
+      "locked": true,
+      "numValue": 100.0,
+      "rightBez": { "x": 5.0, "y": 0.0 },
+      "weightLocked": true
+     },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 13.0, "varType": "double" },
+    "uuid": { "value": "674d0e4d-f144-4416-9ac9-7dee791d9707", "varType": "string" }
+   },
+   "nodeId": "keyframe#1198",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "materialColor": {
+     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "varType": "color"
+    },
+    "niceName": { "value": "Fill 353", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "2b17fdf1-73de-4799-ad0d-1c08cd19ea29", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#996",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "e72f0587-2fa7-4a9e-a0d1-88bdd9eed4e0", "varType": "string" }
+   },
+   "nodeId": "keyframe#1186",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "50aa2553-1f8d-4fc6-98af-2d100927566f", "varType": "string" }
+   },
+   "nodeId": "keyframe#1184",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 356", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "5d17f483-ac7d-4973-88fa-d3f8195066a9", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1004",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 355", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "a8e26eef-e5c1-4571-8411-e1ff20f6de12", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1002",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "materialColor": {
+     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+     "varType": "color"
+    },
+    "niceName": { "value": "Fill 354", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "2b17fdf1-73de-4799-ad0d-1c08cd19ea29", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1000",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 15.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 59.0, "varType": "double" },
+    "uuid": { "value": "7cca3e56-5fce-4bb5-8600-f3440fde98ef", "varType": "string" }
+   },
+   "nodeId": "keyframe#1201",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 359", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "685c470b-8b23-43e7-a8f0-1964f4057b79", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1006",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "fe12cb20-f7ad-4587-9b29-de20b15fda96", "varType": "string" }
+   },
+   "nodeId": "keyframe#1202",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "ea6a856d-f343-4e66-87f1-1f7bbab01bf0", "varType": "string" }
+   },
+   "nodeId": "keyframe#1185",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": {
+      "interpolation": 0,
+      "leftBez": { "x": -13.208904266357422, "y": 0.0 },
+      "locked": true,
+      "numValue": 0.0,
+      "rightBez": { "x": 13.208904266357422, "y": -0.0 },
+      "weightLocked": true
+     },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 40.0, "varType": "double" },
+    "uuid": { "value": "3ee3510a-564d-4fde-b317-92c303c45db0", "varType": "string" }
+   },
+   "nodeId": "keyframe#1197",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "de3a8d70-4d3c-498d-bf5a-d3e21794ba5f", "varType": "string" }
+   },
+   "nodeId": "keyframe#1192",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": 1.0 },
+     "varType": "keyData"
+    },
+    "uuid": { "value": "31cfff15-3cce-4710-bb6a-2916d815a5d5", "varType": "string" }
+   },
+   "nodeId": "keyframe#1181",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 361", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "685c470b-8b23-43e7-a8f0-1964f4057b79", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#998",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "niceName": { "value": "Fill 360", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "d4f2b0eb-bcbf-470a-a149-6010f1abf242", "varType": "string" }
+   },
+   "nodeId": "colorMaterial#1001",
+   "nodeType": "colorMaterial"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": { "numValue": -1.0 },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 121.0, "varType": "double" },
+    "uuid": { "value": "50aa2553-1f8d-4fc6-98af-2d100927566f", "varType": "string" }
+   },
    "nodeId": "keyframe#1165",
    "nodeType": "keyframe"
   },
@@ -3195,7 +6300,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#561",
    "nodeType": "visibilityCurve"
@@ -3208,7 +6313,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#563",
    "nodeType": "visibilityCurve"
@@ -3264,7 +6369,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#562",
    "nodeType": "visibilityCurve"
@@ -3390,7 +6495,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#559",
    "nodeType": "visibilityCurve"
@@ -3403,7 +6508,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#547",
    "nodeType": "visibilityCurve"
@@ -3424,7 +6529,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#560",
    "nodeType": "visibilityCurve"
@@ -3497,6 +6602,16 @@
   },
   {
    "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Artist Name String - Second Line", "varType": "string" },
+    "string": { "value": "Charlotte Ballantine", "varType": "string" },
+    "uuid": { "value": "f888b490-2889-4948-aea4-dcac3fb2808c", "varType": "string" }
+   },
+   "nodeId": "string#5",
+   "nodeType": "string"
+  },
+  {
+   "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "niceName": { "value": "Fill 340", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
@@ -3533,7 +6648,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#553",
    "nodeType": "visibilityCurve"
@@ -3552,14 +6667,6 @@
     "uuid": { "value": "dad96501-58e8-4415-89ce-fee17bf89c45", "varType": "string" }
    },
    "nodeId": "hiddenFolder#425",
-   "nodeType": "hiddenFolder"
-  },
-  {
-   "attributes": {
-    "niceName": { "value": "subUINodes", "varType": "string" },
-    "uuid": { "value": "d8f38b8e-f105-4c6c-8005-cf48d501eb06", "varType": "string" }
-   },
-   "nodeId": "hiddenFolder#444",
    "nodeType": "hiddenFolder"
   },
   {
@@ -3838,14 +6945,6 @@
   {
    "attributes": {
     "niceName": { "value": "subUINodes", "varType": "string" },
-    "uuid": { "value": "9689d19b-a4b9-4238-af3b-9e8ea4b51d32", "varType": "string" }
-   },
-   "nodeId": "hiddenFolder#442",
-   "nodeType": "hiddenFolder"
-  },
-  {
-   "attributes": {
-    "niceName": { "value": "subUINodes", "varType": "string" },
     "uuid": { "value": "fcbdda8d-ccc2-4e8e-aaba-d8456177cb4b", "varType": "string" }
    },
    "nodeId": "hiddenFolder#418",
@@ -3994,20 +7093,6 @@
    },
    "nodeId": "subMesh#2",
    "nodeType": "subMesh"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "materialColor": {
-     "value": { "a": 255, "b": 25, "g": 25, "r": 25 },
-     "varType": "color"
-    },
-    "niceName": { "value": "Fill 282", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "69e3fe7f-a9a4-4ad7-818c-6228de22f105", "varType": "string" }
-   },
-   "nodeId": "colorMaterial#814",
-   "nodeType": "colorMaterial"
   },
   {
    "attributes": {
@@ -4381,17 +7466,6 @@
   {
    "attributes": {
     "data": {
-     "value": { "numValue": 1.0 },
-     "varType": "keyData"
-    },
-    "uuid": { "value": "6e311731-41c6-471b-b8e9-6491e9fc4f9a", "varType": "string" }
-   },
-   "nodeId": "keyframe#885",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
      "value": { "numValue": -1.0 },
      "varType": "keyData"
     },
@@ -4399,18 +7473,6 @@
     "uuid": { "value": "28a16e27-dc15-42de-8fe8-03d9a811ca83", "varType": "string" }
    },
    "nodeId": "keyframe#578",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": 1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 11.0, "varType": "double" },
-    "uuid": { "value": "7f5aa9fc-4eca-437a-b0c9-ea4caed6c55f", "varType": "string" }
-   },
-   "nodeId": "keyframe#899",
    "nodeType": "keyframe"
   },
   {
@@ -4589,20 +7651,6 @@
   },
   {
    "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "materialColor": {
-     "value": { "a": 255, "b": 25, "g": 25, "r": 25 },
-     "varType": "color"
-    },
-    "niceName": { "value": "Fill 284", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "3d5597c3-8164-4dab-abc4-e3b9426fb2ed", "varType": "string" }
-   },
-   "nodeId": "colorMaterial#816",
-   "nodeType": "colorMaterial"
-  },
-  {
-   "attributes": {
     "data": {
      "value": { "numValue": -1.0 },
      "varType": "keyData"
@@ -4674,17 +7722,6 @@
    },
    "nodeId": "colorMaterial#790",
    "nodeType": "colorMaterial"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": 1.0 },
-     "varType": "keyData"
-    },
-    "uuid": { "value": "fc42a645-64c6-4ecc-8199-ce8b96e165b1", "varType": "string" }
-   },
-   "nodeId": "keyframe#889",
-   "nodeType": "keyframe"
   },
   {
    "attributes": {
@@ -4772,18 +7809,6 @@
    },
    "nodeId": "colorMaterial#799",
    "nodeType": "colorMaterial"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": 1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 11.0, "varType": "double" },
-    "uuid": { "value": "48d4df51-5609-489a-8ad8-908a1d13d610", "varType": "string" }
-   },
-   "nodeId": "keyframe#900",
-   "nodeType": "keyframe"
   },
   {
    "attributes": {
@@ -5136,17 +8161,9 @@
   },
   {
    "attributes": {
-    "timeOffset": { "value": 11.0, "varType": "double" },
-    "uuid": { "value": "145d74a5-59d7-4516-9bbf-1d032daae9aa", "varType": "string" }
-   },
-   "nodeId": "keyframe#898",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "niceName": { "value": "Artist Name String", "varType": "string" },
-    "string": { "value": "Dominic North & Max Lynch", "varType": "string" },
+    "niceName": { "value": "Artist Name String - First Line", "varType": "string" },
+    "string": { "value": "Charlotte Ballantine", "varType": "string" },
     "uuid": { "value": "f888b490-2889-4948-aea4-dcac3fb2808c", "varType": "string" }
    },
    "nodeId": "string#2",
@@ -5341,7 +8358,7 @@
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Composition Constraint 3", "varType": "string" },
     "offset": {
-     "value": { "x": -42.0, "y": 65.0 },
+     "value": { "x": -42.0, "y": 50.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -5382,9 +8399,9 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "count": { "value": 25, "varType": "int" },
+    "count": { "value": 20, "varType": "int" },
     "niceName": { "value": "Linear 2", "varType": "string" },
-    "size": { "expression": "-27", "expressionEnabled": true, "value": 788.231445, "varType": "double" },
+    "size": { "expression": "-27", "expressionEnabled": true, "value": 626.015625, "varType": "double" },
     "uuid": { "value": "445439ad-6710-4e52-a1a6-f6998cb8cdc2", "varType": "string" }
    },
    "nodeId": "linearDistribution#1",
@@ -5419,7 +8436,7 @@
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Composition Constraint", "varType": "string" },
     "offset": {
-     "value": { "x": 42.0, "y": 0.0 },
+     "value": { "x": 42.0, "y": -20.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -5436,7 +8453,6 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "height": { "value": 0.0, "varType": "double" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Y Pos CC", "varType": "string" },
     "offset": {
      "childExprs": {
@@ -5454,27 +8470,13 @@
    "nodeId": "compConstraint#5",
    "nodeType": "compConstraint"
   },
-  {
-   "attributes": {
-    "colorId": { "value": 9, "varType": "int" },
-    "niceName": { "value": "Composition Constraint 1", "varType": "string" },
-    "resolution": {
-     "value": { "x": 1080, "y": 1920 },
-     "varType": "int2"
-    },
-    "uuid": { "value": "ea582a2c-8508-4d91-bd19-6ecdc1b94dfd", "varType": "string" },
-    "width": { "value": 100.0, "varType": "double" }
-   },
-   "nodeId": "compConstraint#2",
-   "nodeType": "compConstraint"
-  },
   { "nodeId": "renderQueue#1", "nodeType": "renderQueue" },
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Composition Constraint 4", "varType": "string" },
     "offset": {
-     "value": { "x": -42.0, "y": 65.0 },
+     "value": { "x": -42.0, "y": 50.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -5522,7 +8524,7 @@
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Composition Constraint 2", "varType": "string" },
     "offset": {
-     "value": { "x": -42.0, "y": 20.0 },
+     "value": { "x": -42.0, "y": 0.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -5545,18 +8547,6 @@
    "nodeType": "hiddenFolder"
   },
   { "nodeId": "paletteContainer#1", "nodeType": "paletteContainer" },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": -1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 250.0, "varType": "double" },
-    "uuid": { "value": "abec7780-b5f2-411f-b454-1e5d59be141c", "varType": "string" }
-   },
-   "nodeId": "keyframe#890",
-   "nodeType": "keyframe"
-  },
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
@@ -5631,7 +8621,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "length": { "value": 160.5308443216183, "varType": "double" },
+    "length": { "value": 321.984375, "varType": "double" },
     "niceName": { "value": "Line 3", "varType": "string" },
     "uuid": { "value": "d949e54e-3c6e-4c89-a195-5da123d66bd8", "varType": "string" }
    },
@@ -5650,7 +8640,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "length": { "value": 814.4856231478841, "varType": "double" },
+    "length": { "value": 653.015625, "varType": "double" },
     "niceName": { "value": "Line 2", "varType": "string" },
     "uuid": { "value": "d949e54e-3c6e-4c89-a195-5da123d66bd8", "varType": "string" }
    },
@@ -5705,16 +8695,6 @@
     "uuid": { "value": "12b4fc57-28e7-4074-bd51-a292f38fd1f4", "varType": "string" }
    },
    "nodeId": "motionBlurFilter#297",
-   "nodeType": "motionBlurFilter"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 14, "varType": "int" },
-    "niceName": { "value": "Motion Blur 159", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "ea98f50a-10dd-4d34-aeab-b0d5d9b8c236", "varType": "string" }
-   },
-   "nodeId": "motionBlurFilter#444",
    "nodeType": "motionBlurFilter"
   },
   {
@@ -5880,16 +8860,6 @@
   {
    "attributes": {
     "colorId": { "value": 14, "varType": "int" },
-    "niceName": { "value": "Motion Blur 157", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "34d9bb42-a687-4ff1-8c21-0381db1f9fe7", "varType": "string" }
-   },
-   "nodeId": "motionBlurFilter#442",
-   "nodeType": "motionBlurFilter"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 14, "varType": "int" },
     "niceName": { "value": "Motion Blur 158", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "uuid": { "value": "654cca8d-9203-42d5-98eb-9db8cb498230", "varType": "string" }
@@ -5976,42 +8946,6 @@
    },
    "nodeId": "motionBlurFilter#302",
    "nodeType": "motionBlurFilter"
-  },
-  {
-   "attributes": {
-    "backgroundShape": {
-     "value": {
-      "meshes": [
-       {
-        "address": [ 0, 0 ],
-        "fillType": 0,
-        "path": null
-       },
-       {
-        "address": [ 0 ],
-        "fillType": 0,
-        "path": null
-       }
-      ],
-      "version": 1.0
-     },
-     "varType": "polyMesh"
-    },
-    "colorId": { "value": 2, "varType": "int" },
-    "locked": { "value": false, "varType": "bool" },
-    "margins": {
-     "value": { "w": 0, "x": 45, "y": 545, "z": 45 },
-     "varType": "int4"
-    },
-    "maximumSize": {
-     "value": { "x": 1080, "y": 1920 },
-     "varType": "int2"
-    },
-    "niceName": { "value": "Horizontal Layout Group", "varType": "string" },
-    "uuid": { "value": "befee94a-3c62-45c0-a736-d40067e6a77d", "varType": "string" }
-   },
-   "nodeId": "layoutGroup#6",
-   "nodeType": "layoutGroup"
   },
   {
    "attributes": {
@@ -9571,7 +12505,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "String Length", "varType": "string" },
-    "string": { "value": "Dominic North & Max Lynch", "varType": "string" },
+    "string": { "value": "Charlotte Ballantine", "varType": "string" },
     "uuid": { "value": "bb8e8a73-608b-4df8-8ffb-64bf7431ee33", "varType": "string" }
    },
    "nodeId": "stringLength#1",
@@ -9896,23 +12830,25 @@
      "varType": "font"
     },
     "fontSize": { "value": 58.0, "varType": "double" },
-    "horizontalAlignment": { "value": 1, "varType": "enum" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "horizontalAlignment": { "value": 2, "varType": "enum" },
     "letterSpacing": { "value": -2.0, "varType": "double" },
-    "niceName": { "value": "Speaker - Text", "varType": "string" },
+    "lineSpacing": { "value": -20.0, "varType": "double" },
+    "niceName": { "value": "Speaker - Line 1", "varType": "string" },
     "position": {
-     "value": { "x": 498.0, "y": 65.0, "z": 0.0 },
+     "value": { "x": 498.0, "y": 50.0, "z": 0.0 },
      "varType": "double3"
     },
     "text": {
      "value": {
       "overrides": [
        {
-        "end": 25,
+        "end": 20,
         "features": { "calt": 1, "clig": 1, "liga": 1 },
         "start": 0
        }
       ],
-      "text": "Dominic North & Max Lynch"
+      "text": "Charlotte Ballantine"
      },
      "varType": "richText"
     },
@@ -9967,32 +12903,31 @@
      "varType": "font"
     },
     "fontSize": { "value": 180.0, "varType": "double" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "horizontalLayoutAlignment": { "value": 1, "varType": "enum" },
-    "layoutTransform": {
-     "value": [ 1.0, 0.0, -499.8370056152344, 0.0, 1.0, 446.17218017578125, 0.0, 0.0, 1.0 ],
-     "varType": "transform"
-    },
     "letterSpacing": { "value": -0.6, "varType": "double" },
     "lineSpacing": { "value": -15.0, "varType": "double" },
-    "niceName": { "value": "Responsive Design: The Future ...", "varType": "string" },
+    "niceName": { "value": "The subtle art of art: a thesi...", "varType": "string" },
+    "position": {
+     "value": { "x": -498.0, "y": 425.0, "z": 0.0 },
+     "varType": "double3"
+    },
     "text": {
      "value": {
       "overrides": [
        {
-        "end": 39,
+        "end": 94,
         "features": { "calt": 1, "clig": 1, "liga": 1 },
         "start": 0
        }
       ],
-      "text": "Responsive Design: The Future of Motion"
+      "text": "The subtle art of art: a thesis in modern artistic art practices by artists in the arts space."
      },
      "varType": "richText"
     },
     "textBoxSize": {
      "childExprs": {
       "x": { "expression": "-80", "expressionEnabled": true },
-      "y": { "expression": "clamp(500,value-550,950)", "expressionEnabled": true }
+      "y": { "expression": "clamp(500,value-580,950)", "expressionEnabled": true }
      },
      "value": { "x": 1000.0, "y": 950.0 },
      "varType": "double2"
@@ -10017,7 +12952,7 @@
      "childExprs": {
       "y": { "expression": "-90", "expressionEnabled": false }
      },
-     "value": { "x": -498.0, "y": 0.0, "z": 0.0 },
+     "value": { "x": -498.0, "y": -20.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "76818927-af81-4a31-9c61-af1482ced6a7", "varType": "string" }
@@ -10036,7 +12971,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Line R", "varType": "string" },
     "position": {
-     "value": { "x": 498.0, "y": 20.0, "z": 0.0 },
+     "value": { "x": 498.0, "y": 0.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "76818927-af81-4a31-9c61-af1482ced6a7", "varType": "string" }
@@ -10059,7 +12994,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "animationCurve#17",
    "nodeType": "animationCurve"
@@ -10077,7 +13012,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "animationCurve#16",
    "nodeType": "animationCurve"
@@ -10095,7 +13030,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "animationCurve#10",
    "nodeType": "animationCurve"
@@ -10113,7 +13048,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "animationCurve#9",
    "nodeType": "animationCurve"
@@ -10131,7 +13066,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "animationCurve#13",
    "nodeType": "animationCurve"
@@ -10149,94 +13084,9 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "animationCurve#15",
-   "nodeType": "animationCurve"
-  },
-  {
-   "attributes": {
-    "animationLayers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
-   },
-   "nodeId": "animationCurve#4",
-   "nodeType": "animationCurve"
-  },
-  {
-   "attributes": {
-    "animationLayers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
-   },
-   "nodeId": "animationCurve#7",
-   "nodeType": "animationCurve"
-  },
-  {
-   "attributes": {
-    "animationLayers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
-   },
-   "nodeId": "animationCurve#5",
-   "nodeType": "animationCurve"
-  },
-  {
-   "attributes": {
-    "animationLayers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
-   },
-   "nodeId": "animationCurve#8",
-   "nodeType": "animationCurve"
-  },
-  {
-   "attributes": {
-    "animationLayers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
-   },
-   "nodeId": "animationCurve#6",
    "nodeType": "animationCurve"
   },
   {
@@ -10247,7 +13097,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#305",
    "nodeType": "visibilityCurve"
@@ -10260,7 +13110,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#298",
    "nodeType": "visibilityCurve"
@@ -10273,7 +13123,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#297",
    "nodeType": "visibilityCurve"
@@ -10286,7 +13136,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#424",
    "nodeType": "visibilityCurve"
@@ -10299,7 +13149,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#291",
    "nodeType": "visibilityCurve"
@@ -10312,7 +13162,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#292",
    "nodeType": "visibilityCurve"
@@ -10325,7 +13175,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#421",
    "nodeType": "visibilityCurve"
@@ -10338,7 +13188,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#296",
    "nodeType": "visibilityCurve"
@@ -10351,7 +13201,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#425",
    "nodeType": "visibilityCurve"
@@ -10364,7 +13214,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#293",
    "nodeType": "visibilityCurve"
@@ -10377,7 +13227,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#418",
    "nodeType": "visibilityCurve"
@@ -10390,7 +13240,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#300",
    "nodeType": "visibilityCurve"
@@ -10403,7 +13253,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#284",
    "nodeType": "visibilityCurve"
@@ -10416,7 +13266,7 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 120, "varType": "int" },
-    "inTime": { "value": 24.0, "varType": "double" },
+    "inTime": { "value": 47.0, "varType": "double" },
     "niceName": { "value": "BDF_SocialPost", "varType": "string" },
     "playbackEnd": { "value": 65, "varType": "int" },
     "resolution": {
@@ -10436,7 +13286,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#302",
    "nodeType": "visibilityCurve"
@@ -10449,20 +13299,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
-   },
-   "nodeId": "visibilityCurve#444",
-   "nodeType": "visibilityCurve"
-  },
-  {
-   "attributes": {
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" },
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#417",
    "nodeType": "visibilityCurve"
@@ -10475,7 +13312,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#301",
    "nodeType": "visibilityCurve"
@@ -10488,7 +13325,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#290",
    "nodeType": "visibilityCurve"
@@ -10501,7 +13338,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#443",
    "nodeType": "visibilityCurve"
@@ -10514,7 +13351,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#428",
    "nodeType": "visibilityCurve"
@@ -10527,7 +13364,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#441",
    "nodeType": "visibilityCurve"
@@ -10540,7 +13377,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#304",
    "nodeType": "visibilityCurve"
@@ -10553,7 +13390,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#294",
    "nodeType": "visibilityCurve"
@@ -10566,7 +13403,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#289",
    "nodeType": "visibilityCurve"
@@ -10579,7 +13416,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#427",
    "nodeType": "visibilityCurve"
@@ -10592,20 +13429,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
-   },
-   "nodeId": "visibilityCurve#442",
-   "nodeType": "visibilityCurve"
-  },
-  {
-   "attributes": {
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" },
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#288",
    "nodeType": "visibilityCurve"
@@ -10618,7 +13442,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#307",
    "nodeType": "visibilityCurve"
@@ -10631,7 +13455,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#306",
    "nodeType": "visibilityCurve"
@@ -10644,7 +13468,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#447",
    "nodeType": "visibilityCurve"
@@ -10657,7 +13481,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#303",
    "nodeType": "visibilityCurve"
@@ -10670,7 +13494,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#426",
    "nodeType": "visibilityCurve"
@@ -10683,7 +13507,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#430",
    "nodeType": "visibilityCurve"
@@ -10696,7 +13520,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#287",
    "nodeType": "visibilityCurve"
@@ -10709,7 +13533,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#440",
    "nodeType": "visibilityCurve"
@@ -10722,7 +13546,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#422",
    "nodeType": "visibilityCurve"
@@ -10735,7 +13559,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#416",
    "nodeType": "visibilityCurve"
@@ -10748,7 +13572,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#285",
    "nodeType": "visibilityCurve"
@@ -10761,7 +13585,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#295",
    "nodeType": "visibilityCurve"
@@ -10774,7 +13598,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#279",
    "nodeType": "visibilityCurve"
@@ -10787,7 +13611,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#286",
    "nodeType": "visibilityCurve"
@@ -10800,7 +13624,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#445",
    "nodeType": "visibilityCurve"
@@ -10813,7 +13637,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#283",
    "nodeType": "visibilityCurve"
@@ -10826,7 +13650,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#429",
    "nodeType": "visibilityCurve"
@@ -10839,7 +13663,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#299",
    "nodeType": "visibilityCurve"
@@ -10852,7 +13676,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 24.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#463",
    "nodeType": "visibilityCurve"
@@ -10865,7 +13689,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 24.0, "varType": "double" }
+    "time": { "value": 47.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#485",
    "nodeType": "visibilityCurve"
@@ -10886,9 +13710,30 @@
   {
    "attributes": {
     "colorId": { "value": 4, "varType": "int" },
-    "end": { "value": 46.80155045425486, "varType": "double" },
+    "end": { "value": 0.0, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Visibility Sequence 3", "varType": "string" },
+    "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
+   },
+   "nodeId": "visibility#4",
+   "nodeType": "visibility"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Visibility Sequence 2", "varType": "string" },
+    "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
+   },
+   "nodeId": "visibility#3",
+   "nodeType": "visibility"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "end": { "value": 0.0, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Visibility Sequence", "varType": "string" },
-    "start": { "value": 0.09148594168003742, "varType": "double" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
    },
    "nodeId": "visibility#1",
@@ -10899,7 +13744,6 @@
     "colorId": { "value": 4, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Visibility Sequence 1", "varType": "string" },
-    "start": { "value": 46.80155045425486, "varType": "double" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
    },
    "nodeId": "visibility#2",
@@ -11072,14 +13916,6 @@
   },
   {
    "attributes": {
-    "timeOffset": { "value": 11.0, "varType": "double" },
-    "uuid": { "value": "13f8a3fb-2a16-4baf-8d97-5741c316cf1f", "varType": "string" }
-   },
-   "nodeId": "keyframe#896",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
@@ -11119,18 +13955,6 @@
    },
    "nodeId": "colorMaterial#560",
    "nodeType": "colorMaterial"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": -1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 250.0, "varType": "double" },
-    "uuid": { "value": "3347c49c-109e-44de-85bb-482789a2cd31", "varType": "string" }
-   },
-   "nodeId": "keyframe#886",
-   "nodeType": "keyframe"
   },
   {
    "attributes": {
@@ -11322,14 +14146,6 @@
   },
   {
    "attributes": {
-    "timeOffset": { "value": 11.0, "varType": "double" },
-    "uuid": { "value": "f1889521-b8b9-4215-a8e5-d032333291b6", "varType": "string" }
-   },
-   "nodeId": "keyframe#897",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
     "data": {
      "value": { "numValue": 1.0 },
      "varType": "keyData"
@@ -11403,17 +14219,6 @@
     "verticalLayoutAlignment": { "value": 1, "varType": "enum" }
    },
    "nodeId": "spacerItem#1",
-   "nodeType": "spacerItem"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 2, "varType": "int" },
-    "horizontalLayoutAlignment": { "value": 1, "varType": "enum" },
-    "niceName": { "value": "Spacer", "varType": "string" },
-    "uuid": { "value": "b9a18c19-434c-4b4c-89ed-65658ac019a8", "varType": "string" },
-    "verticalLayoutAlignment": { "value": 1, "varType": "enum" }
-   },
-   "nodeId": "spacerItem#2",
    "nodeType": "spacerItem"
   },
   {
@@ -11497,7 +14302,8 @@
       }
      ]
     },
-    "max": { "value": 330.0, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "max": { "value": 310.0, "varType": "double" },
     "min": { "value": 500.0, "varType": "double" },
     "niceName": { "value": "Y Pos NR", "varType": "string" },
     "sourceMax": { "value": 1920.0, "varType": "double" },
@@ -11645,52 +14451,6 @@
     "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#12",
-   "nodeType": "numberRange"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 4, "varType": "int" },
-    "graph": {
-     "list": [
-      {
-       "compound": {
-        "left": {
-         "value": { "x": -0.5, "y": -0.5 },
-         "varType": "double2"
-        },
-        "right": {
-         "value": { "x": 0.5, "y": 0.5 },
-         "varType": "double2"
-        }
-       }
-      },
-      {
-       "compound": {
-        "left": {
-         "value": { "x": -0.5, "y": -0.5 },
-         "varType": "double2"
-        },
-        "position": {
-         "value": { "x": 1.0, "y": 1.0 },
-         "varType": "double2"
-        },
-        "right": {
-         "value": { "x": 0.5, "y": 0.5 },
-         "varType": "double2"
-        }
-       }
-      }
-     ]
-    },
-    "max": { "value": 545.0, "varType": "double" },
-    "min": { "value": 365.0, "varType": "double" },
-    "niceName": { "value": "Number Range 2", "varType": "string" },
-    "sourceMax": { "value": 1920.0, "varType": "double" },
-    "sourceMin": { "value": 1080.0, "varType": "double" },
-    "uuid": { "value": "686e9684-01de-4eb5-92d8-ee5af56d50de", "varType": "string" },
-    "value": { "value": 1920.0, "varType": "double" }
-   },
-   "nodeId": "numberRange#3",
    "nodeType": "numberRange"
   },
   {
@@ -12171,11 +14931,13 @@
       { "varType": "nodeId" }
      ]
     },
-    "niceName": { "value": "Duplicator", "varType": "string" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Duplicator - Line 1", "varType": "string" },
     "position": {
-     "value": { "x": 498.0, "y": 65.0, "z": 0.0 },
+     "value": { "x": 498.0, "y": 50.0, "z": 0.0 },
      "varType": "double3"
     },
+    "shapeId": { "value": 1, "varType": "int" },
     "shapeScale": {
      "aspectRatio": 1.0,
      "value": { "x": 0.06, "y": 0.06 },
@@ -12200,6 +14962,7 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Speaker", "varType": "string" },
     "position": {
      "value": { "x": 0.0, "y": 460.0, "z": 0.0 },
@@ -12307,7 +15070,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Talk Title", "varType": "string" },
     "uuid": { "value": "a095cf77-449f-49e4-b831-1b8922fb3b96", "varType": "string" }
    },
@@ -12404,9 +15166,8 @@
   {
    "attributes": {
     "colorId": { "value": 0, "varType": "int" },
-    "first": { "value": 815.2314453125, "varType": "double" },
+    "first": { "value": 653.015625, "varType": "double" },
     "niceName": { "value": "Math", "varType": "string" },
-    "second": { "value": 0.9990851405831996, "varType": "double" },
     "uuid": { "value": "c7fa508a-dcd5-49e0-9438-994be39464d2", "varType": "string" }
    },
    "hierarchyOffset": -4.0,
@@ -12449,8 +15210,8 @@
     "array": {
      "list": [
       { "value": 1080.0, "varType": "double" },
-      { "value": 814.4856231478841, "varType": "double" },
-      { "value": 104.9835325304976, "varType": "double" }
+      { "value": 653.015625, "varType": "double" },
+      { "value": 105.0, "varType": "double" }
      ]
     },
     "colorId": { "value": 0, "varType": "int" },
@@ -12459,40 +15220,6 @@
     "uuid": { "value": "a2642b22-8cb2-4d89-91d0-3452a57e482a", "varType": "string" }
    },
    "nodeId": "jsmath#4",
-   "nodeType": "jsmath"
-  },
-  {
-   "attributes": {
-    "array": {
-     "list": [
-      { "value": 1920.0, "varType": "double" },
-      { "value": 645.0, "varType": "double" },
-      { "value": 345.0, "varType": "double" }
-     ]
-    },
-    "colorId": { "value": 0, "varType": "int" },
-    "expression": { "value": "n0 > 1919 ? n1 : n2", "varType": "string" },
-    "niceName": { "value": "Jsmath 2", "varType": "string" },
-    "uuid": { "value": "21ca19ad-eda3-47e5-8448-2fcfafd37f67", "varType": "string" }
-   },
-   "nodeId": "jsmath#5",
-   "nodeType": "jsmath"
-  },
-  {
-   "attributes": {
-    "array": {
-     "list": [
-      { "value": 1080.0, "varType": "double" },
-      { "value": 1750.0, "varType": "double" },
-      { "value": 1000.0, "varType": "double" }
-     ]
-    },
-    "colorId": { "value": 0, "varType": "int" },
-    "expression": { "value": "n0 > 1080 ? n1 : n2", "varType": "string" },
-    "niceName": { "value": "TextBox Width", "varType": "string" },
-    "uuid": { "value": "21ca19ad-eda3-47e5-8448-2fcfafd37f67", "varType": "string" }
-   },
-   "nodeId": "jsmath#6",
    "nodeType": "jsmath"
   },
   {
@@ -12535,7 +15262,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "maximum": { "value": 6.0, "varType": "double" },
     "niceName": { "value": "Random [Shape Id]", "varType": "string" },
-    "seed": { "value": 6, "varType": "int" },
+    "seed": { "value": 11, "varType": "int" },
     "uuid": { "value": "3c292c87-baf9-4696-83a7-fe9ccfa1a11d", "varType": "string" }
    },
    "nodeId": "random#1",
@@ -12920,37 +15647,6 @@
     "uuid": { "value": "1ef8a534-fef7-4765-830b-b7928454c201", "varType": "string" }
    },
    "nodeId": "strokeMaterial#436",
-   "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "gradient": {
-     "list": [
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
-         "varType": "color"
-        }
-       }
-      },
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
-         "varType": "color"
-        },
-        "position": { "value": 1.0, "varType": "double" }
-       }
-      }
-     ]
-    },
-    "niceName": { "value": "Stroke 159", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "42811fc0-d0e6-4266-993c-3ec6a4f3a397", "varType": "string" }
-   },
-   "nodeId": "strokeMaterial#450",
    "nodeType": "strokeMaterial"
   },
   {
@@ -13880,37 +16576,6 @@
       }
      ]
     },
-    "niceName": { "value": "Stroke 161", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "c3364c51-b1b8-4e21-b681-dd7f07f64df1", "varType": "string" }
-   },
-   "nodeId": "strokeMaterial#452",
-   "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "gradient": {
-     "list": [
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
-         "varType": "color"
-        }
-       }
-      },
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
-         "varType": "color"
-        },
-        "position": { "value": 1.0, "varType": "double" }
-       }
-      }
-     ]
-    },
     "niceName": { "value": "Stroke 9", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "uuid": { "value": "cafa3f67-000b-45fe-9201-594035977ab0", "varType": "string" }
@@ -14033,6 +16698,57 @@
    },
    "nodeId": "strokeMaterial#573",
    "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "autoId": { "value": false, "varType": "bool" },
+    "colorId": { "value": 2, "varType": "int" },
+    "deformers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "niceName": { "value": "Duplicator - Line 2", "varType": "string" },
+    "opacity": { "expression": "*100", "expressionEnabled": true, "value": 0.0, "varType": "double" },
+    "position": {
+     "value": { "x": 498.0, "y": 40.0, "z": 0.0 },
+     "varType": "double3"
+    },
+    "shapeId": { "value": 1, "varType": "int" },
+    "shapeScale": {
+     "aspectRatio": 1.0,
+     "value": { "x": 0.06, "y": 0.06 },
+     "varType": "double2"
+    },
+    "shapes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" },
+      { "varType": "nodeId" },
+      { "varType": "nodeId" },
+      { "varType": "nodeId" },
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "uuid": { "value": "8ab6e20a-54ab-493e-8710-b9cb2462f3c1", "varType": "string" }
+   },
+   "nodeId": "duplicator#3",
+   "nodeType": "duplicator"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 16, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Tall Icons 1", "varType": "string" },
+    "position": {
+     "value": { "x": -498.0, "y": -275.0, "z": 0.0 },
+     "varType": "double3"
+    },
+    "uuid": { "value": "c92ce5e6-6798-48d4-890c-96e935560231", "varType": "string" }
+   },
+   "nodeId": "group#59",
+   "nodeType": "group"
   },
   {
    "attributes": {
@@ -14404,6 +17120,624 @@
     "uuid": { "value": "c7dac7f4-8bfd-445d-95ae-c71a5d8e949c", "varType": "string" }
    },
    "nodeId": "strokeMaterial#582",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "array": {
+     "list": [
+      { "value": 530.0, "varType": "double" },
+      { "value": 500.0, "varType": "double" }
+     ]
+    },
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Minimum", "varType": "string" },
+    "uuid": { "value": "62b71845-fbe1-4af2-a0a6-36af2ac7ad4c", "varType": "string" }
+   },
+   "nodeId": "valueArray#2",
+   "nodeType": "valueArray"
+  },
+  {
+   "attributes": {
+    "array": {
+     "list": [
+      { "value": 110.0, "varType": "double" },
+      { "value": 50.0, "varType": "double" }
+     ]
+    },
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Two Lines Switch", "varType": "string" },
+    "uuid": { "value": "62b71845-fbe1-4af2-a0a6-36af2ac7ad4c", "varType": "string" }
+   },
+   "nodeId": "valueArray#3",
+   "nodeType": "valueArray"
+  },
+  {
+   "attributes": {
+    "array": {
+     "list": [
+      { "value": 360.0, "varType": "double" },
+      { "value": 310.0, "varType": "double" }
+     ]
+    },
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Maximum", "varType": "string" },
+    "uuid": { "value": "62b71845-fbe1-4af2-a0a6-36af2ac7ad4c", "varType": "string" }
+   },
+   "nodeId": "valueArray#1",
+   "nodeType": "valueArray"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 4, "varType": "int" },
+    "graph": {
+     "list": [
+      {
+       "compound": {
+        "interpolation": { "value": 1, "varType": "int" },
+        "left": {
+         "value": { "x": -0.0, "y": -0.25519996643066406 },
+         "varType": "double2"
+        },
+        "right": {
+         "value": { "x": 0.0, "y": 0.25519996643066406 },
+         "varType": "double2"
+        }
+       }
+      },
+      {
+       "compound": {
+        "interpolation": { "value": 1, "varType": "int" },
+        "left": {
+         "value": { "x": -0.24480010986328124, "y": -0.004399871826171875 },
+         "varType": "double2"
+        },
+        "position": {
+         "value": { "x": 1.0, "y": 1.0 },
+         "varType": "double2"
+        },
+        "right": {
+         "value": { "x": 0.24480010986328124, "y": 0.004399871826171875 },
+         "varType": "double2"
+        }
+       }
+      }
+     ]
+    },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "maximum": { "value": 6.0, "varType": "double" },
+    "niceName": { "value": "Random [Shape Id] 1", "varType": "string" },
+    "seed": { "value": 11, "varType": "int" },
+    "uuid": { "value": "3c292c87-baf9-4696-83a7-fe9ccfa1a11d", "varType": "string" }
+   },
+   "nodeId": "random#2",
+   "nodeType": "random"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 227", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "8e0f11a1-876f-46e2-93e2-eff958ff3705", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#583",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 226", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "c2a126a3-fbf5-445c-9463-5d1b3eacc309", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#584",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 228", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "c4332a31-533d-4775-85c7-c4d344d49963", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#585",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 241", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "ef5fc2ad-2d2c-40dd-adf1-581738f86595", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#586",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 235", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "89436588-f3ea-4ae6-801a-6fa45c02f571", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#587",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 229", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "6ece3b17-a815-4de2-96cb-bedf55b8d32a", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#588",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 230", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "4fd9d56a-d1e4-4a1a-9a03-25c00b47d35b", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#589",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 231", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "4fd9d56a-d1e4-4a1a-9a03-25c00b47d35b", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#590",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 232", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "04c47815-9ca7-41a1-94d9-d0f1ded19824", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#591",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 233", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "00569311-63bf-46ea-b760-fac2ae8e68fc", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#592",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 234", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "00569311-63bf-46ea-b760-fac2ae8e68fc", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#593",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 237", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "bf140932-9988-450c-8112-2e79ca860737", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#594",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 236", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "89436588-f3ea-4ae6-801a-6fa45c02f571", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#595",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 238", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "89436588-f3ea-4ae6-801a-6fa45c02f571", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#596",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 240", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "89436588-f3ea-4ae6-801a-6fa45c02f571", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#597",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 239", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "4cce92f3-cfe2-41af-a8ef-c75e50bf92d3", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#598",
+   "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 6, "varType": "int" },
+    "gradient": {
+     "list": [
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
+         "varType": "color"
+        }
+       }
+      },
+      {
+       "compound": {
+        "color": {
+         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
+         "varType": "color"
+        },
+        "position": { "value": 1.0, "varType": "double" }
+       }
+      }
+     ]
+    },
+    "niceName": { "value": "Stroke 242", "varType": "string" },
+    "showInProjectWindow": { "value": false, "varType": "bool" },
+    "uuid": { "value": "c7dac7f4-8bfd-445d-95ae-c71a5d8e949c", "varType": "string" }
+   },
+   "nodeId": "strokeMaterial#599",
    "nodeType": "strokeMaterial"
   }
  ],
