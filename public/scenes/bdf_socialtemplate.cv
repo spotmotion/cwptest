@@ -24,6 +24,9 @@
   { "from": "compNode#1.time", "to": "animationCurve#23.time" },
   { "from": "boundingBox#3.size.x", "to": "comparison#1.second" },
   { "from": "boundingBox#1.size.x", "to": "comparison#1.first" },
+  { "from": "boundingBox#1.size.x", "to": "ifElse#7.second" },
+  { "from": "ifElse#6.id", "to": "ifElse#7.first" },
+  { "from": "value#1.id", "to": "ifElse#7.condition" },
   { "from": "pointConstraint#1.id", "to": "componentConstraint#1.generator" },
   { "from": "boundingBox#3.size.x", "to": "linearDistribution#2.size" },
   { "from": "stringLength#2.out", "to": "linearDistribution#2.count" },
@@ -543,7 +546,7 @@
   { "from": "visibilityCurve#289.out", "to": "group#35.on" },
   { "from": "visibilityCurve#279.out", "to": "group#31.on" },
   { "from": "visibilityCurve#445.out", "to": "group#48.on" },
-  { "from": "ifElse#6.id", "to": "math#1.first" },
+  { "from": "ifElse#7.id", "to": "math#1.first" },
   { "from": "animationCurve#15.out", "to": "math#1.second" },
   { "from": "animationCurve#17.out", "to": "random#1.seed" },
   { "from": "linearGradientShader#1.id", "to": "gradientShader#1.generator" },
@@ -598,8 +601,12 @@
    "nodeId": "animationCurve#23"
   },
   {
-   "children": [ "ifElse#6" ],
+   "children": [ "ifElse#7" ],
    "nodeId": "comparison#1"
+  },
+  {
+   "children": [ "ifElse#6" ],
+   "nodeId": "ifElse#7"
   },
   {
    "children": [ "hiddenFolder#669" ],
@@ -1629,15 +1636,23 @@
    "attributes": {
     "colorId": { "value": 0, "varType": "int" },
     "first": { "value": 421.5634765625, "varType": "double" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Compare Text Box Sizes", "varType": "string" },
     "operation": { "value": 1, "varType": "enum" },
-    "second": { "value": 357.3681640625, "varType": "double" },
+    "second": { "value": 0.0, "varType": "double" },
     "uuid": { "value": "1a09c8ca-26e4-4936-81c6-ffdff67a01b6", "varType": "string" }
    },
    "hierarchyOffset": 4.0,
    "nodeId": "comparison#1",
    "nodeType": "comparison"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Check for two lines", "varType": "string" },
+    "uuid": { "value": "72b8be05-8251-450d-a941-df2fe95027df", "varType": "string" }
+   },
+   "nodeId": "ifElse#7",
+   "nodeType": "ifElse"
   },
   {
    "attributes": {
@@ -1752,9 +1767,9 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "count": { "value": 11, "varType": "int" },
+    "count": { "value": 0, "varType": "int" },
     "niceName": { "value": "Linear 3", "varType": "string" },
-    "size": { "expression": "-27", "expressionEnabled": true, "value": 330.368164, "varType": "double" },
+    "size": { "expression": "-27", "expressionEnabled": true, "value": -27.0, "varType": "double" },
     "uuid": { "value": "445439ad-6710-4e52-a1a6-f6998cb8cdc2", "varType": "string" }
    },
    "nodeId": "linearDistribution#2",
@@ -2432,7 +2447,6 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Two Lines Switch", "varType": "string" },
     "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
    },
@@ -2579,7 +2593,6 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "String Length 1", "varType": "string" },
-    "string": { "value": "& Max Lynch", "varType": "string" },
     "uuid": { "value": "bb8e8a73-608b-4df8-8ffb-64bf7431ee33", "varType": "string" }
    },
    "nodeId": "stringLength#2",
@@ -3744,19 +3757,7 @@
      "value": { "x": 498.0, "y": 40.0, "z": 0.0 },
      "varType": "double3"
     },
-    "text": {
-     "value": {
-      "overrides": [
-       {
-        "end": 11,
-        "features": { "calt": 1, "clig": 1, "liga": 1 },
-        "start": 0
-       }
-      ],
-      "text": "& Max Lynch"
-     },
-     "varType": "richText"
-    },
+    "text": { "value": "", "varType": "richText" },
     "uuid": { "value": "0cb92417-6255-4d8f-be58-32424d74b60c", "varType": "string" },
     "verticalAlignment": { "value": 1, "varType": "enum" }
    },
@@ -3836,7 +3837,6 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Two Lines Switch 1", "varType": "string" },
     "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
    },
@@ -4020,7 +4020,7 @@
     "colorId": { "value": 4, "varType": "int" },
     "levelMode": { "value": 3, "varType": "enum" },
     "niceName": { "value": "Sub-Mesh 2 [Speaker - Text] 1", "varType": "string" },
-    "shapeOpacity": { "expression": "*100", "expressionEnabled": true, "value": 100.0, "varType": "double" },
+    "shapeOpacity": { "expression": "*100", "expressionEnabled": true, "value": 0.0, "varType": "double" },
     "uuid": { "value": "9ab66ef7-b16e-4269-8cd8-146a405619ce", "varType": "string" }
    },
    "nodeId": "subMesh#26",
@@ -4054,7 +4054,6 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Two Lines Switch", "varType": "string" },
     "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
    },
@@ -4069,7 +4068,7 @@
     "value": {
      "definitionOverrides": { "hardMax": 1.0, "hardMin": 0.0, "step": 1.0 },
      "instanceName": "OnOff",
-     "value": 1.0,
+     "value": 0.0,
      "varType": "double"
     }
    },
@@ -6704,7 +6703,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Artist Name String - Second Line", "varType": "string" },
-    "string": { "value": "& Max Lynch", "varType": "string" },
+    "string": { "value": "", "varType": "string" },
     "uuid": { "value": "f888b490-2889-4948-aea4-dcac3fb2808c", "varType": "string" }
    },
    "nodeId": "string#5",
@@ -8459,7 +8458,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Composition Constraint 3", "varType": "string" },
     "offset": {
-     "value": { "x": -42.0, "y": 110.0 },
+     "value": { "x": -42.0, "y": 50.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -8554,13 +8553,12 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "height": { "value": 0.0, "varType": "double" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Y Pos CC", "varType": "string" },
     "offset": {
      "childExprs": {
       "y": { "expression": "*-1", "expressionEnabled": true }
      },
-     "value": { "x": 0.0, "y": -530.0 },
+     "value": { "x": 0.0, "y": -500.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -8578,7 +8576,7 @@
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Composition Constraint 4", "varType": "string" },
     "offset": {
-     "value": { "x": -42.0, "y": 110.0 },
+     "value": { "x": -42.0, "y": 50.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -12894,13 +12892,12 @@
      "varType": "font"
     },
     "fontSize": { "value": 58.0, "varType": "double" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "horizontalAlignment": { "value": 2, "varType": "enum" },
     "letterSpacing": { "value": -2.0, "varType": "double" },
     "lineSpacing": { "value": -20.0, "varType": "double" },
     "niceName": { "value": "Speaker - Line 1", "varType": "string" },
     "position": {
-     "value": { "x": 498.0, "y": 110.0, "z": 0.0 },
+     "value": { "x": 498.0, "y": 50.0, "z": 0.0 },
      "varType": "double3"
     },
     "text": {
@@ -12972,7 +12969,7 @@
     "lineSpacing": { "value": -15.0, "varType": "double" },
     "niceName": { "value": "Responsive Design - The Future...", "varType": "string" },
     "position": {
-     "value": { "x": -498.0, "y": 395.0, "z": 0.0 },
+     "value": { "x": -498.0, "y": 425.0, "z": 0.0 },
      "varType": "double3"
     },
     "text": {
@@ -13032,7 +13029,6 @@
       { "varType": "nodeId" }
      ]
     },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Line R", "varType": "string" },
     "position": {
      "value": { "x": 498.0, "y": 0.0, "z": 0.0 },
@@ -14348,8 +14344,8 @@
      ]
     },
     "hierarchy": { "value": false, "varType": "bool" },
-    "max": { "value": 360.0, "varType": "double" },
-    "min": { "value": 530.0, "varType": "double" },
+    "max": { "value": 310.0, "varType": "double" },
+    "min": { "value": 500.0, "varType": "double" },
     "niceName": { "value": "Y Pos NR", "varType": "string" },
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
@@ -14979,7 +14975,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Duplicator - Line 1", "varType": "string" },
     "position": {
-     "value": { "x": 498.0, "y": 110.0, "z": 0.0 },
+     "value": { "x": 498.0, "y": 50.0, "z": 0.0 },
      "varType": "double3"
     },
     "shapeId": { "value": 5, "varType": "int" },
@@ -15007,10 +15003,9 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Speaker", "varType": "string" },
     "position": {
-     "value": { "x": 0.0, "y": 430.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": 460.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "802c2843-68bd-41a8-a154-199c5442f408", "varType": "string" }
@@ -15115,6 +15110,7 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Talk Title", "varType": "string" },
     "uuid": { "value": "a095cf77-449f-49e4-b831-1b8922fb3b96", "varType": "string" }
    },
@@ -15212,7 +15208,6 @@
    "attributes": {
     "colorId": { "value": 0, "varType": "int" },
     "first": { "value": 421.5634765625, "varType": "double" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Length Animation", "varType": "string" },
     "uuid": { "value": "c7fa508a-dcd5-49e0-9438-994be39464d2", "varType": "string" }
    },
@@ -16739,7 +16734,7 @@
     },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Duplicator - Line 2", "varType": "string" },
-    "opacity": { "expression": "*100", "expressionEnabled": true, "value": 100.0, "varType": "double" },
+    "opacity": { "expression": "*100", "expressionEnabled": true, "value": 0.0, "varType": "double" },
     "position": {
      "value": { "x": 498.0, "y": 40.0, "z": 0.0 },
      "varType": "double3"
