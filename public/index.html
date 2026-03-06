@@ -22,13 +22,11 @@
         justify-content: center;
       }
 
-      /* Square viewport */
       #viewport {
         position: relative;
         background: transparent;
       }
 
-      /* Canvas centered inside viewport */
       canvas {
         position: absolute;
         top: 50%;
@@ -58,6 +56,23 @@
       let surface
       let animationFrameId = 0
       let playbackLoopRunning = false
+
+      // Post a message to the parent frame (Framer)
+      function postToParent(message) {
+        window.parent.postMessage(message, "*")
+      }
+
+      // Emit the current frame state to the parent
+      function emitFrameUpdate() {
+        if (!app) return
+        postToParent({
+          type: "frame-update",
+          currentFrame: app.getFrame(),
+          startFrame: app.getStartFrame(),
+          endFrame: app.getEndFrame(),
+          isPlaying: app.isPlaying(),
+        })
+      }
 
       async function writeFile(module, path) {
         const response = await fetch(path)
@@ -114,10 +129,23 @@
           if (!app || !surface || !app.isPlaying()) {
             playbackLoopRunning = false
             animationFrameId = 0
+            emitFrameUpdate()
             return
           }
 
-          app.tick(surface, time)
+          const status = app.tick(surface, time)
+
+          if (status.frameChanged) {
+            postToParent({
+              type: "frame-update",
+              currentFrame: status.currentFrame,
+              startFrame: app.getStartFrame(),
+              endFrame: app.getEndFrame(),
+              isPlaying: true,
+              fps: status.actualFPS,
+            })
+          }
+
           animationFrameId = requestAnimationFrame(tick)
         }
 
@@ -175,36 +203,98 @@
         log("Creating app")
         app = Module.Cavalry.MakeWithPath(sceneFile)
 
-        log("pendingAssets:", Module.pendingAssets)
-        log("Fonts visible to app:", app.queryFonts())
-        log("Peridot styles:", app.getFontStyles("Peridot PE Variable"))
+        resizeViewportAndSurface()
+        window.addEventListener("resize", resizeViewportAndSurface)
 
-        log("About to register message listener")
+        // Start paused on frame 0
+        app.setFrame(0)
+        if (surface) app.render(surface)
+
+        // Notify parent that the player is ready
+        postToParent({
+          type: "player-ready",
+          startFrame: app.getStartFrame(),
+          endFrame: app.getEndFrame(),
+          fps: app.getFPS(),
+          resolution: { width: SCENE_WIDTH, height: SCENE_HEIGHT },
+          isPlaying: false,
+        })
+
+        log("Registering message listener")
 
         window.addEventListener("message", (event) => {
-          log("MESSAGE EVENT FIRED:", event)
-          log("MESSAGE RECEIVED FULL:", event.data)
-
           const data = event.data
           if (!data || typeof data !== "object") return
 
           // Playback control messages
           if (data.type === "player-control") {
             try {
-              if (data.action === "play") {
-                log("Calling app.play()")
-                app.play()
-                runPlaybackLoop()
-              }
+              switch (data.action) {
+                case "play":
+                  app.play()
+                  runPlaybackLoop()
+                  break
 
-              if (data.action === "pause") {
-                log("Calling app.stop()")
-                app.stop()
-                stopPlaybackLoop()
+                case "pause":
+                  app.stop()
+                  stopPlaybackLoop()
+                  if (surface) app.render(surface)
+                  emitFrameUpdate()
+                  break
 
-                if (surface) {
-                  app.render(surface)
+                case "toggle":
+                  if (app.isPlaying()) {
+                    app.stop()
+                    stopPlaybackLoop()
+                    if (surface) app.render(surface)
+                  } else {
+                    app.play()
+                    runPlaybackLoop()
+                  }
+                  emitFrameUpdate()
+                  break
+
+                case "setFrame": {
+                  const frame = data.frame
+                  if (typeof frame === "number") {
+                    app.stop()
+                    stopPlaybackLoop()
+                    app.setFrame(frame)
+                    if (surface) app.render(surface)
+                    emitFrameUpdate()
+                  }
+                  break
                 }
+
+                case "setLoop":
+                  if (typeof data.loop === "boolean") {
+                    app.setLoop(data.loop)
+                  }
+                  break
+
+                case "setPlaybackMode":
+                  if (typeof data.mode === "number") {
+                    app.setPlaybackMode(data.mode)
+                  }
+                  break
+
+                case "setCompTimeMultiplier":
+                  if (typeof data.multiplier === "number") {
+                    app.setCompTimeMultiplier(data.multiplier)
+                  }
+                  break
+
+                case "getState":
+                  postToParent({
+                    type: "player-ready",
+                    startFrame: app.getStartFrame(),
+                    endFrame: app.getEndFrame(),
+                    fps: app.getFPS(),
+                    resolution: { width: SCENE_WIDTH, height: SCENE_HEIGHT },
+                    isPlaying: app.isPlaying(),
+                  })
+                  emitFrameUpdate()
+                  break
               }
             } catch (err) {
               console.error("[CWP] player-control failed", err)
@@ -218,14 +308,10 @@
           const { path, value } = data
           if (typeof path !== "string" || !path.includes(".")) return
 
-          log("PATH:", path)
-          log("VALUE:", value)
-
           try {
             const nodeId = path.slice(0, path.indexOf("."))
             const attr = path.slice(path.indexOf(".") + 1)
 
-            log("SETTING ATTRIBUTE:", nodeId, attr, value)
             app.setAttribute(nodeId, attr, value)
 
             if (path === "compNode#1.resolution") {
@@ -238,11 +324,6 @@
               }
             }
 
-            if (path === "string#2.string") {
-              const input = document.getElementById("nameInput")
-              if (input) input.value = value
-            }
-
             if (surface) {
               app.render(surface)
             }
@@ -251,29 +332,6 @@
           }
         })
 
-        log("Message listener registered")
-
-        const nameInput = document.getElementById("nameInput")
-
-        if (nameInput) {
-          nameInput.addEventListener("input", (e) => {
-            window.postMessage(
-              {
-                type: "set-attribute",
-                path: "string#2.string",
-                value: e.target.value,
-              },
-              "*"
-            )
-          })
-        }
-
-        resizeViewportAndSurface()
-        window.addEventListener("resize", resizeViewportAndSurface)
-
-        log("Starting playback")
-        app.play()
-        runPlaybackLoop()
         log("Running ✓")
       } catch (err) {
         console.error("[CWP] Fatal error", err)
