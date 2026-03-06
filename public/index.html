@@ -49,18 +49,15 @@
       const canvas = document.getElementById("canvas")
       const viewport = document.getElementById("viewport")
 
-      // 📐 Live scene resolution (driven externally)
       let SCENE_WIDTH = 1080
       let SCENE_HEIGHT = 1920
 
       let Module
       let app
       let surface
-
       let animationFrameId = 0
       let playbackLoopRunning = false
 
-      // Utility: fetch a file and write it into WASM virtual FS
       async function writeFile(module, path) {
         const response = await fetch(path)
         if (!response.ok) {
@@ -80,7 +77,6 @@
         const winW = window.innerWidth
         const winH = window.innerHeight
 
-        // Square viewport based on smallest window dimension
         const viewportSize = Math.min(winW, winH)
         viewport.style.width = viewportSize + "px"
         viewport.style.height = viewportSize + "px"
@@ -89,13 +85,10 @@
 
         let renderW, renderH
 
-        // Fit comp inside square (contain)
         if (compAspect >= 1) {
-          // Landscape or square
           renderW = viewportSize
           renderH = Math.round(viewportSize / compAspect)
         } else {
-          // Portrait
           renderH = viewportSize
           renderW = Math.round(viewportSize * compAspect)
         }
@@ -117,13 +110,7 @@
         playbackLoopRunning = true
 
         function tick(time) {
-          if (!app || !surface) {
-            playbackLoopRunning = false
-            animationFrameId = 0
-            return
-          }
-
-          if (!app.isPlaying()) {
+          if (!app || !surface || !app.isPlaying()) {
             playbackLoopRunning = false
             animationFrameId = 0
             return
@@ -145,18 +132,15 @@
       }
 
       try {
-        /* 1) Import the Web Player module */
         log("Importing CavalryWasm.js")
         const CavalryModule = await import("/CavalryWasm.js")
 
-        /* 2) Initialise WASM */
         log("Initialising module")
         Module = await CavalryModule.default({
           canvas,
           locateFile: (path) => `/wasm-lib/${path}`,
         })
 
-        /* 2.5 Set up font auto-loading BEFORE MakeWithPath */
         const loadedFonts = new Set()
 
         window.addEventListener("cavalryAutoLoadAsset", async (event) => {
@@ -180,20 +164,16 @@
           log("Font loaded:", filename)
         })
 
-        /* 3) Load scene into WASM filesystem */
         log("Loading bdf_socialtemplate.cv")
         const sceneFile = await writeFile(Module, "/scenes/bdf_socialtemplate.cv")
 
-        /* 4) Create Cavalry app */
         log("Creating app")
         app = Module.Cavalry.MakeWithPath(sceneFile)
 
-        /* Debugging */
         log("pendingAssets:", Module.pendingAssets)
         log("Fonts visible to app:", app.queryFonts())
         log("Peridot styles:", app.getFontStyles("Peridot PE Variable"))
 
-        /* 5) Listen for attribute updates via postMessage */
         log("About to register message listener")
 
         window.addEventListener("message", (event) => {
@@ -205,10 +185,7 @@
           if (data.type !== "set-attribute") return
 
           const { path, value } = data
-          if (typeof path !== "string" || !path.includes(".")) {
-            console.warn("[CWP] Invalid set-attribute path:", path)
-            return
-          }
+          if (typeof path !== "string" || !path.includes(".")) return
 
           log("PATH:", path)
           log("VALUE:", value)
@@ -218,10 +195,8 @@
             const attr = path.slice(path.indexOf(".") + 1)
 
             log("SETTING ATTRIBUTE:", nodeId, attr, value)
-
             app.setAttribute(nodeId, attr, value)
 
-            // 📐 Resolution updates
             if (path === "compNode#1.resolution") {
               const [w, h] = value
               if (w > 0 && h > 0) {
@@ -232,12 +207,9 @@
               }
             }
 
-            // ✏️ If a native input exists on the page, mirror the text back into it
             if (path === "string#2.string") {
               const input = document.getElementById("nameInput")
-              if (input) {
-                input.value = value
-              }
+              if (input) input.value = value
             }
 
             if (surface) {
@@ -250,7 +222,6 @@
 
         log("Message listener registered")
 
-        /* 5a) Listen for playback controls via CustomEvent */
         log("About to register cavalry-control listener")
 
         window.addEventListener("cavalry-control", (event) => {
@@ -271,7 +242,6 @@
               log("Calling app.stop()")
               app.stop()
               stopPlaybackLoop()
-
               if (surface) {
                 app.render(surface)
               }
@@ -283,7 +253,6 @@
 
         log("cavalry-control listener registered")
 
-        /* 5b) Optional native text input support, if such an input exists on the page. */
         const nameInput = document.getElementById("nameInput")
 
         if (nameInput) {
@@ -299,21 +268,13 @@
           })
         }
 
-        /* 6) Initial surface + resize handling */
         resizeViewportAndSurface()
         window.addEventListener("resize", resizeViewportAndSurface)
 
-        /* 7) Start playback + render loop */
         log("Starting playback")
         app.play()
         runPlaybackLoop()
         log("Running ✓")
-
-        // If you want the player to start paused instead, replace the 3 lines above with:
-        // log("Rendering first frame")
-        // app.render(surface)
-        // log("Ready ✓")
-
       } catch (err) {
         console.error("[CWP] Fatal error", err)
         document.body.innerHTML = `
