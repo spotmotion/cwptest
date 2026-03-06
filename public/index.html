@@ -109,10 +109,14 @@
           renderW = Math.round(viewportSize * compAspect)
         }
 
-        canvas.width = renderW
-        canvas.height = renderH
+        const dpr = window.devicePixelRatio || 1
 
-        surface = Module.makeWebGLSurfaceFromElement(canvas, renderW, renderH)
+        canvas.width = renderW * dpr
+        canvas.height = renderH * dpr
+        canvas.style.width = renderW + "px"
+        canvas.style.height = renderH + "px"
+
+        surface = Module.makeWebGLSurfaceFromElement(canvas, renderW * dpr, renderH * dpr)
 
         if (app && surface) {
           app.render(surface)
