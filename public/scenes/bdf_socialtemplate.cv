@@ -18,6 +18,10 @@
   }
  ],
  "connections": [
+  { "from": "keyframe#1208.id", "to": "animationCurve#23.keyframes.1" },
+  { "from": "keyframe#1207.id", "to": "animationCurve#23.keyframes.0" },
+  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#23.activeAnimationLayer" },
+  { "from": "compNode#1.time", "to": "animationCurve#23.time" },
   { "from": "boundingBox#3.size.x", "to": "comparison#1.second" },
   { "from": "boundingBox#1.size.x", "to": "comparison#1.first" },
   { "from": "pointConstraint#1.id", "to": "componentConstraint#1.generator" },
@@ -186,7 +190,7 @@
   { "from": "value2#1.id", "to": "rectangleShape#1.dimensions" },
   { "from": "compNode#1.resolution", "to": "compConstraint#3.resolution" },
   { "from": "textShape#3.id", "to": "boundingBox#1.inputShapes.0" },
-  { "from": "jsmath#4.id", "to": "simpleLine#2.length" },
+  { "from": "math#3.id", "to": "simpleLine#2.length" },
   { "from": "math#1.id", "to": "simpleLine#1.length" },
   { "from": "numberRange#4.id", "to": "layoutGroup#2.margins.w" },
   { "from": "visibilityCurve#429.out", "to": "layoutGroup#2.on" },
@@ -284,10 +288,6 @@
   { "from": "keyframe#972.id", "to": "animationCurve#17.keyframes.1" },
   { "from": "compNode#1.time", "to": "animationCurve#17.time" },
   { "from": "keyframe#971.id", "to": "animationCurve#17.keyframes.0" },
-  { "from": "compNode#1.time", "to": "animationCurve#16.time" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#16.activeAnimationLayer" },
-  { "from": "keyframe#944.id", "to": "animationCurve#16.keyframes.1" },
-  { "from": "keyframe#942.id", "to": "animationCurve#16.keyframes.0" },
   { "from": "compNode#1.time", "to": "animationCurve#10.time" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "animationCurve#10.activeAnimationLayer" },
   { "from": "keyframe#931.id", "to": "animationCurve#10.keyframes.1" },
@@ -544,9 +544,6 @@
   { "from": "visibilityCurve#445.out", "to": "group#48.on" },
   { "from": "ifElse#6.id", "to": "math#1.first" },
   { "from": "animationCurve#15.out", "to": "math#1.second" },
-  { "from": "value2#1.value.x", "to": "jsmath#4.array.0" },
-  { "from": "animationCurve#16.out", "to": "jsmath#4.array.2" },
-  { "from": "math#1.id", "to": "jsmath#4.array.1" },
   { "from": "animationCurve#17.out", "to": "random#1.seed" },
   { "from": "linearGradientShader#1.id", "to": "gradientShader#1.generator" },
   { "from": "compNode#1.resolution", "to": "gradientShader#1.resolution" },
@@ -566,7 +563,11 @@
   { "from": "customShape#43.id", "to": "duplicator#3.shapes.6" },
   { "from": "linearDistribution#2.id", "to": "duplicator#3.generator" },
   { "from": "visibilityCurve#572.out", "to": "group#59.on" },
-  { "from": "animationCurve#20.out", "to": "random#2.seed" }
+  { "from": "animationCurve#20.out", "to": "random#2.seed" },
+  { "from": "value2#1.value.x", "to": "math#2.first" },
+  { "from": "math#1.id", "to": "math#2.second" },
+  { "from": "animationCurve#23.out", "to": "math#3.second" },
+  { "from": "math#2.id", "to": "math#3.first" }
  ],
  "controlCenter": {
   "compNode#1": {
@@ -591,6 +592,10 @@
  },
  "labelColors": "Pastel",
  "nodeMeta": [
+  {
+   "children": [ "keyframe#1208", "keyframe#1207" ],
+   "nodeId": "animationCurve#23"
+  },
   {
    "children": [ "ifElse#6" ],
    "nodeId": "comparison#1"
@@ -1268,7 +1273,7 @@
    "nodeId": "textShape#10"
   },
   {
-   "children": [ "compConstraint#1", "jsmath#4", "align#4", "hiddenFolder#441" ],
+   "children": [ "compConstraint#1", "math#2", "align#4", "hiddenFolder#441" ],
    "nodeId": "basicLine#2"
   },
   {
@@ -1278,10 +1283,6 @@
   {
    "children": [ "keyframe#972", "keyframe#971" ],
    "nodeId": "animationCurve#17"
-  },
-  {
-   "children": [ "keyframe#944", "keyframe#942" ],
-   "nodeId": "animationCurve#16"
   },
   {
    "children": [ "keyframe#931", "keyframe#930" ],
@@ -1560,10 +1561,6 @@
    "nodeId": "math#1"
   },
   {
-   "children": [ "animationCurve#16" ],
-   "nodeId": "jsmath#4"
-  },
-  {
    "children": [ "animationCurve#17" ],
    "nodeId": "random#1"
   },
@@ -1598,9 +1595,35 @@
   {
    "children": [ "animationCurve#20" ],
    "nodeId": "random#2"
+  },
+  {
+   "children": [ "math#3" ],
+   "nodeId": "math#2"
+  },
+  {
+   "children": [ "animationCurve#23" ],
+   "nodeId": "math#3"
   }
  ],
  "nodes": [
+  {
+   "attributes": {
+    "animationLayers": {
+     "list": [
+      { "varType": "nodeId" }
+     ]
+    },
+    "keyframes": {
+     "list": [
+      { "varType": "nodeId" },
+      { "varType": "nodeId" }
+     ]
+    },
+    "time": { "value": 50.0, "varType": "double" }
+   },
+   "nodeId": "animationCurve#23",
+   "nodeType": "animationCurve"
+  },
   {
    "attributes": {
     "colorId": { "value": 0, "varType": "int" },
@@ -1614,6 +1637,25 @@
    "hierarchyOffset": 4.0,
    "nodeId": "comparison#1",
    "nodeType": "comparison"
+  },
+  {
+   "attributes": {
+    "data": {
+     "value": {
+      "interpolation": 0,
+      "leftBez": { "x": -19.390300750732422, "y": 0.0 },
+      "locked": true,
+      "numValue": 105.0,
+      "rightBez": { "x": 19.390300750732422, "y": -0.0 },
+      "weightLocked": true
+     },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 25.0, "varType": "double" },
+    "uuid": { "value": "6168a593-e2ae-4e3b-a3bc-960e3fc31ae4", "varType": "string" }
+   },
+   "nodeId": "keyframe#1207",
+   "nodeType": "keyframe"
   },
   {
    "attributes": {
@@ -2432,6 +2474,25 @@
   },
   {
    "attributes": {
+    "data": {
+     "value": {
+      "interpolation": 0,
+      "leftBez": { "x": -5.0, "y": 0.0 },
+      "locked": true,
+      "numValue": 87.0,
+      "rightBez": { "x": 5.0, "y": 0.0 },
+      "weightLocked": true
+     },
+     "varType": "keyData"
+    },
+    "timeOffset": { "value": 3.0, "varType": "double" },
+    "uuid": { "value": "1763e983-6588-4ead-bfe8-9cbd228f07e1", "varType": "string" }
+   },
+   "nodeId": "keyframe#1208",
+   "nodeType": "keyframe"
+  },
+  {
+   "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "materialColor": {
      "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
@@ -2538,7 +2599,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#19",
    "nodeType": "animationCurve"
@@ -2551,7 +2612,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#566",
    "nodeType": "visibilityCurve"
@@ -3663,6 +3724,7 @@
      "varType": "font"
     },
     "fontSize": { "value": 58.0, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "horizontalAlignment": { "value": 2, "varType": "enum" },
     "letterSpacing": { "value": -2.0, "varType": "double" },
     "lineSpacing": { "value": -20.0, "varType": "double" },
@@ -3778,7 +3840,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#568",
    "nodeType": "visibilityCurve"
@@ -3796,7 +3858,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#22",
    "nodeType": "animationCurve"
@@ -3809,7 +3871,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#575",
    "nodeType": "visibilityCurve"
@@ -3822,7 +3884,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#571",
    "nodeType": "visibilityCurve"
@@ -3835,7 +3897,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#570",
    "nodeType": "visibilityCurve"
@@ -3848,7 +3910,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#569",
    "nodeType": "visibilityCurve"
@@ -3867,7 +3929,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#20",
    "nodeType": "animationCurve"
@@ -3880,7 +3942,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#573",
    "nodeType": "visibilityCurve"
@@ -3898,7 +3960,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#21",
    "nodeType": "animationCurve"
@@ -3911,7 +3973,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#567",
    "nodeType": "visibilityCurve"
@@ -3924,7 +3986,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#572",
    "nodeType": "visibilityCurve"
@@ -3937,7 +3999,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#574",
    "nodeType": "visibilityCurve"
@@ -5722,7 +5784,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#551",
    "nodeType": "visibilityCurve"
@@ -6327,7 +6389,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#561",
    "nodeType": "visibilityCurve"
@@ -6340,7 +6402,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#563",
    "nodeType": "visibilityCurve"
@@ -6396,7 +6458,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#562",
    "nodeType": "visibilityCurve"
@@ -6522,7 +6584,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#559",
    "nodeType": "visibilityCurve"
@@ -6535,7 +6597,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#547",
    "nodeType": "visibilityCurve"
@@ -6556,7 +6618,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#560",
    "nodeType": "visibilityCurve"
@@ -6675,7 +6737,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#553",
    "nodeType": "visibilityCurve"
@@ -12423,44 +12485,6 @@
   },
   {
    "attributes": {
-    "data": {
-     "value": {
-      "interpolation": 0,
-      "leftBez": { "x": -19.390300750732422, "y": 0.0 },
-      "locked": true,
-      "numValue": 105.0,
-      "rightBez": { "x": 19.390300750732422, "y": -0.0 },
-      "weightLocked": true
-     },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 25.0, "varType": "double" },
-    "uuid": { "value": "895172ff-3bed-4a51-8d4d-5d18dff4e9b6", "varType": "string" }
-   },
-   "nodeId": "keyframe#944",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": {
-      "interpolation": 0,
-      "leftBez": { "x": -5.0, "y": 0.0 },
-      "locked": true,
-      "numValue": 87.0,
-      "rightBez": { "x": 5.0, "y": 0.0 },
-      "weightLocked": true
-     },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 5.0, "varType": "double" },
-    "uuid": { "value": "e10370d8-fc22-4604-a40f-c128878fb339", "varType": "string" }
-   },
-   "nodeId": "keyframe#942",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 6, "varType": "int" },
     "niceName": { "value": "Fill 290", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
@@ -12859,6 +12883,7 @@
      "varType": "font"
     },
     "fontSize": { "value": 58.0, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "horizontalAlignment": { "value": 2, "varType": "enum" },
     "letterSpacing": { "value": -2.0, "varType": "double" },
     "lineSpacing": { "value": -20.0, "varType": "double" },
@@ -12974,7 +12999,6 @@
       { "varType": "nodeId" }
      ]
     },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Line L", "varType": "string" },
     "position": {
      "childExprs": {
@@ -13021,7 +13045,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#17",
    "nodeType": "animationCurve"
@@ -13039,25 +13063,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
-   },
-   "nodeId": "animationCurve#16",
-   "nodeType": "animationCurve"
-  },
-  {
-   "attributes": {
-    "animationLayers": {
-     "list": [
-      { "varType": "nodeId" }
-     ]
-    },
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" },
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#10",
    "nodeType": "animationCurve"
@@ -13075,7 +13081,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#9",
    "nodeType": "animationCurve"
@@ -13093,7 +13099,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#13",
    "nodeType": "animationCurve"
@@ -13111,7 +13117,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "animationCurve#15",
    "nodeType": "animationCurve"
@@ -13124,7 +13130,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#305",
    "nodeType": "visibilityCurve"
@@ -13137,7 +13143,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#298",
    "nodeType": "visibilityCurve"
@@ -13150,7 +13156,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#297",
    "nodeType": "visibilityCurve"
@@ -13163,7 +13169,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#424",
    "nodeType": "visibilityCurve"
@@ -13176,7 +13182,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#291",
    "nodeType": "visibilityCurve"
@@ -13189,7 +13195,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#292",
    "nodeType": "visibilityCurve"
@@ -13202,7 +13208,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#421",
    "nodeType": "visibilityCurve"
@@ -13215,7 +13221,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#296",
    "nodeType": "visibilityCurve"
@@ -13228,7 +13234,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#425",
    "nodeType": "visibilityCurve"
@@ -13241,7 +13247,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#293",
    "nodeType": "visibilityCurve"
@@ -13254,7 +13260,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#418",
    "nodeType": "visibilityCurve"
@@ -13267,7 +13273,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#300",
    "nodeType": "visibilityCurve"
@@ -13280,7 +13286,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#284",
    "nodeType": "visibilityCurve"
@@ -13293,7 +13299,7 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 120, "varType": "int" },
-    "inTime": { "value": 44.0, "varType": "double" },
+    "inTime": { "value": 50.0, "varType": "double" },
     "niceName": { "value": "BDF_SocialPost", "varType": "string" },
     "playbackEnd": { "value": 65, "varType": "int" },
     "resolution": {
@@ -13313,7 +13319,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#302",
    "nodeType": "visibilityCurve"
@@ -13326,7 +13332,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#417",
    "nodeType": "visibilityCurve"
@@ -13339,7 +13345,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#301",
    "nodeType": "visibilityCurve"
@@ -13352,7 +13358,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#290",
    "nodeType": "visibilityCurve"
@@ -13365,7 +13371,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#443",
    "nodeType": "visibilityCurve"
@@ -13378,7 +13384,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#428",
    "nodeType": "visibilityCurve"
@@ -13391,7 +13397,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#441",
    "nodeType": "visibilityCurve"
@@ -13404,7 +13410,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#304",
    "nodeType": "visibilityCurve"
@@ -13417,7 +13423,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#294",
    "nodeType": "visibilityCurve"
@@ -13430,7 +13436,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#289",
    "nodeType": "visibilityCurve"
@@ -13443,7 +13449,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#427",
    "nodeType": "visibilityCurve"
@@ -13456,7 +13462,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#288",
    "nodeType": "visibilityCurve"
@@ -13469,7 +13475,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#307",
    "nodeType": "visibilityCurve"
@@ -13482,7 +13488,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#306",
    "nodeType": "visibilityCurve"
@@ -13495,7 +13501,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#447",
    "nodeType": "visibilityCurve"
@@ -13508,7 +13514,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#303",
    "nodeType": "visibilityCurve"
@@ -13521,7 +13527,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#426",
    "nodeType": "visibilityCurve"
@@ -13534,7 +13540,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#430",
    "nodeType": "visibilityCurve"
@@ -13547,7 +13553,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#287",
    "nodeType": "visibilityCurve"
@@ -13560,7 +13566,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#440",
    "nodeType": "visibilityCurve"
@@ -13573,7 +13579,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#422",
    "nodeType": "visibilityCurve"
@@ -13586,7 +13592,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#416",
    "nodeType": "visibilityCurve"
@@ -13599,7 +13605,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#285",
    "nodeType": "visibilityCurve"
@@ -13612,7 +13618,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#295",
    "nodeType": "visibilityCurve"
@@ -13625,7 +13631,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#279",
    "nodeType": "visibilityCurve"
@@ -13638,7 +13644,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#286",
    "nodeType": "visibilityCurve"
@@ -13651,7 +13657,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#445",
    "nodeType": "visibilityCurve"
@@ -13664,7 +13670,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#283",
    "nodeType": "visibilityCurve"
@@ -13677,7 +13683,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#429",
    "nodeType": "visibilityCurve"
@@ -13690,7 +13696,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#299",
    "nodeType": "visibilityCurve"
@@ -13703,7 +13709,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#463",
    "nodeType": "visibilityCurve"
@@ -13716,7 +13722,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 44.0, "varType": "double" }
+    "time": { "value": 50.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#485",
    "nodeType": "visibilityCurve"
@@ -14963,7 +14969,7 @@
      "value": { "x": 498.0, "y": 110.0, "z": 0.0 },
      "varType": "double3"
     },
-    "shapeId": { "value": 1, "varType": "int" },
+    "shapeId": { "value": 5, "varType": "int" },
     "shapeScale": {
      "aspectRatio": 1.0,
      "value": { "x": 0.06, "y": 0.06 },
@@ -15234,23 +15240,6 @@
   },
   {
    "attributes": {
-    "array": {
-     "list": [
-      { "value": 1080.0, "varType": "double" },
-      { "value": 421.5634765625, "varType": "double" },
-      { "value": 105.0, "varType": "double" }
-     ]
-    },
-    "colorId": { "value": 0, "varType": "int" },
-    "expression": { "value": "n0 - n1 - n2", "varType": "string" },
-    "niceName": { "value": "LineL Length", "varType": "string" },
-    "uuid": { "value": "a2642b22-8cb2-4d89-91d0-3452a57e482a", "varType": "string" }
-   },
-   "nodeId": "jsmath#4",
-   "nodeType": "jsmath"
-  },
-  {
-   "attributes": {
     "colorId": { "value": 4, "varType": "int" },
     "graph": {
      "list": [
@@ -15289,7 +15278,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "maximum": { "value": 6.0, "varType": "double" },
     "niceName": { "value": "Random [Shape Id]", "varType": "string" },
-    "seed": { "value": 11, "varType": "int" },
+    "seed": { "value": 12, "varType": "int" },
     "uuid": { "value": "3c292c87-baf9-4696-83a7-fe9ccfa1a11d", "varType": "string" }
    },
    "nodeId": "random#1",
@@ -16742,7 +16731,7 @@
      "value": { "x": 498.0, "y": 40.0, "z": 0.0 },
      "varType": "double3"
     },
-    "shapeId": { "value": 1, "varType": "int" },
+    "shapeId": { "value": 5, "varType": "int" },
     "shapeScale": {
      "aspectRatio": 1.0,
      "value": { "x": 0.06, "y": 0.06 },
@@ -17236,7 +17225,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "maximum": { "value": 6.0, "varType": "double" },
     "niceName": { "value": "Random [Shape Id] 1", "varType": "string" },
-    "seed": { "value": 11, "varType": "int" },
+    "seed": { "value": 12, "varType": "int" },
     "uuid": { "value": "3c292c87-baf9-4696-83a7-fe9ccfa1a11d", "varType": "string" }
    },
    "nodeId": "random#2",
@@ -17768,6 +17757,30 @@
    },
    "nodeId": "strokeMaterial#599",
    "nodeType": "strokeMaterial"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 0, "varType": "int" },
+    "first": { "value": 1080.0, "varType": "double" },
+    "niceName": { "value": "Width minus R Line", "varType": "string" },
+    "operation": { "value": 1, "varType": "enum" },
+    "second": { "value": 421.5634765625, "varType": "double" },
+    "uuid": { "value": "d2495a20-8d25-4460-b788-84259ca4db45", "varType": "string" }
+   },
+   "nodeId": "math#2",
+   "nodeType": "math"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 0, "varType": "int" },
+    "first": { "value": 658.4365234375, "varType": "double" },
+    "niceName": { "value": "Subtract margins", "varType": "string" },
+    "operation": { "value": 1, "varType": "enum" },
+    "second": { "value": 105.0, "varType": "double" },
+    "uuid": { "value": "0640aa1a-efc8-4d4a-9f84-b7abb7961a1e", "varType": "string" }
+   },
+   "nodeId": "math#3",
+   "nodeType": "math"
   }
  ],
  "other": {
