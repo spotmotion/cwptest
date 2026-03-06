@@ -158,6 +158,26 @@
          console.log("MESSAGE RECEIVED FULL:", JSON.stringify(data))
 
          if (!data || typeof data !== "object") return
+
+         // ▶️ Playback controls
+         if (data.type === "player-control") {
+           try {
+             if (data.action === "play") {
+               player.play()
+               runPlaybackLoop()
+             }
+
+             if (data.action === "pause") {
+               player.stop()
+               cancelAnimationFrame(animationFrameId)
+             }
+           } catch (err) {
+             console.error("[CWP] player-control failed", err)
+           }
+           return
+         }
+
+         // 🎛 Attribute controls
          if (data.type !== "set-attribute") return
 
          const { path, value } = data
@@ -195,21 +215,21 @@
          }
        })
 
-        /* 5b) Send updates from the text box to Cavalry */
-        const nameInput = document.getElementById("nameInput")
+       /* 5b) Send updates from the text box to Cavalry */
+       const nameInput = document.getElementById("nameInput")
 
-        if (nameInput) {
-          nameInput.addEventListener("input", (e) => {
-            window.postMessage(
-              {
-                type: "set-attribute",
-                path: "string#2.string",
-                value: e.target.value
-              },
-              "*"
-            )
-          })
-        }
+       if (nameInput) {
+         nameInput.addEventListener("input", (e) => {
+           window.postMessage(
+             {
+               type: "set-attribute",
+               path: "string#2.string",
+               value: e.target.value,
+             },
+             "*"
+           )
+         })
+       }
 
         /* 6) Initial surface + resize handling */
         resizeViewportAndSurface()
