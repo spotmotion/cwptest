@@ -154,9 +154,10 @@
 
        /* 5) Listen for external control messages */
        window.addEventListener("message", (event) => {
-         const data = event.data
-         console.log("MESSAGE RECEIVED FULL:", JSON.stringify(data))
+         console.log("MESSAGE EVENT FIRED:", event)
+         console.log("MESSAGE RECEIVED FULL:", event.data)
 
+         const data = event.data
          if (!data || typeof data !== "object") return
 
          // ▶️ Playback controls
