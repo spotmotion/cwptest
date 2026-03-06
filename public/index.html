@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
-      html, body {
+      html,
+      body {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -160,7 +161,11 @@
           const data = await response.arrayBuffer()
           Module.FS.writeFile(filename, new Uint8Array(data))
           app.replaceFontAsset(filename, assetId)
-          app.render(surface)
+
+          if (surface) {
+            app.render(surface)
+          }
+
           log("Font loaded:", filename)
         })
 
@@ -182,6 +187,32 @@
 
           const data = event.data
           if (!data || typeof data !== "object") return
+
+          // Playback control messages
+          if (data.type === "player-control") {
+            try {
+              if (data.action === "play") {
+                log("Calling app.play()")
+                app.play()
+                runPlaybackLoop()
+              }
+
+              if (data.action === "pause") {
+                log("Calling app.stop()")
+                app.stop()
+                stopPlaybackLoop()
+
+                if (surface) {
+                  app.render(surface)
+                }
+              }
+            } catch (err) {
+              console.error("[CWP] player-control failed", err)
+            }
+            return
+          }
+
+          // Attribute update messages
           if (data.type !== "set-attribute") return
 
           const { path, value } = data
@@ -221,37 +252,6 @@
         })
 
         log("Message listener registered")
-
-        log("About to register cavalry-control listener")
-
-        window.addEventListener("cavalry-control", (event) => {
-          const data = event.detail
-          log("CUSTOM EVENT RECEIVED:", data)
-
-          if (!data || typeof data !== "object") return
-          if (data.type !== "player-control") return
-
-          try {
-            if (data.action === "play") {
-              log("Calling app.play()")
-              app.play()
-              runPlaybackLoop()
-            }
-
-            if (data.action === "pause") {
-              log("Calling app.stop()")
-              app.stop()
-              stopPlaybackLoop()
-              if (surface) {
-                app.render(surface)
-              }
-            }
-          } catch (err) {
-            console.error("[CWP] player-control failed", err)
-          }
-        })
-
-        log("cavalry-control listener registered")
 
         const nameInput = document.getElementById("nameInput")
 
