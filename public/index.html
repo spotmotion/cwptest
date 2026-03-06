@@ -153,26 +153,28 @@
         log("Peridot styles:", app.getFontStyles("Peridot PE Variable"))
 
        /* 5) Listen for external control messages */
+       console.log("[CWP] About to register message listener")
+
        window.addEventListener("message", (event) => {
-         console.log("MESSAGE EVENT FIRED:", event)
-         console.log("MESSAGE RECEIVED FULL:", event.data)
+         console.log("[CWP] MESSAGE EVENT FIRED:", event)
+         console.log("[CWP] MESSAGE RECEIVED FULL:", event.data)
 
          const data = event.data
          if (!data || typeof data !== "object") return
 
          // ▶️ Playback controls
          if (data.type === "player-control") {
-           console.log("PLAYER CONTROL ACTION:", data.action)
+           console.log("[CWP] PLAYER CONTROL ACTION:", data.action)
 
            try {
              if (data.action === "play") {
-               console.log("Calling player.play()")
+               console.log("[CWP] Calling player.play()")
                player.play()
                runPlaybackLoop()
              }
 
              if (data.action === "pause") {
-               console.log("Calling player.stop()")
+               console.log("[CWP] Calling player.stop()")
                player.stop()
                cancelAnimationFrame(animationFrameId)
              }
@@ -186,14 +188,14 @@
          if (data.type !== "set-attribute") return
 
          const { path, value } = data
-         console.log("PATH:", path)
-         console.log("VALUE:", value)
+         console.log("[CWP] PATH:", path)
+         console.log("[CWP] VALUE:", value)
 
          try {
            const nodeId = path.slice(0, path.indexOf("."))
            const attr = path.slice(path.indexOf(".") + 1)
 
-           console.log("SETTING ATTRIBUTE:", nodeId, attr, value)
+           console.log("[CWP] SETTING ATTRIBUTE:", nodeId, attr, value)
 
            app.setAttribute(nodeId, attr, value)
 
@@ -219,6 +221,8 @@
            console.error("[CWP] setAttribute failed", err)
          }
        })
+
+       console.log("[CWP] Message listener registered")
 
        /* 5b) Send updates from the text box to Cavalry */
        const nameInput = document.getElementById("nameInput")
