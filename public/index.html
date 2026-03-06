@@ -154,6 +154,8 @@
 
        /* 5) Listen for external control messages */
         window.addEventListener("message", (event) => {
+          console.log("MESSAGE RECEIVED:", event.data)
+
           const data = event.data
           if (!data || typeof data !== "object") return
           if (data.type !== "set-attribute") return
@@ -185,7 +187,6 @@
                 input.value = value
               }
             }
-
           } catch (err) {
             console.error("[CWP] setAttribute failed", err)
           }
