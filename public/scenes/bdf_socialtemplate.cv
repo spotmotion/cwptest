@@ -18,6 +18,8 @@
   }
  ],
  "connections": [
+  { "from": "boundingBox#3.size.x", "to": "comparison#1.second" },
+  { "from": "boundingBox#1.size.x", "to": "comparison#1.first" },
   { "from": "pointConstraint#1.id", "to": "componentConstraint#1.generator" },
   { "from": "boundingBox#3.size.x", "to": "linearDistribution#2.size" },
   { "from": "stringLength#2.out", "to": "linearDistribution#2.count" },
@@ -58,6 +60,9 @@
   { "from": "subMesh#26.id", "to": "textShape#14.deformers.0" },
   { "from": "align#12.id", "to": "textShape#14.deformers.1" },
   { "from": "visibilityCurve#566.out", "to": "textShape#14.on" },
+  { "from": "boundingBox#3.size.x", "to": "ifElse#6.second" },
+  { "from": "boundingBox#1.size.x", "to": "ifElse#6.first" },
+  { "from": "comparison#1.out", "to": "ifElse#6.condition" },
   { "from": "valueArray#3.array.1", "to": "ifElse#3.second" },
   { "from": "value#1.id", "to": "ifElse#3.condition" },
   { "from": "valueArray#3.array.0", "to": "ifElse#3.first" },
@@ -537,7 +542,7 @@
   { "from": "visibilityCurve#289.out", "to": "group#35.on" },
   { "from": "visibilityCurve#279.out", "to": "group#31.on" },
   { "from": "visibilityCurve#445.out", "to": "group#48.on" },
-  { "from": "boundingBox#1.size.x", "to": "math#1.first" },
+  { "from": "ifElse#6.id", "to": "math#1.first" },
   { "from": "animationCurve#15.out", "to": "math#1.second" },
   { "from": "value2#1.value.x", "to": "jsmath#4.array.0" },
   { "from": "animationCurve#16.out", "to": "jsmath#4.array.2" },
@@ -586,6 +591,10 @@
  },
  "labelColors": "Pastel",
  "nodeMeta": [
+  {
+   "children": [ "ifElse#6" ],
+   "nodeId": "comparison#1"
+  },
   {
    "children": [ "hiddenFolder#669" ],
    "nodeId": "componentConstraint#1"
@@ -1547,7 +1556,7 @@
    "nodeId": "asset#1"
   },
   {
-   "children": [ "animationCurve#15" ],
+   "children": [ "comparison#1", "animationCurve#15" ],
    "nodeId": "math#1"
   },
   {
@@ -1592,6 +1601,20 @@
   }
  ],
  "nodes": [
+  {
+   "attributes": {
+    "colorId": { "value": 0, "varType": "int" },
+    "first": { "value": 421.5634765625, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Compare Text Box Sizes", "varType": "string" },
+    "operation": { "value": 1, "varType": "enum" },
+    "second": { "value": 357.3681640625, "varType": "double" },
+    "uuid": { "value": "1a09c8ca-26e4-4936-81c6-ffdff67a01b6", "varType": "string" }
+   },
+   "hierarchyOffset": 4.0,
+   "nodeId": "comparison#1",
+   "nodeType": "comparison"
+  },
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
@@ -1676,9 +1699,9 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "count": { "value": 17, "varType": "int" },
+    "count": { "value": 11, "varType": "int" },
     "niceName": { "value": "Linear 3", "varType": "string" },
-    "size": { "expression": "-27", "expressionEnabled": true, "value": 530.572266, "varType": "double" },
+    "size": { "expression": "-27", "expressionEnabled": true, "value": 330.368164, "varType": "double" },
     "uuid": { "value": "445439ad-6710-4e52-a1a6-f6998cb8cdc2", "varType": "string" }
    },
    "nodeId": "linearDistribution#2",
@@ -2356,6 +2379,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Two Lines Switch", "varType": "string" },
     "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
    },
@@ -2483,7 +2507,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "String Length 1", "varType": "string" },
-    "string": { "value": "& Stephen McMinty", "varType": "string" },
+    "string": { "value": "& Max Lynch", "varType": "string" },
     "uuid": { "value": "bb8e8a73-608b-4df8-8ffb-64bf7431ee33", "varType": "string" }
    },
    "nodeId": "stringLength#2",
@@ -2514,7 +2538,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#19",
    "nodeType": "animationCurve"
@@ -2527,7 +2551,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#566",
    "nodeType": "visibilityCurve"
@@ -3651,12 +3675,12 @@
      "value": {
       "overrides": [
        {
-        "end": 17,
+        "end": 11,
         "features": { "calt": 1, "clig": 1, "liga": 1 },
         "start": 0
        }
       ],
-      "text": "& Stephen McMinty"
+      "text": "& Max Lynch"
      },
      "varType": "richText"
     },
@@ -3718,6 +3742,16 @@
   },
   {
    "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
+    "niceName": { "value": "Send Largest", "varType": "string" },
+    "uuid": { "value": "72b8be05-8251-450d-a941-df2fe95027df", "varType": "string" }
+   },
+   "nodeId": "ifElse#6",
+   "nodeType": "ifElse"
+  },
+  {
+   "attributes": {
     "colorId": { "value": 14, "varType": "int" },
     "niceName": { "value": "Motion Blur 204", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
@@ -3729,6 +3763,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Two Lines Switch 1", "varType": "string" },
     "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
    },
@@ -3743,7 +3778,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#568",
    "nodeType": "visibilityCurve"
@@ -3761,7 +3796,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#22",
    "nodeType": "animationCurve"
@@ -3774,7 +3809,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#575",
    "nodeType": "visibilityCurve"
@@ -3787,7 +3822,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#571",
    "nodeType": "visibilityCurve"
@@ -3800,7 +3835,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#570",
    "nodeType": "visibilityCurve"
@@ -3813,7 +3848,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#569",
    "nodeType": "visibilityCurve"
@@ -3832,7 +3867,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#20",
    "nodeType": "animationCurve"
@@ -3845,7 +3880,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#573",
    "nodeType": "visibilityCurve"
@@ -3863,7 +3898,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#21",
    "nodeType": "animationCurve"
@@ -3876,7 +3911,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#567",
    "nodeType": "visibilityCurve"
@@ -3889,7 +3924,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#572",
    "nodeType": "visibilityCurve"
@@ -3902,7 +3937,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#574",
    "nodeType": "visibilityCurve"
@@ -3912,7 +3947,7 @@
     "colorId": { "value": 4, "varType": "int" },
     "levelMode": { "value": 3, "varType": "enum" },
     "niceName": { "value": "Sub-Mesh 2 [Speaker - Text] 1", "varType": "string" },
-    "shapeOpacity": { "expression": "*100", "expressionEnabled": true, "value": 0.0, "varType": "double" },
+    "shapeOpacity": { "expression": "*100", "expressionEnabled": true, "value": 100.0, "varType": "double" },
     "uuid": { "value": "9ab66ef7-b16e-4269-8cd8-146a405619ce", "varType": "string" }
    },
    "nodeId": "subMesh#26",
@@ -3932,7 +3967,7 @@
    "attributes": {
     "array": {
      "list": [
-      { "instanceName": "n0", "value": "Charlotte Ballantine", "varType": "string" }
+      { "instanceName": "n0", "value": "Dominic North", "varType": "string" }
      ]
     },
     "colorId": { "value": 0, "varType": "int" },
@@ -3946,6 +3981,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
+    "condition": { "value": true, "varType": "bool" },
     "niceName": { "value": "Two Lines Switch", "varType": "string" },
     "uuid": { "value": "61c3808e-2582-4c48-bc7a-5c53e6867841", "varType": "string" }
    },
@@ -3960,7 +3996,7 @@
     "value": {
      "definitionOverrides": { "hardMax": 1.0, "hardMin": 0.0, "step": 1.0 },
      "instanceName": "OnOff",
-     "value": 0.0,
+     "value": 1.0,
      "varType": "double"
     }
    },
@@ -5686,7 +5722,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#551",
    "nodeType": "visibilityCurve"
@@ -6291,7 +6327,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#561",
    "nodeType": "visibilityCurve"
@@ -6304,7 +6340,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#563",
    "nodeType": "visibilityCurve"
@@ -6360,7 +6396,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#562",
    "nodeType": "visibilityCurve"
@@ -6486,7 +6522,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#559",
    "nodeType": "visibilityCurve"
@@ -6499,7 +6535,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#547",
    "nodeType": "visibilityCurve"
@@ -6520,7 +6556,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#560",
    "nodeType": "visibilityCurve"
@@ -6595,7 +6631,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Artist Name String - Second Line", "varType": "string" },
-    "string": { "value": "& Stephen McMinty", "varType": "string" },
+    "string": { "value": "& Max Lynch", "varType": "string" },
     "uuid": { "value": "f888b490-2889-4948-aea4-dcac3fb2808c", "varType": "string" }
    },
    "nodeId": "string#5",
@@ -6639,7 +6675,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#553",
    "nodeType": "visibilityCurve"
@@ -8154,7 +8190,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Artist Name String - First Line", "varType": "string" },
-    "string": { "value": "Charlotte Ballantine", "varType": "string" },
+    "string": { "value": "Dominic North", "varType": "string" },
     "uuid": { "value": "f888b490-2889-4948-aea4-dcac3fb2808c", "varType": "string" }
    },
    "nodeId": "string#2",
@@ -8347,9 +8383,10 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Composition Constraint 3", "varType": "string" },
     "offset": {
-     "value": { "x": -42.0, "y": 50.0 },
+     "value": { "x": -42.0, "y": 110.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -8390,9 +8427,9 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "count": { "value": 20, "varType": "int" },
+    "count": { "value": 13, "varType": "int" },
     "niceName": { "value": "Linear 2", "varType": "string" },
-    "size": { "expression": "-27", "expressionEnabled": true, "value": 626.015625, "varType": "double" },
+    "size": { "expression": "-27", "expressionEnabled": true, "value": 394.563477, "varType": "double" },
     "uuid": { "value": "445439ad-6710-4e52-a1a6-f6998cb8cdc2", "varType": "string" }
    },
    "nodeId": "linearDistribution#1",
@@ -8450,7 +8487,7 @@
      "childExprs": {
       "y": { "expression": "*-1", "expressionEnabled": true }
      },
-     "value": { "x": 0.0, "y": -500.0 },
+     "value": { "x": 0.0, "y": -530.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -8468,7 +8505,7 @@
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Composition Constraint 4", "varType": "string" },
     "offset": {
-     "value": { "x": -42.0, "y": 50.0 },
+     "value": { "x": -42.0, "y": 110.0 },
      "varType": "double2"
     },
     "resolution": {
@@ -8613,7 +8650,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "length": { "value": 321.984375, "varType": "double" },
+    "length": { "value": 553.4365234375, "varType": "double" },
     "niceName": { "value": "Line 3", "varType": "string" },
     "uuid": { "value": "d949e54e-3c6e-4c89-a195-5da123d66bd8", "varType": "string" }
    },
@@ -8632,7 +8669,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "length": { "value": 653.015625, "varType": "double" },
+    "length": { "value": 421.5634765625, "varType": "double" },
     "niceName": { "value": "Line 2", "varType": "string" },
     "uuid": { "value": "d949e54e-3c6e-4c89-a195-5da123d66bd8", "varType": "string" }
    },
@@ -12497,7 +12534,7 @@
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "String Length", "varType": "string" },
-    "string": { "value": "Charlotte Ballantine", "varType": "string" },
+    "string": { "value": "Dominic North", "varType": "string" },
     "uuid": { "value": "bb8e8a73-608b-4df8-8ffb-64bf7431ee33", "varType": "string" }
    },
    "nodeId": "stringLength#1",
@@ -12827,19 +12864,19 @@
     "lineSpacing": { "value": -20.0, "varType": "double" },
     "niceName": { "value": "Speaker - Line 1", "varType": "string" },
     "position": {
-     "value": { "x": 498.0, "y": 50.0, "z": 0.0 },
+     "value": { "x": 498.0, "y": 110.0, "z": 0.0 },
      "varType": "double3"
     },
     "text": {
      "value": {
       "overrides": [
        {
-        "end": 20,
+        "end": 13,
         "features": { "calt": 1, "clig": 1, "liga": 1 },
         "start": 0
        }
       ],
-      "text": "Charlotte Ballantine"
+      "text": "Dominic North"
      },
      "varType": "richText"
     },
@@ -12897,21 +12934,21 @@
     "horizontalLayoutAlignment": { "value": 1, "varType": "enum" },
     "letterSpacing": { "value": -0.6, "varType": "double" },
     "lineSpacing": { "value": -15.0, "varType": "double" },
-    "niceName": { "value": "The subtle art of art: a thesi...", "varType": "string" },
+    "niceName": { "value": "Responsive Design - The Future...", "varType": "string" },
     "position": {
-     "value": { "x": -498.0, "y": 425.0, "z": 0.0 },
+     "value": { "x": -498.0, "y": 395.0, "z": 0.0 },
      "varType": "double3"
     },
     "text": {
      "value": {
       "overrides": [
        {
-        "end": 94,
+        "end": 40,
         "features": { "calt": 1, "clig": 1, "liga": 1 },
         "start": 0
        }
       ],
-      "text": "The subtle art of art: a thesis in modern artistic art practices by artists in the arts space."
+      "text": "Responsive Design - The Future of Motion"
      },
      "varType": "richText"
     },
@@ -12959,7 +12996,6 @@
       { "varType": "nodeId" }
      ]
     },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Line R", "varType": "string" },
     "position": {
      "value": { "x": 498.0, "y": 0.0, "z": 0.0 },
@@ -12985,7 +13021,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#17",
    "nodeType": "animationCurve"
@@ -13003,7 +13039,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#16",
    "nodeType": "animationCurve"
@@ -13021,7 +13057,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#10",
    "nodeType": "animationCurve"
@@ -13039,7 +13075,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#9",
    "nodeType": "animationCurve"
@@ -13057,7 +13093,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#13",
    "nodeType": "animationCurve"
@@ -13075,7 +13111,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "animationCurve#15",
    "nodeType": "animationCurve"
@@ -13088,7 +13124,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#305",
    "nodeType": "visibilityCurve"
@@ -13101,7 +13137,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#298",
    "nodeType": "visibilityCurve"
@@ -13114,7 +13150,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#297",
    "nodeType": "visibilityCurve"
@@ -13127,7 +13163,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#424",
    "nodeType": "visibilityCurve"
@@ -13140,7 +13176,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#291",
    "nodeType": "visibilityCurve"
@@ -13153,7 +13189,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#292",
    "nodeType": "visibilityCurve"
@@ -13166,7 +13202,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#421",
    "nodeType": "visibilityCurve"
@@ -13179,7 +13215,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#296",
    "nodeType": "visibilityCurve"
@@ -13192,7 +13228,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#425",
    "nodeType": "visibilityCurve"
@@ -13205,7 +13241,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#293",
    "nodeType": "visibilityCurve"
@@ -13218,7 +13254,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#418",
    "nodeType": "visibilityCurve"
@@ -13231,7 +13267,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#300",
    "nodeType": "visibilityCurve"
@@ -13244,7 +13280,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#284",
    "nodeType": "visibilityCurve"
@@ -13257,7 +13293,7 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 120, "varType": "int" },
-    "inTime": { "value": 34.0, "varType": "double" },
+    "inTime": { "value": 44.0, "varType": "double" },
     "niceName": { "value": "BDF_SocialPost", "varType": "string" },
     "playbackEnd": { "value": 65, "varType": "int" },
     "resolution": {
@@ -13277,7 +13313,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#302",
    "nodeType": "visibilityCurve"
@@ -13290,7 +13326,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#417",
    "nodeType": "visibilityCurve"
@@ -13303,7 +13339,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#301",
    "nodeType": "visibilityCurve"
@@ -13316,7 +13352,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#290",
    "nodeType": "visibilityCurve"
@@ -13329,7 +13365,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#443",
    "nodeType": "visibilityCurve"
@@ -13342,7 +13378,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#428",
    "nodeType": "visibilityCurve"
@@ -13355,7 +13391,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#441",
    "nodeType": "visibilityCurve"
@@ -13368,7 +13404,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#304",
    "nodeType": "visibilityCurve"
@@ -13381,7 +13417,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#294",
    "nodeType": "visibilityCurve"
@@ -13394,7 +13430,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#289",
    "nodeType": "visibilityCurve"
@@ -13407,7 +13443,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#427",
    "nodeType": "visibilityCurve"
@@ -13420,7 +13456,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#288",
    "nodeType": "visibilityCurve"
@@ -13433,7 +13469,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#307",
    "nodeType": "visibilityCurve"
@@ -13446,7 +13482,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#306",
    "nodeType": "visibilityCurve"
@@ -13459,7 +13495,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#447",
    "nodeType": "visibilityCurve"
@@ -13472,7 +13508,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#303",
    "nodeType": "visibilityCurve"
@@ -13485,7 +13521,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#426",
    "nodeType": "visibilityCurve"
@@ -13498,7 +13534,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#430",
    "nodeType": "visibilityCurve"
@@ -13511,7 +13547,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#287",
    "nodeType": "visibilityCurve"
@@ -13524,7 +13560,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#440",
    "nodeType": "visibilityCurve"
@@ -13537,7 +13573,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#422",
    "nodeType": "visibilityCurve"
@@ -13550,7 +13586,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#416",
    "nodeType": "visibilityCurve"
@@ -13563,7 +13599,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#285",
    "nodeType": "visibilityCurve"
@@ -13576,7 +13612,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#295",
    "nodeType": "visibilityCurve"
@@ -13589,7 +13625,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#279",
    "nodeType": "visibilityCurve"
@@ -13602,7 +13638,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#286",
    "nodeType": "visibilityCurve"
@@ -13615,7 +13651,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#445",
    "nodeType": "visibilityCurve"
@@ -13628,7 +13664,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#283",
    "nodeType": "visibilityCurve"
@@ -13641,7 +13677,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#429",
    "nodeType": "visibilityCurve"
@@ -13654,7 +13690,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#299",
    "nodeType": "visibilityCurve"
@@ -13667,7 +13703,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 34.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#463",
    "nodeType": "visibilityCurve"
@@ -13680,7 +13716,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 34.0, "varType": "double" }
+    "time": { "value": 44.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#485",
    "nodeType": "visibilityCurve"
@@ -13701,7 +13737,7 @@
   {
    "attributes": {
     "colorId": { "value": 4, "varType": "int" },
-    "end": { "value": 6.852715605165407, "varType": "double" },
+    "end": { "value": 0.0, "varType": "double" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Visibility Sequence 3", "varType": "string" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
@@ -13713,7 +13749,6 @@
    "attributes": {
     "colorId": { "value": 4, "varType": "int" },
     "niceName": { "value": "Visibility Sequence 2", "varType": "string" },
-    "start": { "value": 6.852715605165407, "varType": "double" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
    },
    "nodeId": "visibility#3",
@@ -13722,7 +13757,7 @@
   {
    "attributes": {
     "colorId": { "value": 4, "varType": "int" },
-    "end": { "value": 6.852715605165407, "varType": "double" },
+    "end": { "value": 0.0, "varType": "double" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Visibility Sequence", "varType": "string" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
@@ -13735,7 +13770,6 @@
     "colorId": { "value": 4, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Visibility Sequence 1", "varType": "string" },
-    "start": { "value": 6.852715605165407, "varType": "double" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
    },
    "nodeId": "visibility#2",
@@ -14295,8 +14329,8 @@
      ]
     },
     "hierarchy": { "value": false, "varType": "bool" },
-    "max": { "value": 310.0, "varType": "double" },
-    "min": { "value": 500.0, "varType": "double" },
+    "max": { "value": 360.0, "varType": "double" },
+    "min": { "value": 530.0, "varType": "double" },
     "niceName": { "value": "Y Pos NR", "varType": "string" },
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
@@ -14923,12 +14957,13 @@
       { "varType": "nodeId" }
      ]
     },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Duplicator - Line 1", "varType": "string" },
     "position": {
-     "value": { "x": 498.0, "y": 50.0, "z": 0.0 },
+     "value": { "x": 498.0, "y": 110.0, "z": 0.0 },
      "varType": "double3"
     },
-    "shapeId": { "value": 3, "varType": "int" },
+    "shapeId": { "value": 1, "varType": "int" },
     "shapeScale": {
      "aspectRatio": 1.0,
      "value": { "x": 0.06, "y": 0.06 },
@@ -14955,7 +14990,7 @@
     "colorId": { "value": 16, "varType": "int" },
     "niceName": { "value": "Speaker", "varType": "string" },
     "position": {
-     "value": { "x": 0.0, "y": 460.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": 430.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "802c2843-68bd-41a8-a154-199c5442f408", "varType": "string" }
@@ -15157,8 +15192,9 @@
   {
    "attributes": {
     "colorId": { "value": 0, "varType": "int" },
-    "first": { "value": 653.015625, "varType": "double" },
-    "niceName": { "value": "Math", "varType": "string" },
+    "first": { "value": 421.5634765625, "varType": "double" },
+    "hierarchy": { "value": false, "varType": "bool" },
+    "niceName": { "value": "Length Animation", "varType": "string" },
     "uuid": { "value": "c7fa508a-dcd5-49e0-9438-994be39464d2", "varType": "string" }
    },
    "hierarchyOffset": -4.0,
@@ -15201,7 +15237,7 @@
     "array": {
      "list": [
       { "value": 1080.0, "varType": "double" },
-      { "value": 653.015625, "varType": "double" },
+      { "value": 421.5634765625, "varType": "double" },
       { "value": 105.0, "varType": "double" }
      ]
     },
@@ -15253,7 +15289,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "maximum": { "value": 6.0, "varType": "double" },
     "niceName": { "value": "Random [Shape Id]", "varType": "string" },
-    "seed": { "value": 8, "varType": "int" },
+    "seed": { "value": 11, "varType": "int" },
     "uuid": { "value": "3c292c87-baf9-4696-83a7-fe9ccfa1a11d", "varType": "string" }
    },
    "nodeId": "random#1",
@@ -16699,13 +16735,14 @@
       { "varType": "nodeId" }
      ]
     },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Duplicator - Line 2", "varType": "string" },
-    "opacity": { "expression": "*100", "expressionEnabled": true, "value": 0.0, "varType": "double" },
+    "opacity": { "expression": "*100", "expressionEnabled": true, "value": 100.0, "varType": "double" },
     "position": {
      "value": { "x": 498.0, "y": 40.0, "z": 0.0 },
      "varType": "double3"
     },
-    "shapeId": { "value": 3, "varType": "int" },
+    "shapeId": { "value": 1, "varType": "int" },
     "shapeScale": {
      "aspectRatio": 1.0,
      "value": { "x": 0.06, "y": 0.06 },
@@ -17137,6 +17174,7 @@
      ]
     },
     "colorId": { "value": 9, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Two Lines Switch", "varType": "string" },
     "uuid": { "value": "62b71845-fbe1-4af2-a0a6-36af2ac7ad4c", "varType": "string" }
    },
@@ -17198,7 +17236,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "maximum": { "value": 6.0, "varType": "double" },
     "niceName": { "value": "Random [Shape Id] 1", "varType": "string" },
-    "seed": { "value": 8, "varType": "int" },
+    "seed": { "value": 11, "varType": "int" },
     "uuid": { "value": "3c292c87-baf9-4696-83a7-fe9ccfa1a11d", "varType": "string" }
    },
    "nodeId": "random#2",
