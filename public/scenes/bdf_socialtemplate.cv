@@ -309,10 +309,6 @@
   { "from": "keyframe#884.id", "to": "visibilityCurve#441.keyframes.1" },
   { "from": "keyframe#883.id", "to": "visibilityCurve#441.keyframes.0" },
   { "from": "compNode#1.time", "to": "visibilityCurve#441.time" },
-  { "from": "keyframe#872.id", "to": "visibilityCurve#435.keyframes.1" },
-  { "from": "compNode#1.time", "to": "visibilityCurve#435.time" },
-  { "from": "keyframe#871.id", "to": "visibilityCurve#435.keyframes.0" },
-  { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#435.activeAnimationLayer" },
   { "from": "keyframe#608.id", "to": "visibilityCurve#304.keyframes.1" },
   { "from": "compNode#1.outActiveAnimationLayer", "to": "visibilityCurve#304.activeAnimationLayer" },
   { "from": "keyframe#607.id", "to": "visibilityCurve#304.keyframes.0" },
@@ -468,7 +464,6 @@
   { "from": "visibilityCurve#283.out", "to": "group#34.on" },
   { "from": "group#34.scale.x", "to": "group#34.scale.y" },
   { "from": "numberRange#11.id", "to": "group#34.scale.x" },
-  { "from": "visibilityCurve#435.out", "to": "group#47.on" },
   { "from": "visibilityCurve#427.out", "to": "group#43.on" },
   { "from": "visibilityCurve#289.out", "to": "group#35.on" },
   { "from": "visibilityCurve#279.out", "to": "group#31.on" },
@@ -488,7 +483,8 @@
  "controlCenter": {
   "compNode#1": {
    "attributes": [
-    { "path": "value2Array#1.arrayIndex" }
+    { "path": "value2Array#1.arrayIndex" },
+    { "path": "string#2.string" }
    ],
    "footerScript": "",
    "headerScript": ""
@@ -713,10 +709,6 @@
   {
    "children": [ "colorMaterial#556", "motionBlurFilter#296", "strokeMaterial#302", "colorMaterial#555", "visibilityCurve#296" ],
    "nodeId": "hiddenFolder#296"
-  },
-  {
-   "children": [ "motionBlurFilter#435", "strokeMaterial#443", "colorMaterial#807", "visibilityCurve#435" ],
-   "nodeId": "hiddenFolder#435"
   },
   {
    "children": [ "motionBlurFilter#279", "strokeMaterial#285", "colorMaterial#526", "visibilityCurve#279" ],
@@ -1135,10 +1127,6 @@
    "nodeId": "visibilityCurve#441"
   },
   {
-   "children": [ "keyframe#872", "keyframe#871" ],
-   "nodeId": "visibilityCurve#435"
-  },
-  {
    "children": [ "keyframe#608", "keyframe#607" ],
    "nodeId": "visibilityCurve#304"
   },
@@ -1263,11 +1251,11 @@
    "nodeId": "spacerItem#2"
   },
   {
-   "children": [ "visibility#1", "align#10", "compConstraint#6", "random#1", "hiddenFolder#482" ],
+   "children": [ "group#57", "visibility#1", "align#10", "compConstraint#6", "random#1", "hiddenFolder#482" ],
    "nodeId": "duplicator#2"
   },
   {
-   "children": [ "group#57", "duplicator#2", "compConstraint#5", "basicLine#2", "textShape#3", "basicLine#1", "hiddenFolder#534" ],
+   "children": [ "compConstraint#5", "basicLine#2", "duplicator#2", "textShape#3", "basicLine#1", "hiddenFolder#534" ],
    "nodeId": "group#55"
   },
   {
@@ -1287,10 +1275,6 @@
    "nodeId": "group#34"
   },
   {
-   "children": [ "hiddenFolder#435" ],
-   "nodeId": "group#47"
-  },
-  {
    "children": [ "numberRange#4", "layoutGroup#2", "hiddenFolder#427" ],
    "nodeId": "group#43"
   },
@@ -1299,7 +1283,7 @@
    "nodeId": "group#35"
   },
   {
-   "children": [ "group#42", "group#55", "group#47", "group#48", "group#43", "group#34", "basicShape#1", "hiddenFolder#279" ],
+   "children": [ "group#42", "group#55", "group#48", "group#43", "group#34", "basicShape#1", "hiddenFolder#279" ],
    "nodeId": "group#31"
   },
   {
@@ -3067,7 +3051,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#551",
    "nodeType": "visibilityCurve"
@@ -3212,7 +3196,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#561",
    "nodeType": "visibilityCurve"
@@ -3225,7 +3209,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#563",
    "nodeType": "visibilityCurve"
@@ -3281,7 +3265,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#562",
    "nodeType": "visibilityCurve"
@@ -3407,7 +3391,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#559",
    "nodeType": "visibilityCurve"
@@ -3420,7 +3404,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#547",
    "nodeType": "visibilityCurve"
@@ -3441,7 +3425,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#560",
    "nodeType": "visibilityCurve"
@@ -3550,7 +3534,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#553",
    "nodeType": "visibilityCurve"
@@ -3738,14 +3722,6 @@
     "uuid": { "value": "3424d11b-066c-4da0-8086-de2c69987a74", "varType": "string" }
    },
    "nodeId": "hiddenFolder#296",
-   "nodeType": "hiddenFolder"
-  },
-  {
-   "attributes": {
-    "niceName": { "value": "subUINodes", "varType": "string" },
-    "uuid": { "value": "d0b0b535-25b3-4b7a-8373-c6df700112bb", "varType": "string" }
-   },
-   "nodeId": "hiddenFolder#435",
    "nodeType": "hiddenFolder"
   },
   {
@@ -3965,7 +3941,7 @@
     "fontSize": { "value": 58.0, "varType": "double" },
     "horizontalAlignment": { "value": 2, "varType": "enum" },
     "layoutTransform": {
-     "value": [ 1.0, 0.0, 496.70196533203125, 0.0, 1.0, 504.3381042480469, 0.0, 0.0, 1.0 ],
+     "value": [ 1.0, 0.0, 496.70196533203125, 0.0, 1.0, 789.338134765625, 0.0, 0.0, 1.0 ],
      "varType": "transform"
     },
     "letterSpacing": { "value": -2.0, "varType": "double" },
@@ -4605,20 +4581,6 @@
   {
    "attributes": {
     "colorId": { "value": 6, "varType": "int" },
-    "materialColor": {
-     "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
-     "varType": "color"
-    },
-    "niceName": { "value": "Fill 278", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "7715b95e-8f18-403b-9a24-8db3ed2235ee", "varType": "string" }
-   },
-   "nodeId": "colorMaterial#807",
-   "nodeType": "colorMaterial"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
     "niceName": { "value": "Fill 7", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "uuid": { "value": "51ce2f09-7290-41f6-a98f-9bd55c266591", "varType": "string" }
@@ -5184,7 +5146,7 @@
   {
    "attributes": {
     "colorId": { "value": 9, "varType": "int" },
-    "niceName": { "value": "String 1", "varType": "string" },
+    "niceName": { "value": "Artist Name String", "varType": "string" },
     "string": { "value": "Dominic North & Max Lynch", "varType": "string" },
     "uuid": { "value": "f888b490-2889-4948-aea4-dcac3fb2808c", "varType": "string" }
    },
@@ -5384,7 +5346,7 @@
      "varType": "double2"
     },
     "resolution": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "uuid": { "value": "f0da6e83-56f6-4465-9739-91850c270ea4", "varType": "string" },
@@ -5462,7 +5424,7 @@
      "varType": "double2"
     },
     "resolution": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "uuid": { "value": "ea582a2c-8508-4d91-bd19-6ecdc1b94dfd", "varType": "string" },
@@ -5481,11 +5443,11 @@
      "childExprs": {
       "y": { "expression": "*-1", "expressionEnabled": true }
      },
-     "value": { "x": 0.0, "y": -330.0 },
+     "value": { "x": 0.0, "y": -500.0 },
      "varType": "double2"
     },
     "resolution": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "uuid": { "value": "5a90b9f3-124f-4970-9a24-64555c5d3c3a", "varType": "string" }
@@ -5498,7 +5460,7 @@
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Composition Constraint 1", "varType": "string" },
     "resolution": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "uuid": { "value": "ea582a2c-8508-4d91-bd19-6ecdc1b94dfd", "varType": "string" },
@@ -5517,7 +5479,7 @@
      "varType": "double2"
     },
     "resolution": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "uuid": { "value": "f0da6e83-56f6-4465-9739-91850c270ea4", "varType": "string" },
@@ -5539,7 +5501,7 @@
     "colorId": { "value": 9, "varType": "int" },
     "cornerRadius": { "value": 15.0, "varType": "double" },
     "dimensions": {
-     "value": { "x": 1080.0, "y": 1080.0 },
+     "value": { "x": 1080.0, "y": 1920.0 },
      "varType": "double2"
     },
     "niceName": { "value": "Rectangle", "varType": "string" },
@@ -5565,7 +5527,7 @@
      "varType": "double2"
     },
     "resolution": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "uuid": { "value": "ea582a2c-8508-4d91-bd19-6ecdc1b94dfd", "varType": "string" },
@@ -5659,7 +5621,6 @@
       }
      ]
     },
-    "arrayIndex": { "value": 1, "varType": "int" },
     "autoIndex": { "value": false, "varType": "bool" },
     "colorId": { "value": 9, "varType": "int" },
     "niceName": { "value": "Canvas Size Array", "varType": "string" },
@@ -6040,11 +6001,11 @@
     "colorId": { "value": 2, "varType": "int" },
     "locked": { "value": false, "varType": "bool" },
     "margins": {
-     "value": { "w": 0, "x": 45, "y": 365, "z": 45 },
+     "value": { "w": 0, "x": 45, "y": 545, "z": 45 },
      "varType": "int4"
     },
     "maximumSize": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "niceName": { "value": "Horizontal Layout Group", "varType": "string" },
@@ -6075,11 +6036,11 @@
     },
     "colorId": { "value": 2, "varType": "int" },
     "margins": {
-     "value": { "w": 45, "x": 45, "y": 22, "z": 45 },
+     "value": { "w": 180, "x": 45, "y": 22, "z": 45 },
      "varType": "int4"
     },
     "maximumSize": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "niceName": { "value": "Horizontal Layout Group", "varType": "string" },
@@ -6113,11 +6074,11 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "locked": { "value": false, "varType": "bool" },
     "margins": {
-     "value": { "w": 0, "x": 45, "y": 45, "z": 45 },
+     "value": { "w": 0, "x": 45, "y": 180, "z": 45 },
      "varType": "int4"
     },
     "maximumSize": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "niceName": { "value": "Horizontal Layout Group", "varType": "string" },
@@ -6361,7 +6322,7 @@
     "niceName": { "value": "SVG Layer", "varType": "string" },
     "opacity": { "value": 80.0, "varType": "double" },
     "position": {
-     "value": { "x": 203.0, "y": -176.0, "z": 0.0 },
+     "value": { "x": 203.0, "y": 34.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "59ebf994-4b93-496e-b0b0-359d6b23774c", "varType": "string" }
@@ -6761,7 +6722,7 @@
     "niceName": { "value": "SVG Layer", "varType": "string" },
     "opacity": { "value": 80.0, "varType": "double" },
     "position": {
-     "value": { "x": 350.0, "y": -351.0, "z": 0.0 },
+     "value": { "x": 350.0, "y": -203.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "8ed1df1b-d4fa-4285-a862-4d0c915a0c70", "varType": "string" }
@@ -6825,7 +6786,7 @@
     "niceName": { "value": "SVG Layer", "varType": "string" },
     "opacity": { "value": 80.0, "varType": "double" },
     "position": {
-     "value": { "x": -298.0, "y": -156.0, "z": 0.0 },
+     "value": { "x": -298.0, "y": 102.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "7223076d-f379-47b6-ad27-99ccd799012e", "varType": "string" }
@@ -7487,7 +7448,7 @@
     "niceName": { "value": "SVG Layer", "varType": "string" },
     "opacity": { "value": 80.0, "varType": "double" },
     "position": {
-     "value": { "x": 0.0, "y": -462.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": -350.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "fcd612ab-a206-4c46-b8e3-cd053c8a2cd4", "varType": "string" }
@@ -7988,7 +7949,7 @@
     "niceName": { "value": "SVG Layer", "varType": "string" },
     "opacity": { "value": 80.0, "varType": "double" },
     "position": {
-     "value": { "x": -298.0, "y": -416.0, "z": 0.0 },
+     "value": { "x": -298.0, "y": -221.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "e01c2dc9-917e-451b-adc5-8c8949e8aa58", "varType": "string" }
@@ -9238,16 +9199,6 @@
   {
    "attributes": {
     "colorId": { "value": 14, "varType": "int" },
-    "niceName": { "value": "Motion Blur 153", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "a33e80bc-01d3-407d-a203-7c939b2e22ce", "varType": "string" }
-   },
-   "nodeId": "motionBlurFilter#435",
-   "nodeType": "motionBlurFilter"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 14, "varType": "int" },
     "niceName": { "value": "Motion Blur 15", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "uuid": { "value": "9d1e1153-6b9b-4c07-89fc-37b5573c26e6", "varType": "string" }
@@ -10020,7 +9971,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "horizontalLayoutAlignment": { "value": 1, "varType": "enum" },
     "layoutTransform": {
-     "value": [ 1.0, 0.0, -502.906982421875, 0.0, 1.0, 196.83859252929688, 0.0, 0.0, 1.0 ],
+     "value": [ 1.0, 0.0, -499.8370056152344, 0.0, 1.0, 446.17218017578125, 0.0, 0.0, 1.0 ],
      "varType": "transform"
     },
     "letterSpacing": { "value": -0.6, "varType": "double" },
@@ -10044,7 +9995,7 @@
       "x": { "expression": "-80", "expressionEnabled": true },
       "y": { "expression": "clamp(500,value-550,950)", "expressionEnabled": true }
      },
-     "value": { "x": 1000.0, "y": 530.0 },
+     "value": { "x": 1000.0, "y": 950.0 },
      "varType": "double2"
     },
     "uuid": { "value": "1af185f5-0855-4a98-9b5e-97cf46c42f7e", "varType": "string" },
@@ -10109,7 +10060,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#17",
    "nodeType": "animationCurve"
@@ -10127,7 +10078,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#16",
    "nodeType": "animationCurve"
@@ -10145,7 +10096,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#10",
    "nodeType": "animationCurve"
@@ -10163,7 +10114,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#9",
    "nodeType": "animationCurve"
@@ -10181,7 +10132,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#13",
    "nodeType": "animationCurve"
@@ -10199,7 +10150,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#15",
    "nodeType": "animationCurve"
@@ -10216,7 +10167,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#4",
    "nodeType": "animationCurve"
@@ -10233,7 +10184,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#7",
    "nodeType": "animationCurve"
@@ -10250,7 +10201,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#5",
    "nodeType": "animationCurve"
@@ -10267,7 +10218,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#8",
    "nodeType": "animationCurve"
@@ -10284,7 +10235,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "animationCurve#6",
    "nodeType": "animationCurve"
@@ -10297,7 +10248,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#305",
    "nodeType": "visibilityCurve"
@@ -10310,7 +10261,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#298",
    "nodeType": "visibilityCurve"
@@ -10323,7 +10274,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#297",
    "nodeType": "visibilityCurve"
@@ -10336,7 +10287,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#424",
    "nodeType": "visibilityCurve"
@@ -10349,7 +10300,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#291",
    "nodeType": "visibilityCurve"
@@ -10362,7 +10313,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#292",
    "nodeType": "visibilityCurve"
@@ -10375,7 +10326,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#421",
    "nodeType": "visibilityCurve"
@@ -10388,7 +10339,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#296",
    "nodeType": "visibilityCurve"
@@ -10401,7 +10352,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#425",
    "nodeType": "visibilityCurve"
@@ -10414,7 +10365,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#293",
    "nodeType": "visibilityCurve"
@@ -10427,7 +10378,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#418",
    "nodeType": "visibilityCurve"
@@ -10440,7 +10391,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#300",
    "nodeType": "visibilityCurve"
@@ -10453,7 +10404,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#284",
    "nodeType": "visibilityCurve"
@@ -10466,11 +10417,11 @@
     },
     "colorId": { "value": 3, "varType": "int" },
     "endFrame": { "value": 120, "varType": "int" },
-    "inTime": { "value": 42.0, "varType": "double" },
+    "inTime": { "value": 39.0, "varType": "double" },
     "niceName": { "value": "BDF_SocialPost", "varType": "string" },
     "playbackEnd": { "value": 65, "varType": "int" },
     "resolution": {
-     "value": { "x": 1080, "y": 1080 },
+     "value": { "x": 1080, "y": 1920 },
      "varType": "int2"
     },
     "uuid": { "value": "cc0e72eb-1c9c-4414-bfdc-cad926cabbd3", "varType": "string" }
@@ -10486,7 +10437,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#302",
    "nodeType": "visibilityCurve"
@@ -10499,7 +10450,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#444",
    "nodeType": "visibilityCurve"
@@ -10512,7 +10463,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#417",
    "nodeType": "visibilityCurve"
@@ -10525,7 +10476,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#301",
    "nodeType": "visibilityCurve"
@@ -10538,7 +10489,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#290",
    "nodeType": "visibilityCurve"
@@ -10551,7 +10502,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#443",
    "nodeType": "visibilityCurve"
@@ -10564,7 +10515,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#428",
    "nodeType": "visibilityCurve"
@@ -10577,7 +10528,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#441",
    "nodeType": "visibilityCurve"
@@ -10590,20 +10541,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
-   },
-   "nodeId": "visibilityCurve#435",
-   "nodeType": "visibilityCurve"
-  },
-  {
-   "attributes": {
-    "keyframes": {
-     "list": [
-      { "varType": "nodeId" },
-      { "varType": "nodeId" }
-     ]
-    },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#304",
    "nodeType": "visibilityCurve"
@@ -10616,7 +10554,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#294",
    "nodeType": "visibilityCurve"
@@ -10629,7 +10567,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#289",
    "nodeType": "visibilityCurve"
@@ -10642,7 +10580,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#427",
    "nodeType": "visibilityCurve"
@@ -10655,7 +10593,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#442",
    "nodeType": "visibilityCurve"
@@ -10668,7 +10606,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#288",
    "nodeType": "visibilityCurve"
@@ -10681,7 +10619,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#307",
    "nodeType": "visibilityCurve"
@@ -10694,7 +10632,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#306",
    "nodeType": "visibilityCurve"
@@ -10707,7 +10645,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#447",
    "nodeType": "visibilityCurve"
@@ -10720,7 +10658,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#303",
    "nodeType": "visibilityCurve"
@@ -10733,7 +10671,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#426",
    "nodeType": "visibilityCurve"
@@ -10746,7 +10684,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#430",
    "nodeType": "visibilityCurve"
@@ -10759,7 +10697,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#287",
    "nodeType": "visibilityCurve"
@@ -10772,7 +10710,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#440",
    "nodeType": "visibilityCurve"
@@ -10785,7 +10723,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#422",
    "nodeType": "visibilityCurve"
@@ -10798,7 +10736,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#416",
    "nodeType": "visibilityCurve"
@@ -10811,7 +10749,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#285",
    "nodeType": "visibilityCurve"
@@ -10824,7 +10762,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#295",
    "nodeType": "visibilityCurve"
@@ -10837,7 +10775,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#279",
    "nodeType": "visibilityCurve"
@@ -10850,7 +10788,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#286",
    "nodeType": "visibilityCurve"
@@ -10863,7 +10801,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#445",
    "nodeType": "visibilityCurve"
@@ -10876,7 +10814,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#283",
    "nodeType": "visibilityCurve"
@@ -10889,7 +10827,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#429",
    "nodeType": "visibilityCurve"
@@ -10902,7 +10840,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#299",
    "nodeType": "visibilityCurve"
@@ -10915,7 +10853,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "disconnectTime": true, "value": 42.0, "varType": "double" }
+    "time": { "disconnectTime": true, "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#463",
    "nodeType": "visibilityCurve"
@@ -10928,7 +10866,7 @@
       { "varType": "nodeId" }
      ]
     },
-    "time": { "value": 42.0, "varType": "double" }
+    "time": { "value": 39.0, "varType": "double" }
    },
    "nodeId": "visibilityCurve#485",
    "nodeType": "visibilityCurve"
@@ -10939,7 +10877,7 @@
     "niceName": { "value": "CompSizeValues", "varType": "string" },
     "uuid": { "value": "2891d419-4234-49c8-a611-7bef1de8beb8", "varType": "string" },
     "value": {
-     "value": { "x": 1080.0, "y": 1080.0 },
+     "value": { "x": 1080.0, "y": 1920.0 },
      "varType": "double2"
     }
    },
@@ -10950,7 +10888,7 @@
    "attributes": {
     "alwaysOff": { "value": "7,13,15,19", "varType": "string" },
     "colorId": { "value": 4, "varType": "int" },
-    "end": { "value": 0.0, "varType": "double" },
+    "end": { "value": 0.19104225588289517, "varType": "double" },
     "niceName": { "value": "Visibility Sequence", "varType": "string" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
    },
@@ -10962,6 +10900,7 @@
     "colorId": { "value": 4, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Visibility Sequence 1", "varType": "string" },
+    "start": { "value": 0.19104225588289517, "varType": "double" },
     "uuid": { "value": "97928175-75ca-4fe4-8e91-ca7468510a7a", "varType": "string" }
    },
    "nodeId": "visibility#2",
@@ -10981,7 +10920,7 @@
     "horizontalAlignment": { "value": 2, "varType": "enum" },
     "horizontalLayoutAlignment": { "value": 1, "varType": "enum" },
     "layoutTransform": {
-     "value": [ 1.0, 0.0, 497.4072265625, 0.0, 1.0, -422.443359375, 0.0, 0.0, 1.0 ],
+     "value": [ 1.0, 0.0, 497.4072265625, 0.0, 1.0, -707.443359375, 0.0, 0.0, 1.0 ],
      "varType": "transform"
     },
     "letterSpacing": { "value": -2.0, "varType": "double" },
@@ -11430,17 +11369,6 @@
   {
    "attributes": {
     "data": {
-     "value": { "numValue": 1.0 },
-     "varType": "keyData"
-    },
-    "uuid": { "value": "c81d4a39-5658-4105-9f24-ff5c839460a7", "varType": "string" }
-   },
-   "nodeId": "keyframe#871",
-   "nodeType": "keyframe"
-  },
-  {
-   "attributes": {
-    "data": {
      "value": { "numValue": -1.0 },
      "varType": "keyData"
     },
@@ -11463,18 +11391,6 @@
    },
    "nodeId": "colorMaterial#550",
    "nodeType": "colorMaterial"
-  },
-  {
-   "attributes": {
-    "data": {
-     "value": { "numValue": -1.0 },
-     "varType": "keyData"
-    },
-    "timeOffset": { "value": 250.0, "varType": "double" },
-    "uuid": { "value": "36b529aa-af6b-4a1c-a90b-bd1d53551675", "varType": "string" }
-   },
-   "nodeId": "keyframe#872",
-   "nodeType": "keyframe"
   },
   {
    "attributes": {
@@ -11542,7 +11458,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "686e9684-01de-4eb5-92d8-ee5af56d50de", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#1",
    "nodeType": "numberRange"
@@ -11588,7 +11504,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "686e9684-01de-4eb5-92d8-ee5af56d50de", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#2",
    "nodeType": "numberRange"
@@ -11634,7 +11550,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "686e9684-01de-4eb5-92d8-ee5af56d50de", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#4",
    "nodeType": "numberRange"
@@ -11727,7 +11643,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "dc4e5d70-9dfa-4111-8a72-24a2826605d0", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#12",
    "nodeType": "numberRange"
@@ -11773,7 +11689,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "686e9684-01de-4eb5-92d8-ee5af56d50de", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#3",
    "nodeType": "numberRange"
@@ -11961,7 +11877,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "dc4e5d70-9dfa-4111-8a72-24a2826605d0", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#7",
    "nodeType": "numberRange"
@@ -12099,7 +12015,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "dc4e5d70-9dfa-4111-8a72-24a2826605d0", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#6",
    "nodeType": "numberRange"
@@ -12145,7 +12061,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "dc4e5d70-9dfa-4111-8a72-24a2826605d0", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#9",
    "nodeType": "numberRange"
@@ -12192,7 +12108,7 @@
     "sourceMax": { "value": 1920.0, "varType": "double" },
     "sourceMin": { "value": 1080.0, "varType": "double" },
     "uuid": { "value": "dc4e5d70-9dfa-4111-8a72-24a2826605d0", "varType": "string" },
-    "value": { "value": 1080.0, "varType": "double" }
+    "value": { "value": 1920.0, "varType": "double" }
    },
    "nodeId": "numberRange#16",
    "nodeType": "numberRange"
@@ -12256,6 +12172,7 @@
       { "varType": "nodeId" }
      ]
     },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Duplicator", "varType": "string" },
     "position": {
      "value": { "x": 498.0, "y": 65.0, "z": 0.0 },
@@ -12287,7 +12204,7 @@
     "colorId": { "value": 16, "varType": "int" },
     "niceName": { "value": "Speaker", "varType": "string" },
     "position": {
-     "value": { "x": 0.0, "y": 210.0, "z": 0.0 },
+     "value": { "x": 0.0, "y": 460.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "802c2843-68bd-41a8-a154-199c5442f408", "varType": "string" }
@@ -12323,7 +12240,7 @@
     "colorId": { "value": 16, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "layoutTransform": {
-     "value": [ 1.0, 0.0, 12.089385986328125, 0.0, 1.0, 160.39886474609375, 0.0, 0.0, 1.0 ],
+     "value": [ 1.0, 0.0, 12.089385986328125, 0.0, 1.0, -124.60113525390625, 0.0, 0.0, 1.0 ],
      "varType": "transform"
     },
     "niceName": { "value": "Location", "varType": "string" },
@@ -12350,15 +12267,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "niceName": { "value": "Speaker", "varType": "string" },
-    "uuid": { "value": "61398ed8-81c0-4a74-a231-82955d65db67", "varType": "string" }
-   },
-   "nodeId": "group#47",
-   "nodeType": "group"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 16, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Bottom Bar", "varType": "string" },
     "position": {
@@ -12375,7 +12283,7 @@
     "colorId": { "value": 16, "varType": "int" },
     "hierarchy": { "value": false, "varType": "bool" },
     "layoutTransform": {
-     "value": [ 1.0, 0.0, -494.21002197265625, 0.0, 1.0, 488.4898986816406, 0.0, 0.0, 1.0 ],
+     "value": [ 1.0, 0.0, -494.21002197265625, 0.0, 1.0, 773.4898681640625, 0.0, 0.0, 1.0 ],
      "varType": "transform"
     },
     "niceName": { "value": "Logo", "varType": "string" },
@@ -12558,7 +12466,7 @@
    "attributes": {
     "array": {
      "list": [
-      { "value": 1080.0, "varType": "double" },
+      { "value": 1920.0, "varType": "double" },
       { "value": 645.0, "varType": "double" },
       { "value": 345.0, "varType": "double" }
      ]
@@ -12628,7 +12536,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "maximum": { "value": 6.0, "varType": "double" },
     "niceName": { "value": "Random [Shape Id]", "varType": "string" },
-    "seed": { "value": 10, "varType": "int" },
+    "seed": { "value": 9, "varType": "int" },
     "uuid": { "value": "3c292c87-baf9-4696-83a7-fe9ccfa1a11d", "varType": "string" }
    },
    "nodeId": "random#1",
@@ -13444,37 +13352,6 @@
       }
      ]
     },
-    "niceName": { "value": "Stroke 155", "varType": "string" },
-    "showInProjectWindow": { "value": false, "varType": "bool" },
-    "uuid": { "value": "f06a4eca-4020-4c97-a74b-78095c554234", "varType": "string" }
-   },
-   "nodeId": "strokeMaterial#443",
-   "nodeType": "strokeMaterial"
-  },
-  {
-   "attributes": {
-    "colorId": { "value": 6, "varType": "int" },
-    "gradient": {
-     "list": [
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 0, "g": 0, "r": 0 },
-         "varType": "color"
-        }
-       }
-      },
-      {
-       "compound": {
-        "color": {
-         "value": { "a": 255, "b": 255, "g": 255, "r": 255 },
-         "varType": "color"
-        },
-        "position": { "value": 1.0, "varType": "double" }
-       }
-      }
-     ]
-    },
     "niceName": { "value": "Stroke 17", "varType": "string" },
     "showInProjectWindow": { "value": false, "varType": "bool" },
     "uuid": { "value": "23c41889-4dc0-476d-99f3-3f50265a2ac0", "varType": "string" }
@@ -14088,7 +13965,7 @@
     "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Tall Icons", "varType": "string" },
     "position": {
-     "value": { "x": 0.0, "y": -210.0, "z": 0.0 },
+     "value": { "x": -498.0, "y": -275.0, "z": 0.0 },
      "varType": "double3"
     },
     "uuid": { "value": "c92ce5e6-6798-48d4-890c-96e935560231", "varType": "string" }
