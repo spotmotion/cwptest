@@ -161,13 +161,17 @@
 
          // ▶️ Playback controls
          if (data.type === "player-control") {
+           console.log("PLAYER CONTROL ACTION:", data.action)
+
            try {
              if (data.action === "play") {
+               console.log("Calling player.play()")
                player.play()
                runPlaybackLoop()
              }
 
              if (data.action === "pause") {
+               console.log("Calling player.stop()")
                player.stop()
                cancelAnimationFrame(animationFrameId)
              }
