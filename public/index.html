@@ -223,6 +223,7 @@
        })
 
        console.log("[CWP] Message listener registered")
+       window.postMessage({ type: "player-control", action: "pause" }, "*")
 
        /* 5b) Send updates from the text box to Cavalry */
        const nameInput = document.getElementById("nameInput")
