@@ -153,44 +153,47 @@
         log("Peridot styles:", app.getFontStyles("Peridot PE Variable"))
 
        /* 5) Listen for external control messages */
-        window.addEventListener("message", (event) => {
-          console.log("MESSAGE RECEIVED:", event.data)
+       window.addEventListener("message", (event) => {
+         const data = event.data
+         console.log("MESSAGE RECEIVED FULL:", JSON.stringify(data))
 
-          const data = event.data
-          if (!data || typeof data !== "object") return
-          if (data.type !== "set-attribute") return
+         if (!data || typeof data !== "object") return
+         if (data.type !== "set-attribute") return
 
-          const { path, value } = data
+         const { path, value } = data
+         console.log("PATH:", path)
+         console.log("VALUE:", value)
 
-          try {
-            app.setAttribute(
-              path.slice(0, path.indexOf(".")),
-              path.slice(path.indexOf(".") + 1),
-              value
-            )
+         try {
+           const nodeId = path.slice(0, path.indexOf("."))
+           const attr = path.slice(path.indexOf(".") + 1)
 
-            // 📐 Resolution updates
-            if (path === "compNode#1.resolution") {
-              const [w, h] = value
-              if (w > 0 && h > 0) {
-                SCENE_WIDTH = w
-                SCENE_HEIGHT = h
-                log("Resolution updated:", w, "x", h)
-                resizeViewportAndSurface()
-              }
-            }
+           console.log("SETTING ATTRIBUTE:", nodeId, attr, value)
 
-            // ✏️ Text input updates
-            if (path === "string#2.string") {
-              const input = document.getElementById("nameInput")
-              if (input) {
-                input.value = value
-              }
-            }
-          } catch (err) {
-            console.error("[CWP] setAttribute failed", err)
-          }
-        })
+           app.setAttribute(nodeId, attr, value)
+
+           // 📐 Resolution updates
+           if (path === "compNode#1.resolution") {
+             const [w, h] = value
+             if (w > 0 && h > 0) {
+               SCENE_WIDTH = w
+               SCENE_HEIGHT = h
+               log("Resolution updated:", w, "x", h)
+               resizeViewportAndSurface()
+             }
+           }
+
+           // ✏️ Text input updates
+           if (path === "string#2.string") {
+             const input = document.getElementById("nameInput")
+             if (input) {
+               input.value = value
+             }
+           }
+         } catch (err) {
+           console.error("[CWP] setAttribute failed", err)
+         }
+       })
 
         /* 5b) Send updates from the text box to Cavalry */
         const nameInput = document.getElementById("nameInput")
