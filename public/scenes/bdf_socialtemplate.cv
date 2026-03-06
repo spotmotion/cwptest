@@ -269,6 +269,7 @@
   { "from": "string#2.id", "to": "textShape#3.text" },
   { "from": "colorMaterial#794.id", "to": "textShape#7.material" },
   { "from": "visibilityCurve#422.out", "to": "textShape#7.on" },
+  { "from": "string#8.string", "to": "textShape#10.text" },
   { "from": "colorMaterial#815.id", "to": "textShape#10.material" },
   { "from": "visibilityCurve#443.out", "to": "textShape#10.on" },
   { "from": "value2#1.value.x", "to": "textShape#10.textBoxSize.x" },
@@ -576,9 +577,9 @@
     { "path": "string#2.string" },
     { "path": "visibility#1.alwaysOff" },
     { "path": "value#1.value" },
-    { "path": "textShape#10.text" },
     { "path": "visibility#4.alwaysOff" },
-    { "path": "string#5.string" }
+    { "path": "string#5.string" },
+    { "path": "string#8.string" }
    ],
    "footerScript": "",
    "headerScript": ""
@@ -1549,7 +1550,7 @@
    "nodeId": "group#31"
   },
   {
-   "children": [ "textShape#10", "hiddenFolder#445" ],
+   "children": [ "string#8", "textShape#10", "hiddenFolder#445" ],
    "nodeId": "group#48"
   },
   {
@@ -1637,6 +1638,16 @@
    "hierarchyOffset": 4.0,
    "nodeId": "comparison#1",
    "nodeType": "comparison"
+  },
+  {
+   "attributes": {
+    "colorId": { "value": 9, "varType": "int" },
+    "niceName": { "value": "Talk Title", "varType": "string" },
+    "string": { "value": "Responsive Design - The Future of Motion", "varType": "string" },
+    "uuid": { "value": "701a0c71-a95a-4e62-845e-785f8959aeac", "varType": "string" }
+   },
+   "nodeId": "string#8",
+   "nodeType": "string"
   },
   {
    "attributes": {
@@ -12999,6 +13010,7 @@
       { "varType": "nodeId" }
      ]
     },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Line L", "varType": "string" },
     "position": {
      "childExprs": {
@@ -13020,6 +13032,7 @@
       { "varType": "nodeId" }
      ]
     },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Line R", "varType": "string" },
     "position": {
      "value": { "x": 498.0, "y": 0.0, "z": 0.0 },
@@ -14994,6 +15007,7 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
+    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Speaker", "varType": "string" },
     "position": {
      "value": { "x": 0.0, "y": 430.0, "z": 0.0 },
@@ -15101,7 +15115,6 @@
   {
    "attributes": {
     "colorId": { "value": 16, "varType": "int" },
-    "hierarchy": { "value": false, "varType": "bool" },
     "niceName": { "value": "Talk Title", "varType": "string" },
     "uuid": { "value": "a095cf77-449f-49e4-b831-1b8922fb3b96", "varType": "string" }
    },
